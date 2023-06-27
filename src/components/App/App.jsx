@@ -1,7 +1,6 @@
 import './App.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
-
+import React from 'react';
 
 function App() {
 
