@@ -8,12 +8,14 @@
 .Promo__container {
     border: solid 1px deeppink;
     display: flex;
+    flex-direction: column;
     border-radius: 10px;
     background: #272727;
     justify-content: center;
     padding-top: 160px;
     padding-left: 235px;
     padding-right: 235px;
+    padding-bottom: 30px;
 }
 
 .Promo__title {
@@ -30,6 +32,8 @@
     line-height: 58px;
     letter-spacing: -2px;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 
     border: solid 1px deeppink;
 }
