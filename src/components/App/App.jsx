@@ -1,14 +1,16 @@
 import './App.css';
 import Header from '../Header/Header';
 import React from 'react';
+import Main from "../Main/Main";
+
 
 function App() {
 
     return (
-      <div className='app'>
-        <Header/>
-      </div>
-    );
+        <div className='app'>
+         <Main/>
+        </div>
+        );
   }
 
   export default App;
