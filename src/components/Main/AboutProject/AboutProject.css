@@ -6,12 +6,8 @@
     padding-right: 70px;
 }
 
-.about-project__container {
-    border: solid 1px deeppink;
-}
-
 .about-project__title {
-    font-family: "Inter-Regular", Helvetica, sans-serif;
+    font-family: Inter;
     display: flex;
     flex-direction: column;
     font-size: 22px;
@@ -29,10 +25,6 @@
     display: flex;
     gap: 40px;
     margin-top: 70px;
-}
-
-.diplom-container {
-
 }
 
 .diplom-container__title {
