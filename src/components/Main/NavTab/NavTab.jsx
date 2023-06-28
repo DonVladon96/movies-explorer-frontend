@@ -7,10 +7,10 @@ function NavTab() {
       <a href="#about" className="navtab__link-aboute">
         <button className="navtab__button">О проекте</button>
       </a>
-      <a href="#about" className="navtab__link-techs">
+      <a href="#techs" className="navtab__link-techs">
         <button className="navtab__button">Технологии</button>
       </a>
-      <a href="#about" className="navtab__link-student">
+      <a href="#student" className="navtab__link-student">
         <button className="navtab__button">Студент</button>
       </a>
     </div>
