@@ -1,3 +1,20 @@
+.aboutme__container {
+    padding-top: 110px;
+    padding-bottom: 125px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.aboutme__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.aboutme__wrapper {
+    display: flex;
+}
+
 .aboutme__title {
     display: flex;
     flex-direction: column;
@@ -8,6 +25,7 @@
     padding-top: 0;
     padding-bottom: 23px;
     margin: 0;
+    margin-bottom: 66px;
     border-bottom: 1px solid #DADADA;
     color: #FFF;
 }
@@ -22,6 +40,7 @@
 
 .aboutme__name {
     color: #FFF;
+    max-width: 600px;
     font-size: 50px;
     font-family: Inter;
     line-height: 58px;
@@ -29,6 +48,39 @@
     font-style: normal;
     font-weight: 400;
     margin: 0;
+    margin-bottom: 18px;
+}
+
+.aboutme__job {
+    max-width: 600px;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 20px;
+    font-style: normal;
+    margin: 0;
+    margin-bottom: 26px;
+}
+
+.aboutme__biography {
+    max-width: 600px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFF;
+    margin: 0;
+    margin-bottom: 99px;
 
 }
 
+.aboutme__github {
+    color: #FFF;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 17px;
+    text-decoration: none;
+}
