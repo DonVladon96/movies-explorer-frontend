@@ -15,6 +15,7 @@
 }
 
 .portfolio__title {
+    cursor: default;
     display: flex;
     max-width: 250px;
     flex-direction: column;
