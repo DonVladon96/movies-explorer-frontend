@@ -23,3 +23,11 @@
     cursor: pointer;
     transition: 0.4s;
 }
+
+.navtab__button:hover {
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    color: #000;
+    background-color: #2BE080;
+}
+

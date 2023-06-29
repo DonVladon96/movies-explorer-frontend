@@ -83,4 +83,19 @@
     font-style: normal;
     line-height: 17px;
     text-decoration: none;
+    text-align: center;
+    max-width: 46px;
+}
+
+.aboutme__github:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    color: #000;
+    text-decoration: none;
+    background-color: #2BE080;
+    border-radius: 3px;
+    max-width: 46px;
+    text-align: center;
+    font-weight: 400;
 }

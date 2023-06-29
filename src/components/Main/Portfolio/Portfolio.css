@@ -51,6 +51,14 @@
     align-items: center;
 }
 
+.porfolio__link:hover {
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    color: #000;
+    background-color: #2BE080;
+    border-radius: 3px;
+}
+
 .portfolio__link-icon {
     background-image: url("../../../images/text__COLOR_font-main.svg");
     background-repeat: no-repeat;
