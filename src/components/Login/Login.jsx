@@ -13,7 +13,7 @@ function Login() {
         </div>
         <h2 className="login__title">Рады видеть!</h2>
         <form className="login__form" >
-          <div className="login__inputs-container">
+          <fieldset className="login__inputs-container">
             <label>
               <span className="login__email">E-mail</span>
               <input className="login__input"/>
@@ -23,7 +23,7 @@ function Login() {
               <span className="login__password">Пароль</span>
               <input className="login__input"/>
             </label>
-          </div>
+          </fieldset>
           <div className="login__button-container">
             <button className="login__button" type="submit" >Войти</button>
             <Link className="login__link" to="/signup">

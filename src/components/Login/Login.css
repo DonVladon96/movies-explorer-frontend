@@ -44,6 +44,8 @@
 .login__inputs-container {
     display: flex;
     flex-direction: column;
+    border: none;
+    padding: 0;
     margin: 0;
     margin-bottom: 221px;
 }

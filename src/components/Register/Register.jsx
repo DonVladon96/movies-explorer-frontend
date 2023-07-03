@@ -15,7 +15,7 @@ function Register() {
         </div>
         <h2 className="register__title">Доброе пожаловать!</h2>
         <form className="register__form">
-          <div className="register__inputs-container">
+          <fieldset className="register__inputs-container">
             <label>
               <span className="register__name">Имя</span>
               <input className="register__input"/>
@@ -28,7 +28,7 @@ function Register() {
               <label className="register__password">Пароль</label>
               <input className="register__input"/>
             </label>
-          </div>
+          </fieldset>
           <div className="register__button-container">
             <button className="register__button" type="submit">Зарегистрироваться</button>
             <Link className="register__link" to="/signin">
@@ -37,7 +37,6 @@ function Register() {
             </Link>
           </div>
         </form>
-
       </div>
     </section>
   );
