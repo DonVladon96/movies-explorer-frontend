@@ -12,7 +12,6 @@ function Main() {
 
   return (
     <div className="content-container">
-
       <Header/>
       <main>
         <Promo/>
