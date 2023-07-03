@@ -1,29 +1,16 @@
 import React from "react";
 import "./Profile.css";
-import Header from "../Header/Header";
-import {NavLink} from "react-router-dom";
-import Logo from "../../images/logo.svg";
+import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 
 function Profile() {
 
-  return(
+  return (
     <>
-      <header className='header'>
-        <div className='header__container'>
-          <NavLink to="/">
-            <img className='header__logo' src={Logo} alt="Логотип"/>
-          </NavLink>
-
-          <nav className='header__button-container'>
-            <NavLink className={`header__button-signup`}>Регистрация</NavLink>
-            <NavLink className={`header__button-signing`}>Войти</NavLink>
-          </nav>
-        </div>
-      </header>
+      <HeaderLogedin/>
       <section className="profile">
         <div className='profile__container'>
           <h2 className='profile__title'>Привет, Виталий!</h2>
-          <form className='profile__form' >
+          <form className='profile__form'>
             <fieldset className='profile__inputs-container'>
               <label className='profile__lable-container'>
                 <p className='profile__name'>Имя</p>
@@ -37,7 +24,7 @@ function Profile() {
             </fieldset>
             <div className='profile__navigate'>
               <button className='profile__button-edit' type='submit'>Редактировать</button>
-              <button className='profile__button-exit' >Выйти из аккаунта</button>
+              <button className='profile__button-exit'>Выйти из аккаунта</button>
             </div>
           </form>
         </div>
