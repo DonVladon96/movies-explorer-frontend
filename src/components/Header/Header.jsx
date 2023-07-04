@@ -11,8 +11,8 @@ function Header() {
           <img className='header__logo' src={Logo} alt="Логотип"/>
         </NavLink>
         <nav className='header__button-container'>
-          <NavLink className={`header__button-signup`}>Регистрация</NavLink>
-          <NavLink className={`header__button-signing`}>Войти</NavLink>
+          <NavLink className={`header__button-signup`} to="/signup" >Регистрация</NavLink>
+          <NavLink className={`header__button-signing`} to="/signin">Войти</NavLink>
         </nav>
       </div>
     </header>

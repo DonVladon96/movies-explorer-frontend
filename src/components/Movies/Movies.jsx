@@ -1,16 +1,16 @@
 import React from "react";
 import "./Movies.css";
-import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import SearchForm from "./SearchForm/SearchForm";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";
+import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 
 function Movies() {
 
   return (
     <>
-      <Header/>
-      <main className="main__box">
+      <HeaderLogedin/>
+      <main className="main__container">
         <SearchForm/>
         <MoviesCardList/>
         )}
