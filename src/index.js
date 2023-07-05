@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.body.style.backgroundColor = '#202020';
 root.render(
   <React.StrictMode>
     <BrowserRouter>

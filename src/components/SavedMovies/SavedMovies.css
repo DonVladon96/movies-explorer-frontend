@@ -1,0 +1,119 @@
+.saveMovieCardList {
+    background-color: #202020;
+}
+
+.saveMovieCardList__container {
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 37px;
+    margin-bottom: 247px;
+}
+
+.saveMovie {
+    width: 364px;
+    height: 281px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #222;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.saveMovie__container {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.saveMovie__poster {
+    width: 364px;
+    height: 203px;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+}
+
+.saveMovie__caption {
+    color: #FFF;
+    font-size: 13px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 290px;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0;
+    margin-left: 16px;
+}
+
+.saveMovie__like_active {
+    background-image: url("../../images/delete.svg");
+    background-color: #222222;
+    border: none;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.saveMovie__like {
+    background-image: url("../../images/delete.svg");
+    display: none;
+    background-color: #222222;
+    border: none;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.saveMovie__time-line {
+    color: #8B8B8B;
+    font-size: 11px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.saveMovie__like-container {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

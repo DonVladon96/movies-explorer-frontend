@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeaderLogedin.css";
+import "../Anim-logo/Anim-logo.css"
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import icon from "../../images/icon.svg";
@@ -10,7 +11,7 @@ function HeaderLogedin() {
     <header className="header__logedin">
       <div className="header__logedin-container">
         <NavLink to="/" >
-          <img className="header__logedin-logo" src={logo} alt="Логотип" />
+          <img className="header__logedin-logo anim-logo" src={logo} alt="Логотип" />
         </NavLink>
         <div className="header__movies-container">
           <NavLink to="/movies" className="header__films">

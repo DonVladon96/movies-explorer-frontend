@@ -8,7 +8,7 @@ function Login() {
       <div className="login__container">
         <div className="login__logo-container">
           <Link to="/">
-            <img src={logo} alt="Логотип" className="login__logo" />
+            <img src={logo} alt="Логотип" className="login__logo anim-logo" />
           </Link>
         </div>
         <h2 className="login__title">Рады видеть!</h2>

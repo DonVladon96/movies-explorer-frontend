@@ -1,0 +1,25 @@
+.anim-logo {
+    width: 38px;
+    height: 38px;
+}
+
+.anim-logo:hover {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    80% {
+        transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}

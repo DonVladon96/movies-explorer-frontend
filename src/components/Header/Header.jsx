@@ -8,7 +8,7 @@ function Header() {
     <header className='header'>
       <div className='header__container'>
         <NavLink to="/">
-          <img className='header__logo' src={Logo} alt="Логотип"/>
+          <img className='header__logo anim-logo' src={Logo} alt="Логотип"/>
         </NavLink>
         <nav className='header__button-container'>
           <NavLink className={`header__button-signup`} to="/signup" >Регистрация</NavLink>
