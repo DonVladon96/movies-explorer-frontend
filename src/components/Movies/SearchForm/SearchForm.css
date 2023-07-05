@@ -69,6 +69,10 @@
     margin-right: 6px;
 }
 
+.searchform__button:hover {
+
+}
+
 .searchform__switch-tumbler {
     display: flex;
     cursor: pointer;

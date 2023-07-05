@@ -12,11 +12,12 @@
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 80px;
+    cursor: pointer;
 }
 
 .movies__button {
     color: #FFF;
-    background-color: #202020;
+    background-color: transparent;
     border: none;
     text-align: center;
     font-size: 12px;
@@ -24,4 +25,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    cursor: pointer;
+}
+
+.movies__button-container:hover {
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    color: #000;
+    background-color: #2BE080;
+    border-radius: 10px;
 }
