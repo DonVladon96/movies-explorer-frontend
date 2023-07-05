@@ -15,7 +15,7 @@ function SearchForm() {
           <label className="searchform__switch-container">
             <input className="searchform__switch-input" type="checkbox"/>
             <div className="searchform__switch-tumbler"></div>
-            <p className="searchform__shorts">Короткометражки</p>
+            <p className="searchform__short-films">Короткометражки</p>
           </label>
         </fieldset>
 

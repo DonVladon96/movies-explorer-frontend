@@ -13,10 +13,11 @@ function Movies() {
       <main className="main__container">
         <SearchForm/>
         <MoviesCardList/>
-        )}
-        <button className="movies__button">
-          Еще
-        </button>
+        <div className="movies__button-container">
+          <button className="movies__button">
+            Еще
+          </button>
+        </div>
       </main>
       <Footer/>
     </>
