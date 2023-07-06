@@ -13,15 +13,15 @@ function Register() {
             <img src={logo} alt="Логотип" className="register__logo anim-logo" />
           </Link>
         </div>
-        <h2 className="register__title">Доброе пожаловать!</h2>
+        <h2 className="register__title">Добро пожаловать!</h2>
         <form className="register__form">
           <fieldset className="register__inputs-container">
             <label>
-              <span className="register__name">Имя</span>
-              <input className="register__input"/>
+              <label className="register__name">Имя</label>
+              <input className="register__input" />
             </label>
             <label>
-              <span className="register__email">E-mail</span>
+              <label className="register__email">E-mail</label>
               <input className="register__input"/>
             </label>
             <label>
@@ -32,7 +32,7 @@ function Register() {
           <div className="register__button-container">
             <button className="register__button" type="submit">Зарегистрироваться</button>
             <Link className="register__link" to="/signin">
-              Ещё не зарегистрированы?
+              Уже зарегистрированы?
               <span className="register__login">Войти</span>
             </Link>
           </div>

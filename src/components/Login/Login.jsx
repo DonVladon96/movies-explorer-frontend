@@ -15,12 +15,12 @@ function Login() {
         <form className="login__form" >
           <fieldset className="login__inputs-container">
             <label>
-              <span className="login__email">E-mail</span>
+              <label className="login__email">E-mail</label>
               <input className="login__input"/>
 
             </label>
             <label>
-              <span className="login__password">Пароль</span>
+              <label className="login__password">Пароль</label>
               <input className="login__input"/>
             </label>
           </fieldset>

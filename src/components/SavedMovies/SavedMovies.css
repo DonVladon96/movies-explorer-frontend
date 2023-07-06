@@ -11,7 +11,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 24px;
     grid-row-gap: 37px;
-    margin-bottom: 247px;
+    margin-bottom: 258px;
 }
 
 .saveMovie {
@@ -40,7 +40,7 @@
     width: 364px;
     height: 203px;
     flex-shrink: 0;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
 }
 
 .saveMovie__caption {

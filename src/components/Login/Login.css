@@ -32,7 +32,7 @@
     flex-direction: column;
     flex-shrink: 0;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 
 .login__form {
@@ -47,7 +47,8 @@
     border: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 221px;
+    margin-bottom: 219px;
+    gap: 16px;
 }
 
 .login__email {
@@ -157,6 +158,8 @@
     font-weight: 400;
     line-height: 17px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .login__register {

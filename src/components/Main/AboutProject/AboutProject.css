@@ -1,7 +1,7 @@
 .about-project {
     margin: auto;
     padding-top: 110px;
-    padding-bottom: 110px;
+    padding-bottom: 86px;
     padding-left: 70px;
     padding-right: 70px;
 }
@@ -24,7 +24,7 @@
 .diplom {
     display: flex;
     gap: 40px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .diplom-container__title {
@@ -43,6 +43,8 @@
     font-family: Inter, Arial, sans-serif;
     line-height: 20px;
     font-weight: 400;
+    margin-top: 26px;
+    margin-bottom: 0;
 }
 
 .diplom-processing {

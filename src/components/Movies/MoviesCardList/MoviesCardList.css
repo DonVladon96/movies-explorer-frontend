@@ -32,13 +32,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .movie__poster {
     width: 364px;
     height: 203px;
     flex-shrink: 0;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
 }
 
 .movie__caption {
