@@ -86,3 +86,41 @@
     background-color: #2BE080;
     border-radius: 10px;
 }
+
+
+@media screen and (max-width: 769px) {
+   .techs__container {
+       padding-left: 50px;
+       padding-right: 50px;
+   }
+
+    .techs__subtitle {
+        margin-top: 80px;
+        margin-bottom: 22px;
+
+    }
+
+    .techs__about {
+        font-size: 12px;
+        font-style: normal;
+        line-height: 18px;
+        letter-spacing: -0.48px;
+    }
+
+    .techs__items {
+        margin-top: 83px;
+    }
+
+    .techs__item {
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.48px;
+        width: 84px;
+        height: 57px;
+    }
+}

@@ -31,3 +31,17 @@
     background-color: #2BE080;
 }
 
+@media screen and (max-width: 769px) {
+    .navtab {
+        margin-top: 314px;
+    }
+
+    .navtab__button {
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+}
+

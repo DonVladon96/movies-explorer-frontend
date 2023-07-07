@@ -33,7 +33,7 @@
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -70,9 +70,15 @@
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
 
@@ -92,4 +98,58 @@
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 769px) {
+    .Promo {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .Promo__container {
+        padding-top: 347px;
+        padding-bottom: 30px;
+        padding-left: 24px;
+        padding-right: 24px;
+
+    }
+
+    .Promo__title {
+        max-width: 680px;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -1.6px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

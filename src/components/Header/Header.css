@@ -73,3 +73,10 @@
     color: #000;
 }
 
+@media screen and (max-width: 769px) {
+    .header {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
