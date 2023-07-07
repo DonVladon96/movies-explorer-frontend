@@ -2,3 +2,8 @@ Main {
     min-height: calc(100vh - 246px);
 }
 
+@media screen and (max-width: 530px) {
+    .content-container {
+
+    }
+}

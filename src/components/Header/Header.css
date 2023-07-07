@@ -80,3 +80,30 @@
     }
 }
 
+@media screen and (max-width: 530px) {
+    .header {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .header__container {
+        align-items: center;
+    }
+
+    .header__button-signup {
+        font-size: 10px;
+    }
+
+    .header__button-signing {
+        font-size: 10px;
+        width: 54px;
+        height: 26px;
+        flex-shrink: 0;
+    }
+
+    .header__button-container {
+        gap: 14px;
+        max-height: 26px;
+    }
+}
+

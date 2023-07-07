@@ -106,6 +106,7 @@
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 80px;
+        padding-bottom: 91px;
     }
 
     .aboutme__name {
@@ -132,7 +133,68 @@
         line-height: 18px;
     }
 
-    .
+    .aboutme__biography {
+        margin-bottom: 13px;
+    }
+
+    .aboutme__github {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .aboutme__container {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 81px;
+        padding-bottom: 70px;
+    }
+
+    .aboutme__title {
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: -0.72px;
+        padding-bottom: 28px;
+        margin-bottom: 60px;
+    }
+
+    .aboutme__avatar {
+        width: 292px;
+        height: 352px;
+        flex-shrink: 0;
+    }
+
+    .aboutme__name {
+        font-size: 30px;
+        line-height: normal;
+        letter-spacing: -1.2px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .aboutme__job {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+
+    .aboutme__biography {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        color: #FFF;
+        font-style: normal;
+        margin-bottom: 7px;
+    }
+
+    .aboutme__wrapper {
+        flex-direction: column-reverse;
+    }
 }
 
 

@@ -119,8 +119,34 @@
         line-height: 52px;
         letter-spacing: -1.6px;
     }
+}
 
+@media screen and (max-width: 530px) {
+    .Promo {
+        margin-left: 14px;
+        margin-right: 14px;
+        margin-top: 10px;
+    }
 
+    .Promo__title {
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 29px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 37px;
+        letter-spacing: -1.16px;
+        display: flex;
+        width: 292px;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .Promo__container {
+        padding-top: 220px;
+        padding-bottom: 17px;
+    }
 }
 
 
