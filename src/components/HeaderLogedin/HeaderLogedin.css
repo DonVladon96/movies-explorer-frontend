@@ -133,3 +133,11 @@
         align-items: center
     }
 }
+
+@media screen and (max-width: 530px) {
+    .header__logedin {
+        margin-left: 14px;
+        margin-right: 14px;
+        padding-top: 18px;
+    }
+}

@@ -32,7 +32,6 @@ function BurgerMenu() {
               <div className="header__wrapper">
                 <img className="header__navigation-logo" src={icon} alt="аккаунт" />
               </div>
-
             </NavLink>
           </nav>
         </div>

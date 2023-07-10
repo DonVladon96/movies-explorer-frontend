@@ -144,6 +144,65 @@
 
 }
 
+@media screen and (max-width: 530px) {
+    .movieCardList__container {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 19px;
+        gap: 14px;
+    }
+
+    .movie__poster {
+        width: 300px;
+        height: 168px;
+        margin-bottom: 0;
+    }
+
+    .movie__caption {
+        font-size: 12px;
+        width: 240px;
+    }
+
+    .movie__container {
+        justify-content: normal;
+        gap: 6px;
+    }
+
+    .movie {
+        width: 300px;
+        height: 237px;
+    }
+
+    .movie__time-line {
+        font-size: 10px;
+    }
+
+    .movie__like_active {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .movie__like {
+        margin-right: 0;
+    }
+
+    .movie:nth-child(6) {
+        display: none;
+    }
+
+    .movie:nth-child(7) {
+        display: none;
+    }
+
+    .movie:nth-child(8) {
+        display: none;
+    }
+
+}
+
 
 
 

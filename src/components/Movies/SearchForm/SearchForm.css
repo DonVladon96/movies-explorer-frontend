@@ -170,3 +170,19 @@
         padding-right: 30px;
     }
 }
+
+@media screen and (max-width: 530px) {
+    .searchform {
+        padding-top: 94px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .searchform__switch-container {
+        gap: 12px;
+    }
+
+    .searchform__short-films {
+        font-size: 11px;
+    }
+}

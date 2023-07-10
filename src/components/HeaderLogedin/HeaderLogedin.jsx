@@ -16,7 +16,7 @@ function HeaderLogedin() {
           <img className="header__logedin-logo anim-logo" src={logo} alt="Логотип" />
         </NavLink>
         {/*Раскрыть, когда буду делать функционал*/}
-        <BurgerMenu />
+        {/*<BurgerMenu />*/}
         <div className="header__movies-container">
           <NavLink to="/movies" className="header__films">
             Фильмы

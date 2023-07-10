@@ -41,3 +41,12 @@
         margin-top: 69px;
     }
 }
+
+@media screen and (max-width: 530px) {
+    .movies__button-container {
+        width: 240px;
+        height: 36px;
+        margin-top: 65px;
+    }
+}
+
