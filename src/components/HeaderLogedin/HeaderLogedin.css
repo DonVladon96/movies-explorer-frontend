@@ -124,7 +124,12 @@
     .header__logedin {
         margin-left: 30px;
         margin-right: 30px;
+        padding-top: 14px;
     }
 
-    
+    .header__logedin-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
 }

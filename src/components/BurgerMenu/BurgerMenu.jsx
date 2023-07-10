@@ -10,23 +10,23 @@ function BurgerMenu() {
   return (
     <div className="burgermenu">
 
-      <div className="hamburger-menu__notactive">
-        <button className="hamburger-menu__button">
-          <img src={burgermenuLogo} alt="бургер меню логотип"/>
+      <div className="burger-menu__notactive">
+        <button className="burger-menu__button">
+          <img src={burgermenuLogo} alt="меню"/>
         </button>
       </div>
 
-      <div className="hamburger-bg">
-        <div className="hamburger-menu__active">
-          <button className="hamburger-menu__close">
-            <img src={burgermenuButtonClose} alt="бургер меню закрыть"/>
+      <div className="burger-container">
+        <div className="burger-menu__active">
+          <button className="burger-menu__close">
+            <img src={burgermenuButtonClose} alt="закрыть меню"/>
           </button>
-          <nav className="hamburger-menu__links">
-            <Link className="hamburger-menu__link" to="/">Главная</Link>
-            <Link className="hamburger-menu__link hamburger-menu__link_active" to="/movies">Фильмы</Link>
-            <Link className="hamburger-menu__link" to="/saved-movies">Сохранённые фильмы</Link>
+          <nav className="burger-menu__links">
+            <Link className="burger-menu__link" to="/">Главная</Link>
+            <Link className="burger-menu__link burger-menu__link_active" to="/movies">Фильмы</Link>
+            <Link className="burger-menu__link" to="/saved-movies">Сохранённые фильмы</Link>
           </nav>
-          <nav className='hamburger-menu__footer'>
+          <nav className='burger-menu__footer'>
             <NavLink to="/profile" className="header__account-button">
               Аккаунт
               <div className="header__wrapper">
