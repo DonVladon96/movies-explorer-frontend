@@ -25,7 +25,7 @@ function Register() {
               <input className="register__input"/>
             </label>
             <label>
-              <label className="register__password">Пароль</label>
+              <label className="register__password" autocomplete="off">Пароль</label>
               <input className="register__input"/>
               <div className="register__error">Что-то пошло не так...</div>
             </label>
