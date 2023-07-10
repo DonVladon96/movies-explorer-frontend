@@ -35,3 +35,9 @@
     background-color: #2BE080;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .movies__button-container {
+        margin-top: 69px;
+    }
+}

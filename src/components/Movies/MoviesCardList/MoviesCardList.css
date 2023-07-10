@@ -95,6 +95,54 @@
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .movie__container {
+        margin-bottom: 7px;
+    }
+
+    .movieCardList__container {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        gap: 30px;
+    }
+
+    .movie:nth-child(9) {
+        display: none;
+    }
+
+    .movie:nth-child(10) {
+        display: none;
+    }
+
+    .movie:nth-child(11) {
+        display: none;
+    }
+
+    .movie:nth-child(12) {
+        display: none;
+    }
+
+    .movie__poster {
+        width: 339px;
+        height: 190px;
+        margin-bottom: 7px;
+    }
+
+    .movie {
+        width: 339px;
+        height: 262px;
+        flex-shrink: 0;
+    }
+
+    .movie__caption {
+        margin-left: 14px;
+        display: flex;
+        width: 260px;
+    }
+
+}
 
 
 

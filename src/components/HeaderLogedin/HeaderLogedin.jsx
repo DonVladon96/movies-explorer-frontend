@@ -4,6 +4,8 @@ import "../Anim-logo/Anim-logo.css"
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import icon from "../../images/icon.svg";
+// import BurgerMenu from "../BurgerMenu/BurgerMenu";
+// import burgermenuLogo from "../../images/burger-menu.svg";
 
 function HeaderLogedin() {
 
@@ -13,6 +15,8 @@ function HeaderLogedin() {
         <NavLink to="/" >
           <img className="header__logedin-logo anim-logo" src={logo} alt="Логотип" />
         </NavLink>
+        {/*Раскрыть, когда буду делать функционал*/}
+        {/*<BurgerMenu />*/}
         <div className="header__movies-container">
           <NavLink to="/movies" className="header__films">
             Фильмы

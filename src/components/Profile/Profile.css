@@ -164,3 +164,23 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    .profile__container {
+        padding: 250px 0 70px 0;
+    }
+
+    .profile__title {
+        margin-bottom: 85px;
+    }
+
+    .profile__name {
+        width: 141px;
+        height: 14px;
+        margin-bottom: 6px;
+    }
+
+    .profile__inputs-container {
+        margin-bottom: 181px;
+    }
+}
+

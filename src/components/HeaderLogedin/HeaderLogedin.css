@@ -111,3 +111,20 @@
 .header__navigation-logo:hover {
     background-color: transparent;
 }
+
+@media screen and (max-width: 768px) {
+    .header__movies-container{
+        display: none;
+    }
+
+    .header__navigation {
+        display: none;
+    }
+
+    .header__logedin {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    
+}

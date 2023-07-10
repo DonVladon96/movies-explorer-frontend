@@ -69,11 +69,16 @@
     border-radius: 3px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .footer__container {
         padding-right: 30px;
         padding-left: 30px;
-        padding-top: 35px;
+        padding-top: 38px;
+    }
+
+    .footer__title {
+        padding-bottom: 20px;
+        margin-bottom: 0px;
     }
 }
 
@@ -122,5 +127,6 @@
         flex-direction: column-reverse;
     }
 }
+
 
 

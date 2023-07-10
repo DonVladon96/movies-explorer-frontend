@@ -95,3 +95,11 @@
     100% { background-position: 0 0; }
 }
 
+@media screen and (max-width: 768px) {
+    .page404__error {
+        margin-top: 407px;
+    }
+}
+
+
+

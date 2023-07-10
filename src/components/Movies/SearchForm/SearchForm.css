@@ -162,3 +162,11 @@
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .searchform{
+        padding-top: 93px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
