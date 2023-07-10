@@ -1,9 +1,9 @@
 import React from "react";
 import "./Page404.css";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function Page404() {
-  return(
+  return (
     <section className="page404">
       <h2 className="page404__error">404</h2>
       <p className="page404__text">Страница не найдена</p>

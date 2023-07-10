@@ -1,5 +1,4 @@
 import './App.css';
-import Header from '../Header/Header';
 import React from 'react';
 import Main from "../Main/Main";
 import {Route, Routes} from "react-router-dom";
@@ -13,46 +12,46 @@ import Page404 from "../Page404/Page404";
 
 function App() {
 
-    return (
-        <div className='app'>
-          <Routes>
-            <Route exact path="/" element={<Main/>} />
+  return (
+    <div className='app'>
+      <Routes>
+        <Route exact path="/" element={<Main/>}/>
 
-            <Route exact path="/signin"
-                   element={
-                       <Login/>
-                   }
-            />
+        <Route exact path="/signin"
+               element={
+                 <Login/>
+               }
+        />
 
-            <Route exact path="/signup"
-                   element={
-                       <Register />
-                   }
-            />
+        <Route exact path="/signup"
+               element={
+                 <Register/>
+               }
+        />
 
-            <Route exact path="/profile"
-                   element={
-                       <Profile/>
-                   }
-            />
+        <Route exact path="/profile"
+               element={
+                 <Profile/>
+               }
+        />
 
-            <Route exact path="/Movies"
-                   element={
-                       <Movies/>
-                   }
-            />
+        <Route exact path="/Movies"
+               element={
+                 <Movies/>
+               }
+        />
 
-            <Route exact path="/saved-movies"
-                   element={
-                       <SavedMovies/>
-                   }
-            />
+        <Route exact path="/saved-movies"
+               element={
+                 <SavedMovies/>
+               }
+        />
 
-            <Route exact path="*" element={<Page404/>} />
-          </Routes>
+        <Route exact path="*" element={<Page404/>}/>
+      </Routes>
 
-        </div>
-        );
-  }
+    </div>
+  );
+}
 
-  export default App;
+export default App;
