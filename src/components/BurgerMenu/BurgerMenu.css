@@ -134,4 +134,18 @@
     .burger-menu__active {
         width: 100vw;
     }
+
+    .burger-menu__links {
+        margin-top: 99px;
+        gap: 24px;
+    }
+
+    .burger-menu__close {
+        margin-top: 12px;
+        margin-right: 7px;
+    }
+
+    .burger-menu__footer {
+        margin: 443px 0 0;
+    }
 }
