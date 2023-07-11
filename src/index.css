@@ -1,11 +1,2 @@
-body {
-    margin: 0;
-    font-family: "Inter-Regular", Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family:"Inter-Regular", Helvetica, sans-serif,
-    monospace;
-}
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts.css');

@@ -34,13 +34,14 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    gap: 17px;
 }
 
 .saveMovie__poster {
     width: 364px;
     height: 203px;
     flex-shrink: 0;
-    margin-bottom: 9px;
+    margin-bottom: 0;
 }
 
 .saveMovie__caption {
@@ -95,31 +96,40 @@
     margin-left: 16px;
     margin-bottom: 16px;
     padding: 0;
+    margin-top: 16px;
 }
 
 .saveMovie__like-container {
     width: 30px;
     height: 30px;
+    position: absolute;
+    top: 212px;
+    left: 318px;
 }
 
 @media screen and (max-width: 768px) {
     .saveMovie__container {
         margin-bottom: 7px;
+        gap: 9px;
     }
 
     .saveMovieCardList__container {
         grid-template-columns: 1fr 1fr;
         padding-left: 30px;
         padding-right: 30px;
-        padding-top: 50px;
+        padding-top: 48px;
         gap: 30px;
         margin-bottom: 181px;
+    }
+
+    .saveMovie__time-line {
+        margin-top: 7px;
     }
 
     .saveMovie__poster {
         width: 339px;
         height: 190px;
-        margin-bottom: 7px;
+        margin-bottom: 0;
     }
 
     .saveMovie {
@@ -132,6 +142,16 @@
         margin-left: 14px;
         display: flex;
         width: 260px;
+    }
+
+    .saveMovie__like-container {
+        position: static;
+        margin-right: 14px;
+    }
+
+    .saveMovie__like_active {
+        position: static;
+        margin-right: 14px;
     }
 
 }

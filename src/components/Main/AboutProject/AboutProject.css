@@ -134,7 +134,7 @@
 
 @media screen and (max-width: 530px) {
     .about-project {
-        padding: 73px 18px 51px 18px;
+        padding: 73px 18px 54px 18px;
     }
 
     .about-project__title {
@@ -162,7 +162,7 @@
 
     .diplom {
         flex-direction: column;
-        margin-top: 44px;
+        margin-top: 42px;
     }
 
     .diplom-container__subtitle {

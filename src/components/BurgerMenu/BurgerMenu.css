@@ -6,6 +6,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 .burger-menu__button:hover {
@@ -147,5 +148,12 @@
 
     .burger-menu__footer {
         margin: 443px 0 0;
+    }
+
+
+    .burger-menu__button-icon {
+        width: 40px;
+        height: 43px;
+
     }
 }

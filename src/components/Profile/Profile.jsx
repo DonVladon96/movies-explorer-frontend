@@ -1,6 +1,7 @@
 import React from "react";
 import "./Profile.css";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
+import {Link} from "react-router-dom";
 
 function Profile() {
 
@@ -24,7 +25,10 @@ function Profile() {
             </fieldset>
             <div className='profile__navigate'>
               <button className='profile__button-edit' type='submit'>Редактировать</button>
-              <button className='profile__button-exit'>Выйти из аккаунта</button>
+              <Link to="/" className="profile__button-exit">
+                <button className='profile__button-text'>Выйти из аккаунта</button>
+              </Link>
+
             </div>
           </form>
         </div>

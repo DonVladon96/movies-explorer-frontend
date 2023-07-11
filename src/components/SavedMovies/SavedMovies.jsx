@@ -23,7 +23,7 @@ function SavedMovies() {
                 <img className="saveMovie__poster" src={pic1} alt="Фильм"/>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
-                  <button className="saveMovie__like"></button>
+                  <button className="saveMovie__like_active"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 47м</p>
@@ -34,10 +34,10 @@ function SavedMovies() {
                 <img className="saveMovie__poster" src={pic2} alt="Фильм"/>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
-                  <button className="saveMovie__like_active"></button>
+                  <button className="saveMovie__like"></button>
                 </div>
               </figure>
-              <p className="saveMovie__time-line">1ч 47м</p>
+              <p className="saveMovie__time-line">1ч 3м</p>
             </div>
 
             <div className="saveMovie">
@@ -48,7 +48,7 @@ function SavedMovies() {
                   <button className="saveMovie__like"></button>
                 </div>
               </figure>
-              <p className="saveMovie__time-line">1ч 47м</p>
+              <p className="saveMovie__time-line">1ч 42м</p>
             </div>
           </div>
         </section>

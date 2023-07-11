@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
+    margin-top: 3px;
 }
 
 .register__logo {
@@ -52,8 +52,8 @@
     border: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 150px;
-    gap: 16px
+    gap: 16px;
+    margin-bottom: 131px;
 }
 
 .register__name {
@@ -80,12 +80,13 @@
     display: flex;
     width: 100%;
     border: none;
-    padding: 5px 0 10px 0;
+    padding: 12px 0 5px 0;;
     line-height: 17px;
     align-items: center;
     outline: 0;
     border-bottom: 1px solid #424242;
     background-color: #202020;
+
 }
 
 .register__password {

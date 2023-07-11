@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutMe.css";
-import Avatar from "../../../images/Barik.jpg";
+import Avatar from "../../../images/pic__COLOR_pic.png";
 
 
 function AboutMe() {
@@ -10,18 +10,18 @@ function AboutMe() {
         <h2 className="aboutme__title">Студент</h2>
         <div className='aboutme__wrapper'>
           <div className="aboutme__info">
-            <h3 className="aboutme__name">Барик</h3>
-            <p className="aboutme__job">Фронтенд разработчик, 27 лет (1 год человека = 7 годам кота)</p>
-            <p className="aboutme__biography">Привет! Меня зовут Барик, я&nbsp;родился в&nbsp;городе Ижевск
-              в&nbsp;2019&nbsp;году. Я&nbsp;домашний питомец замечательного человека, который разрабатывал этот
-              сайт. Меня очень любят. Кушаю я&nbsp;исключительно Royal Canin. Совсем c недавних пор я&nbsp;начал кодить,
-              чтобы самостоятельно зарабатывать себе на&nbsp;Royal Canin. После того как я&nbsp;прошел курс
-              по&nbsp;веб-разработке начал заниматься фриланс заказами и&nbsp;ушел c постоянной кошачей работы.
+            <h3 className="aboutme__name">Виталий</h3>
+            <p className="aboutme__job">Фронтенд-разработчик, 30 лет</p>
+            <p className="aboutme__biography">Я&nbsp;родился и&nbsp;живу в&nbsp;Саратове, закончил факультет экономики
+              СГУ. У&nbsp;меня есть жена
+              и&nbsp;дочь. Я&nbsp;люблю слушать музыку, а&nbsp;ещё увлекаюсь бегом. Недавно начал кодить. С 2015
+              года работал в&nbsp;компании &laquo;СКБ Контур&raquo;. После того, как прошёл курс по&nbsp;веб-разработке,
+              начал заниматься фриланс-заказами и&nbsp;ушёл с&nbsp;постоянной работы.
             </p>
             <a className="aboutme__github" href="https://github.com/DonVladon96" target="_blank"
                rel="noreferrer">GitHub</a>
           </div>
-          <img className="aboutme__avatar" src={Avatar} alt="Барик"></img>
+          <img className="aboutme__avatar" src={Avatar} alt="Фото Виталия"></img>
         </div>
 
       </div>
