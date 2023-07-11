@@ -21,12 +21,19 @@ function BurgerMenu() {
       {menuIsActive &&
         <div className="burger-container">
           <div className="burger-menu__active">
-            <button className="burger-menu__close" onClick={()=>setMenuIsActive(prev=>setMenuIsActive(!prev))}>
+            <button className="burger-menu__close" onClick={() => setMenuIsActive(prev => setMenuIsActive(!prev))}>
               <img src={ButtonClose} alt="закрыть меню"/>
             </button>
             <nav className="burger-menu__links">
               <Link className="burger-menu__link" to="/">Главная</Link>
-              <Link className="burger-menu__link burger-menu__link_active" to="/movies">Фильмы</Link>
+              <NavLink
+                to="/movies"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Фильмы
+              </NavLink>
               <Link className="burger-menu__link" to="/saved-movies">Сохранённые фильмы</Link>
             </nav>
             <nav className='burger-menu__footer'>
