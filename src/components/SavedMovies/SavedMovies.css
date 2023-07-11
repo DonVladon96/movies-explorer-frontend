@@ -16,7 +16,6 @@
 
 .saveMovie {
     width: 364px;
-    height: 281px;
     flex-shrink: 0;
     border-radius: 6px;
     background: #222;
@@ -107,7 +106,46 @@
     left: 318px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1212px) {
+    .saveMovie__container {
+        margin-bottom: 7px;
+    }
+
+    .saveMovieCardList__container {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        gap: 30px;
+        justify-items: center
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .saveMoveCardList__container {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 48px;
+        gap: 30px;
+        margin-bottom: 181px;
+    }
+}
+
+
+
+@media screen and (max-width: 792px) {
+    .saveMoveCardList__container {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 19px;
+        gap: 14px;
+        justify-items: center
+    }
+}
+
+@media screen and (max-width: 792px) {
     .saveMovie__container {
         margin-bottom: 7px;
         gap: 9px;
@@ -134,7 +172,6 @@
 
     .saveMovie {
         width: 339px;
-        height: 262px;
         flex-shrink: 0;
     }
 
@@ -156,7 +193,7 @@
 
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 736px) {
     .saveMovieCardList__container {
         grid-template-columns: 1fr;
         padding-left: 10px;
@@ -184,7 +221,6 @@
 
     .saveMovie {
         width: 300px;
-        height: 237px;
     }
 
     .saveMovie__time-line {
@@ -207,13 +243,6 @@
     }
 
 }
-
-
-
-
-
-
-
 
 
 

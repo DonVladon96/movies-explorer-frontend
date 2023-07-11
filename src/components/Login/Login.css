@@ -97,6 +97,7 @@
     z-index: 0;
 }
 
+
 .login__button:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -112,6 +113,21 @@
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
+}
+
+.login__button:disabled {
+    background-color: #A0A0A0;
+    opacity: 0.3;
+}
+
+.login__button:disabled:before {
+    background-color: #A0A0A0;
+    opacity: 0.3;
+}
+
+.login__button:disabled:after {
+    background-color: #A0A0A0;
+    opacity: 0.3;
 }
 
 .login__button:active {
@@ -172,6 +188,15 @@
     margin: 0 0 0 6px;
 }
 
+.login__error {
+    color: #EE3465;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 @media screen and (max-width: 768px) {
     .login__container {
         padding-top: 232px;
@@ -209,7 +234,7 @@
     }
 
     .login__inputs-container {
-        margin-bottom: 307px;
+        margin-bottom: 311px;
     }
 
     .login__button {
