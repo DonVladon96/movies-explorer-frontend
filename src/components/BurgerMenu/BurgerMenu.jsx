@@ -29,7 +29,7 @@ function BurgerMenu() {
               <NavLink
                 to="/movies"
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
+                  isPending ? "pending" : isActive ? "active" : "burger-menu__link"
                 }
               >
                 Фильмы
