@@ -7,6 +7,7 @@ import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 
 function Movies() {
 
+
   return (
     <>
       <HeaderLogedin/>
