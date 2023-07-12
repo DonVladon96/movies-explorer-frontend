@@ -11,6 +11,7 @@ function Movies() {
   return (
     <>
       <HeaderLogedin/>
+
       <main className="main__container">
         <SearchForm/>
         <MoviesCardList/>
