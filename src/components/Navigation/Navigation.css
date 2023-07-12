@@ -12,6 +12,7 @@
   background-color: #202020;;
   z-index: 2;
   margin-left: 44px;
+  justify-items: center;
 }
 
 .navigation_active {
