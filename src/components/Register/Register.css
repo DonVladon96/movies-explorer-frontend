@@ -53,7 +53,7 @@
     padding: 0;
     margin: 0;
     gap: 16px;
-    margin-bottom: 131px;
+    margin-bottom: 149px;
 }
 
 .register__name {
@@ -80,7 +80,8 @@
     display: flex;
     width: 100%;
     border: none;
-    padding: 12px 0 5px 0;;
+    padding: 5px 0 12px 0;
+
     line-height: 17px;
     align-items: center;
     outline: 0;

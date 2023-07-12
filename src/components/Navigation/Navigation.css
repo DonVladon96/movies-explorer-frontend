@@ -91,9 +91,19 @@
     right: -520px;
     padding: 159px 0 92px 0;
     width: 520px;
+    justify-items: center;
   }
 
-
+  .navigation__link {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 31px;
+  }
 
   .navigation_active {
     right: 0;
@@ -113,6 +123,7 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr 101px;
+    justify-items: center;
   }
 
   .navigation__list {
