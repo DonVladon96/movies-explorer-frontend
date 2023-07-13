@@ -21,7 +21,7 @@ function MoviesCardList() {
       <div className="movieCardList__container">
         <div className="movie">
           <figure className="movie__container">
-            <img className="movie__poster" src={pic1} alt="Фильм"/>
+            <img className="movie__poster" src={pic1} alt="Полный фильм"/>
             <figcaption className="movie__caption">33 слова о дизайне</figcaption>
             <button className="movie__like_active"></button>
           </figure>

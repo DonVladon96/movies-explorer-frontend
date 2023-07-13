@@ -25,7 +25,7 @@ function Profile() {
     <>
       <HeaderLogedin/>
       <section className="profile">
-        <div className='profile__container'>
+        <main className='profile__container'>
           <h2 className='profile__title'>Привет, Виталий!</h2>
           <form className='profile__form'>
             <fieldset className='profile__inputs-container'>
@@ -61,7 +61,7 @@ function Profile() {
 
             </div>
           </form>
-        </div>
+        </main>
       </section>
     </>
   );

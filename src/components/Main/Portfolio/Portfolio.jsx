@@ -5,7 +5,7 @@ function Portfolio() {
   return (
     <section className="portfolio">
       <div className='portfolio__container'>
-        <h3 className="portfolio__title">Портфолио</h3>
+        <h1 className="portfolio__title">Портфолио</h1>
         <ul className="potfolio__list">
 
           <li className="portfolio__work">

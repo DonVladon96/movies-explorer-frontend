@@ -81,13 +81,13 @@ function Register() {
 
   return (
     <section className="register">
-      <div className="register__container">
+      <main className="register__container">
         <div className="register__logo-container">
           <Link to="/">
             <img src={logo} alt="Логотип" className="register__logo anim-logo"/>
           </Link>
         </div>
-        <h2 className="register__title">Добро пожаловать!</h2>
+        <h1 className="register__title">Добро пожаловать!</h1>
         <form className="register__form" noValidate name="register-form" onSubmit={e => e.preventDefault()}>
           <fieldset className="register__inputs-container">
             <label className="register__lable">
@@ -142,7 +142,7 @@ function Register() {
             </Link>
           </div>
         </form>
-      </div>
+      </main>
     </section>
   );
 }

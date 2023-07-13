@@ -12,6 +12,7 @@
     background-color: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .header__container {
@@ -45,11 +46,12 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    width: 76px;
     height: 32px;
     text-decoration: none;
     background-color: #2BE080;
     border-radius: 3px;
+    outline: none;
+    border: none;
 }
 
 

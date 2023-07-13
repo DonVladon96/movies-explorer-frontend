@@ -5,10 +5,14 @@ function SearchForm() {
 
 
   return (
-    <div className="searchform">
+    <section className="searchform">
       <form className="searchform__container">
         <div className="searchform__find">
-          <input type="text" className="searchform__input" placeholder="Фильмы"/>
+          <input className="searchform__input"
+                 type="text"
+                 required
+                 placeholder="Фильмы"
+          />
           <button className="searchform__button"></button>
         </div>
         <fieldset className="searchform__switch">
@@ -20,7 +24,7 @@ function SearchForm() {
         </fieldset>
 
       </form>
-    </div>
+    </section>
   );
 }
 

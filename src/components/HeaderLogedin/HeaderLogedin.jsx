@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, { useState} from "react";
 import "./HeaderLogedin.css";
 import "../Anim-logo/Anim-logo.css"
 import logo from "../../images/logo.svg";
@@ -31,15 +31,6 @@ function HeaderLogedin() {
         <Navigation
           isOpenBurger={openBurger}/>
       </div>
-      {/*<div className="header__entrance">*/}
-      {/*  <NavLink to="/signup" className="header__link">*/}
-      {/*    Регистрация*/}
-      {/*  </NavLink>*/}
-      {/*  <NavLink to="/signin" className="header__button">*/}
-      {/*    Войти*/}
-      {/*  </NavLink>*/}
-      {/*</div>*/}
-
     </header>
   );
 }

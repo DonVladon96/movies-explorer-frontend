@@ -87,7 +87,10 @@
     outline: 0;
     border-bottom: 1px solid #424242;
     background-color: #202020;
+}
 
+.register__input:focus {
+    border-color: #48ff00;
 }
 
 .register__password {
@@ -198,6 +201,11 @@
     justify-content: center;
 }
 
+.register__link:hover {
+    color: #2BE080;
+    opacity: 0.9;
+}
+
 .register__login {
     color: #4285F4;
     text-align: center;
@@ -209,7 +217,8 @@
 }
 
 .register__login:hover {
-
+    opacity: 1;
+    color: #fffb00;
 }
 
 @media screen and (max-width: 768px) {

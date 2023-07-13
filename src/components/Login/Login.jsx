@@ -61,13 +61,13 @@ function Login() {
   }, [errorMessageEmail, errorMessagePassword])
 
   return (<section className="login">
-      <div className="login__container">
+      <main className="login__container">
         <div className="login__logo-container">
           <Link to="/">
             <img src={logo} alt="Логотип" className="login__logo anim-logo"/>
           </Link>
         </div>
-        <h2 className="login__title">Рады видеть!</h2>
+        <h1 className="login__title">Рады видеть!</h1>
         <form noValidate name="login__form" className="login__form" onSubmit={event=> event.preventDefault()}>
           <fieldset className="login__inputs-container">
             <label>
@@ -110,7 +110,7 @@ function Login() {
             </Link>
           </div>
         </form>
-      </div>
+      </main>
     </section>);
 }
 
