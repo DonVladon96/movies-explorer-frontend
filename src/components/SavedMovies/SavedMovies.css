@@ -261,6 +261,27 @@
 
 }
 
+@media screen and (max-width: 738px) {
+    .saveMovie__container {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .saveMovie__poster {
+        width: 300px;
+        height: 168px;
+        margin-bottom: 6px;
+    }
+
+    .saveMovie__like-container {
+        position: static;
+        margin-right: 10px;
+    }
+}
+
+
+
+
 
 
 
