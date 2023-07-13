@@ -24,6 +24,7 @@ function SavedMovies() {
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
                   <button className="saveMovie__like"></button>
+                  <button className="saveMovie__like_activee"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 47м</p>

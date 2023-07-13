@@ -174,8 +174,8 @@
         grid-template-columns: 1fr;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 19px;
-        gap: 14px;
+        gap: 12px;
+        padding-top: 41px;
     }
 
     .movie__poster {

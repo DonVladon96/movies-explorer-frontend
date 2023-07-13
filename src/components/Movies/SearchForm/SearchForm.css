@@ -180,6 +180,7 @@
 
     .searchform__switch-container {
         gap: 12px;
+        padding-bottom: 50px;
     }
 
     .searchform__short-films {

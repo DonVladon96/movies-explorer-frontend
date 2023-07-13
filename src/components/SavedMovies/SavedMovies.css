@@ -84,6 +84,19 @@
     cursor: pointer;
 }
 
+.saveMovie__like_activee {
+    background-image: url("../../images/delete.svg");
+    background-color: #222222;
+    border: none;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 16px;
+    cursor: pointer;
+    display: none;
+}
+
 .saveMovie__time-line {
     color: #8B8B8B;
     font-size: 11px;
@@ -198,9 +211,9 @@
         grid-template-columns: 1fr;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 19px;
         gap: 14px;
         margin-bottom: 177px;
+        padding-top: 40px;
     }
 
     .saveMovie__poster {
@@ -232,6 +245,10 @@
         height: 30px;
         margin: 0;
         padding: 0;
+    }
+
+    .saveMovie__like_activee {
+    display: block;
     }
 
     .saveMovie__like {

@@ -302,6 +302,20 @@
     .header__logedin {
         margin-left: 14px;
         margin-right: 14px;
-        padding-top: 15px;
+        padding-top: 18px;
+    }
+
+    .header__burger {
+        width: 35px;
+    }
+
+    .header__burger-inner {
+        height: 4px;
+        width: 23px;
+    }
+
+    .header__burger-inner::before {
+        left: 0;
+    ;
     }
 }
