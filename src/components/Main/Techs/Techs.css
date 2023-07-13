@@ -125,6 +125,16 @@
     }
 }
 
+@media screen and (max-width: 651px) {
+    .techs__items {
+        display: grid;
+        grid-template-columns: 84px 84px;
+        margin-top: 51px;
+    }
+}
+
+
+
 @media screen and (max-width: 530px) {
     .techs__container {
         padding-left: 14px;

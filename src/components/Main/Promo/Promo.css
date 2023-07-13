@@ -84,7 +84,7 @@
 
 .Promo__title {
     display: flex;
-    width: 730px;
+    width: 100%;
     flex-direction: column;
     flex-shrink: 0;
 
