@@ -25,7 +25,7 @@ function BurgerMenu() {
               <img src={ButtonClose} alt="закрыть меню"/>
             </button>
             <nav className="burger-menu__links">
-              <Link className="burger-menu__link" to="/">Главная</Link>
+              <NavLink className="burger-menu__link" to="/">Главная</NavLink>
               <NavLink
                 to="/movies"
                 className={({ isActive, isPending }) =>
@@ -34,7 +34,7 @@ function BurgerMenu() {
               >
                 Фильмы
               </NavLink>
-              <Link className="burger-menu__link" to="/saved-movies">Сохранённые фильмы</Link>
+              <NavLink className="burger-menu__link" to="/saved-movies">Сохранённые фильмы</NavLink>
             </nav>
             <nav className='burger-menu__footer'>
               <NavLink to="/profile" className="header__account-button">

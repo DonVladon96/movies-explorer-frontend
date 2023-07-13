@@ -8,11 +8,18 @@ function Header() {
     <header className='header'>
       <div className='header__container'>
         <NavLink to="/">
-          <img className='header__logo anim-logo' src={Logo} alt="Логотип"/>
+          <button className='header__logo anim-logo'/>
         </NavLink>
         <nav className='header__button-container'>
-          <NavLink className={`header__button-signup`} to="/signup">Регистрация</NavLink>
-          <NavLink className={`header__button-signing`} to="/signin">Войти</NavLink>
+          <NavLink to="/signup">
+            <button className='header__button-signup'>Регистрация</button>
+          </NavLink>
+
+
+          <NavLink to="/signin">
+            <button className={`header__button-signing`}>Войти</button>
+          </NavLink>
+
         </nav>
       </div>
     </header>

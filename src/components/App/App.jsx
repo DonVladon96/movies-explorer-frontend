@@ -13,15 +13,15 @@ import Page404 from "../Page404/Page404";
 
 function App() {
 
-  const [ currentUser ] = useState({
+  const [currentUser, setCurrentUser] = useState({
     name: 'Vlad',
-    email: 'test123@mail.ru',
+    email: 'test1234@mail.ru',
     loggeIn: false,
   });
 
   return (
-    <div className='app'>
-      <CurrentUserContext.Provider value={currentUser}>
+    <CurrentUserContext.Provider value={currentUser}>
+      <div className='app'>
         <Routes>
           <Route exact path="/" element={<Main/>}/>
 
@@ -57,10 +57,9 @@ function App() {
 
           <Route exact path="*" element={<Page404/>}/>
         </Routes>
+      </div>
+    </CurrentUserContext.Provider>
 
-      </CurrentUserContext.Provider>
-
-    </div>
   );
 }
 
