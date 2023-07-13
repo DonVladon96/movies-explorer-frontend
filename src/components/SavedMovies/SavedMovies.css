@@ -146,7 +146,6 @@
 }
 
 
-
 @media screen and (max-width: 792px) {
     .saveMoveCardList__container {
         grid-template-columns: 1fr;
@@ -248,7 +247,7 @@
     }
 
     .saveMovie__like_activee {
-    display: block;
+        display: block;
     }
 
     .saveMovie__like {
@@ -278,6 +277,14 @@
         margin-right: 10px;
     }
 }
+
+@media screen and (max-width: 530px) {
+    .saveMovieCardList__container {
+        margin-bottom: 172px;
+    }
+}
+
+
 
 
 

@@ -1,9 +1,9 @@
 .about-project {
     margin: auto;
-    padding-top: 110px;
     padding-bottom: 86px;
     padding-left: 70px;
     padding-right: 70px;
+    padding-top: 94px;
 }
 
 .about-project__title {
@@ -61,7 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 228px;
+    width: 285px;
 }
 
 .diplom-processing__frontend {
@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 769px) {
     .about-project {
-        padding: 90px 50px 90px 50px;
+        padding: 74px 50px 90px 50px;
         max-width: 668px;
     }
 
@@ -128,13 +128,13 @@
     }
 
     .diplom-processing__backend {
-        width: 241px;
+        width: 177px;
     }
 }
 
 @media screen and (max-width: 530px) {
     .about-project {
-        padding: 73px 18px 54px 18px;
+        padding: 55px 18px 54px 18px;
     }
 
     .about-project__title {
@@ -162,7 +162,7 @@
 
     .diplom {
         flex-direction: column;
-        margin-top: 42px;
+        margin-top: 44px;
     }
 
     .diplom-container__subtitle {

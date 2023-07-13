@@ -204,6 +204,7 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .profile__container {
         padding-top: 84px;
         max-width: 260px;
+        padding-bottom: 40px;
     }
 
     .profile__name {

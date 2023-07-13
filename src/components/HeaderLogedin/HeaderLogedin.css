@@ -296,6 +296,10 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .header__burger {
+        width: 37px;
+    }
 }
 
 @media screen and (max-width: 530px) {

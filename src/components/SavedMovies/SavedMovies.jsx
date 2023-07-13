@@ -6,21 +6,24 @@ import pic1 from "../../images/pic__COLOR_pic.png";
 import pic2 from "../../images/pic2.png";
 import pic3 from "../../images/png3.png";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
+import {Link} from "react-router-dom";
 
 
 function SavedMovies() {
 
-  return(
+  return (
     <>
       <HeaderLogedin/>
       <main className="main__container">
-        <SearchForm />
+        <SearchForm/>
 
         <section className="saveMovieCardList">
           <div className="saveMovieCardList__container">
             <div className="saveMovie">
               <figure className="saveMovie__container">
-                <img className="saveMovie__poster" src={pic1} alt="Сохраненный Фильм"/>
+                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                  <img className="saveMovie__poster" src={pic1} alt="Сохраненный Фильм"/>
+                </Link>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
                   <button className="saveMovie__like"></button>
@@ -32,7 +35,9 @@ function SavedMovies() {
 
             <div className="saveMovie">
               <figure className="saveMovie__container">
-                <img className="saveMovie__poster" src={pic2} alt="Сохраненный Фильм"/>
+                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                  <img className="saveMovie__poster" src={pic2} alt="Сохраненный Фильм"/>
+                </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
                   <button className="saveMovie__like_active"></button>
@@ -43,7 +48,9 @@ function SavedMovies() {
 
             <div className="saveMovie">
               <figure className="saveMovie__container">
-                <img className="saveMovie__poster" src={pic3} alt="Сохраненный Фильм"/>
+                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                  <img className="saveMovie__poster" src={pic3} alt="Сохраненный Фильм"/>
+                </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">
                   <button className="saveMovie__like"></button>
