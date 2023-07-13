@@ -19,11 +19,11 @@ function AboutProject() {
         </div>
         <div className="diplom-processing">
           <div className="diplom-processing__backend">
-            <p className="diplom-processing__time_week">1 неделя</p>
+            <p className="diplom-processing__time diplom-processing__time_week">1 неделя</p>
             <p className="diplom-processing__title">Back-end</p>
           </div>
           <div className="diplom-processing__frontend">
-            <p className="diplom-processing__time_weeks">4 недели</p>
+            <p className="diplom-processing__time diplom-processing__time_weeks">4 недели</p>
             <p className="diplom-processing__title">Front-end</p>
           </div>
         </div>
