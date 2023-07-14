@@ -36,7 +36,7 @@
     gap: 17px;
 }
 
-.saveMovie__poster {
+.movie__poster {
     width: 364px;
     height: 203px;
     flex-shrink: 0;
@@ -176,7 +176,7 @@
         margin-top: 7px;
     }
 
-    .saveMovie__poster {
+    .movie__poster {
         width: 339px;
         height: 190px;
         margin-bottom: 0;
@@ -215,7 +215,7 @@
         padding-top: 40px;
     }
 
-    .saveMovie__poster {
+    .movie__poster {
         width: 300px;
         height: 168px;
         margin-bottom: 0;
@@ -266,7 +266,7 @@
         justify-content: space-between;
     }
 
-    .saveMovie__poster {
+    .movie__poster {
         width: 300px;
         height: 168px;
         margin-bottom: 6px;

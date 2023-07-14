@@ -1,16 +1,13 @@
 .movieCardList {
     background-color: #202020;
-}
-
-.movieCardList__container {
     padding-top: 70px;
     padding-left: 70px;
     padding-right: 70px;
-    padding-bottom: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 24px;
-    grid-row-gap: 36px;
+    grid-row-gap: 42px;
+    padding-bottom: 14px;
 }
 
 .movie {
@@ -55,9 +52,10 @@
     overflow: hidden;
     margin: 0;
     margin-left: 16px;
+    margin-top: 14px;
 }
 
-.movie__like_active {
+.movie__like-active {
     background-image: url("../../../images/like-active.svg");
     background-color: #222222;
     border: none;
@@ -99,7 +97,7 @@
         margin-bottom: 7px;
     }
 
-    .movieCardList__container {
+    .movieCardList {
         grid-template-columns: 1fr 1fr;
         padding-left: 30px;
         padding-right: 30px;
@@ -110,7 +108,7 @@
 }
 
 @media screen and (max-width: 795px) {
-    .movieCardList__container {
+    .movieCardList {
         grid-template-columns: 1fr;
         padding-left: 10px;
         padding-right: 10px;
@@ -123,10 +121,10 @@
 
 @media screen and (max-width: 768px) {
     .movie__container {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
     }
 
-    .movieCardList__container {
+    .movieCardList {
         grid-template-columns: 1fr 1fr;
         padding-left: 30px;
         padding-right: 30px;
@@ -170,7 +168,7 @@
 }
 
 @media screen and (max-width: 736px) {
-    .movieCardList__container {
+    .movieCardList {
         grid-template-columns: 1fr;
         padding-left: 10px;
         padding-right: 10px;
@@ -203,7 +201,7 @@
         font-size: 10px;
     }
 
-    .movie__like_active {
+    .movie__like-active {
         width: 30px;
         height: 30px;
         margin: 0;

@@ -12,11 +12,11 @@ function Movies() {
     <>
       <HeaderLogedin/>
 
-      <main className="main__container">
+      <main className="main">
         <SearchForm/>
         <MoviesCardList/>
-        <div className="movies__button-container">
-          <button className="movies__button">
+        <div className="main__button-container">
+          <button className="movies-button">
             Еще
           </button>
         </div>

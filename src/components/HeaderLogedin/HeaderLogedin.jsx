@@ -15,18 +15,18 @@ function HeaderLogedin() {
   }
 
   return (
-    <header className="header__logedin">
+    <header className="header-logedin">
       <NavLink to="/">
-        <img className="header__logedin-logo anim-logo" src={logo} alt="Логотип"/>
+        <img className="header-logedin__logedin-logo anim-logo" src={logo} alt="Логотип"/>
       </NavLink>
 
       <div>
-        <div className={`header__overlay ${openBurger ? 'header__overlay_active' : ''}`}/>
+        <div className={`header-logedin__overlay ${openBurger ? 'header__overlay_active' : ''}`}/>
         <button
-          className="header__burger"
+          className="header-logedin__burger"
           onClick={handleToggleBurger}>
           <div
-            className={`header__burger-icon ${openBurger ? 'header__burger-active' : ''}`}/>
+            className={`header-logedin__burger-icon ${openBurger ? 'header__burger-active' : ''}`}/>
           <div></div>
         </button>
         <Navigation

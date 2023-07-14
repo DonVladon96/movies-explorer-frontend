@@ -22,7 +22,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster" src={pic1} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster" src={pic1} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
@@ -36,7 +36,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster" src={pic2} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster" src={pic2} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
@@ -49,7 +49,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster" src={pic3} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster" src={pic3} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">
