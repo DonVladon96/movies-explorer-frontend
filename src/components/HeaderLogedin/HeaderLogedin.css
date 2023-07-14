@@ -310,16 +310,20 @@
     }
 
     .header__burger {
-        width: 35px;
+        width: 28px;
+        height: 36px;
     }
 
     .header__burger-inner {
-        height: 4px;
-        width: 23px;
+        height: 3px;
+        width: 22px;
     }
 
     .header__burger-inner::before {
         left: 0;
-    ;
+    }
+
+    .header__burger-inner::after {
+        height: 1px;
     }
 }
