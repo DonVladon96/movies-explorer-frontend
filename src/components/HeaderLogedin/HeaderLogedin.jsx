@@ -26,7 +26,8 @@ function HeaderLogedin() {
           className="header__burger"
           onClick={handleToggleBurger}>
           <div
-            className={`header__burger-inner ${openBurger ? 'header__burger-inner_active' : ''}`}/>
+            className={`header__burger-icon ${openBurger ? 'header__burger-active' : ''}`}/>
+          <div></div>
         </button>
         <Navigation
           isOpenBurger={openBurger}/>

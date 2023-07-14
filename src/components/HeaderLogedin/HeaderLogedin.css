@@ -90,6 +90,7 @@
 
 .header__burger-inner_active::after {
     transform: translateY(-8px);
+
 }
 .header__burger-inner::after {
     content: '';
@@ -227,6 +228,28 @@
 
 @media screen and (max-width: 768px) {
 
+    .header__burger-icon {
+        background-image: url("../../images/burger-icone.svg");
+        width: 44px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: -14px;
+        left: -5px;
+        background-size: 44px 44px;
+    }
+
+    .header__burger-active {
+        background-image: url("../../images/closeIcone.svg");
+        width: 30px;
+        height: 33px;
+        position: absolute;
+        top: -6px;
+        left: 14px;
+        background-size: 32px 36px;
+    }
+
     .header__logedin-logo {
         width: 22px;
         height: 22px;
@@ -310,20 +333,61 @@
     }
 
     .header__burger {
-        width: 28px;
-        height: 36px;
+        padding: 0;
+        position: relative;
+        display: block;
+        width: 31px;
+        height: 25px;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .header__burger-inner_top {
+        width: 26px;
+        height: 39px;
+    }
+
+    .header__burger .focus {
+        width: 26px;
+        height: 37px;
+        border-color: red;
     }
 
     .header__burger-inner {
+        position: absolute;
+        top: 3px;
+        left: 5px;
         height: 3px;
         width: 22px;
+        background-color: #FFFF;
+        transition: transform .2s ease;
+    }
+
+    .header__burger-inner .active {
+
     }
 
     .header__burger-inner::before {
+        content: '';
+        position: absolute;
+        top: -8px;
         left: 0;
+        height: 3px;
+        width: 22px;
+        background-color: #FFFF;
+        transition: transform .2s ease;
     }
 
     .header__burger-inner::after {
-        height: 1px;
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: #FFFF;
+        transition: transform .1s ease;
     }
 }
