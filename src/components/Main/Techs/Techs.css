@@ -125,7 +125,7 @@
     }
 }
 
-@media screen and (max-width: 842px) {
+@media screen and (max-width: 765px) {
     .techs__items {
         display: grid;
         grid-template-columns: 84px 84px;
