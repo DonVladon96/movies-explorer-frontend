@@ -14,7 +14,7 @@
     color: #FFF;
     text-align: center;
     font-size: 24px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -51,7 +51,7 @@
 .profile__name {
     color: #FFF;
     font-size: 11px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -66,7 +66,7 @@
 .profile__email {
     color: #FFF;
     font-size: 11px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -83,7 +83,7 @@
     color: #FFF;
     text-align: right;
     font-size: 11px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -117,7 +117,7 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #FFF;
     text-align: center;
     font-size: 14px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: 17px;
@@ -153,7 +153,7 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #FFF;
     text-align: center;
     font-size: 13px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -175,7 +175,7 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #EE3465;
     text-align: center;
     font-size: 13px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -239,7 +239,7 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .profile__button-text {
         color: #EE3465;
         text-align: center;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 500;

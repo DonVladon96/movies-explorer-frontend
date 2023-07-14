@@ -33,7 +33,7 @@
 .navigation__list .active {
   color: #FFF;
   text-align: center;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -46,7 +46,7 @@
 .navigation__link {
   color: #FFF;
   text-align: right;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -111,7 +111,7 @@
   .navigation__link {
     color: #FFF;
     text-align: center;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

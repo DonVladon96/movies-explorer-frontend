@@ -7,7 +7,7 @@
 }
 
 .about-project__title {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 22px;
@@ -84,7 +84,7 @@
     color: #8B8B8B;
     text-align: center;
     font-size: 14px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-weight: 500;
     line-height: 17px;
 }
@@ -139,7 +139,7 @@
 
     .about-project__title {
         color: #FFF;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -150,7 +150,7 @@
 
     .diplom-container__title {
         color: #FFF;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -167,7 +167,7 @@
 
     .diplom-container__subtitle {
         color: #FFF;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 11px;
         font-style: normal;
         font-weight: 400;
@@ -186,7 +186,7 @@
     .diplom-processing__time_week {
         color: #000;
         text-align: center;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 11px;
         font-style: normal;
         font-weight: 400;
@@ -198,7 +198,7 @@
     .diplom-processing__title {
         color: #A0A0A0;
         text-align: center;
-        font-family: Suisse Intl, sans-serif;
+        font-family: 'Inter', Arial, sans-serif, Suisse Intl;
         font-size: 11px;
         font-style: normal;
         font-weight: 400;
@@ -208,7 +208,7 @@
     .diplom-processing__time_weeks {
         color: #FFF;
         text-align: center;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 11px;
         font-style: normal;
         font-weight: 400;

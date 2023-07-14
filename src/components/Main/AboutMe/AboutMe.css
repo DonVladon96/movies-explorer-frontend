@@ -43,7 +43,7 @@
     color: #FFF;
     max-width: 600px;
     font-size: 50px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     line-height: 58px;
     letter-spacing: -2px;
     font-style: normal;
@@ -56,7 +56,7 @@
     max-width: 600px;
     color: #FFF;
     font-size: 18px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-weight: 500;
     line-height: 20px;
     font-style: normal;
@@ -79,7 +79,7 @@
 .aboutme__github {
     color: #FFF;
     font-size: 14px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-weight: 500;
     font-style: normal;
     line-height: 17px;
@@ -111,7 +111,7 @@
 
     .aboutme__name {
         color: #FFF;
-        font-family: Inter;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 40px;
         font-style: normal;
         font-weight: 400;
