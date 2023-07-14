@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import './Navigation.css';
+import React from "react";
 
 function Navigation({ isOpenBurger }) {
   return(
@@ -9,14 +10,19 @@ function Navigation({ isOpenBurger }) {
       </Link>
       <ul className='navigation__list'>
         <li>
-          <Link to='/movies' className='navigation__link'>
+          <NavLink
+            to="/movies"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : "navigation__link"
+            }
+          >
             Фильмы
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to='/saved-movies' className='navigation__link'>
+          <NavLink to='/saved-movies' className='navigation__link'>
             Сохраненные фильмы
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <Link to="/profile" className="navigation__profile">

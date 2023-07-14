@@ -30,6 +30,19 @@
   gap: 16px
 }
 
+.navigation__list .active {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 4px;
+}
+
 .navigation__link {
   color: #FFF;
   text-align: right;
@@ -40,6 +53,7 @@
   line-height: 18px;
   text-decoration: none;
 }
+
 
 .navigation__link:hover {
   color: #8B8B8B;
@@ -110,7 +124,7 @@
   }
 
   .navigation__list {
-    gap: 28px;
+    gap: 26px;
   }
 }
 
@@ -141,4 +155,14 @@
   }
 }
 
+@media screen and (max-width: 530px) {
+  .navigation {
+    width: 100%;
+    padding: 144px 0 48px 0;
+  }
+
+  .navigation__link {
+    margin-bottom: 25px;
+  }
+}
 
