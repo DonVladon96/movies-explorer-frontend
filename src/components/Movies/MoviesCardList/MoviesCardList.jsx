@@ -21,7 +21,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic1} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic1} alt="картина 33 слова о дизайне"/>
             </Link>
             <figcaption className="movie__caption-title">33 слова о дизайне</figcaption>
             <button className="movie__like-active"></button>
@@ -32,7 +32,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic2} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic2} alt="картина Киноальманах «100 лет дизайна»"/>
             </Link>
             <figcaption className="movie__caption-title">Киноальманах «100 лет дизайна»</figcaption>
             <button className="movie__like"></button>
@@ -43,7 +43,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic3} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic3} alt="картина В погоне за Бенкси"/>
             </Link>
             <figcaption className="movie__caption-title">В погоне за Бенкси</figcaption>
             <button className="movie__like"></button>
@@ -54,7 +54,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic4} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic4} alt="картина Баския: Взрыв реальности"/>
             </Link>
             <figcaption className="movie__caption-title">Баския: Взрыв реальности</figcaption>
             <button className="movie__like"></button>
@@ -65,7 +65,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic5} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic5} alt="картина Бег это свобода"/>
             </Link>
             <figcaption className="movie__caption-title">Бег это свобода</figcaption>
             <button className="movie__like"></button>
@@ -76,7 +76,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic6} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic6} alt="Картина Книготворцы"/>
             </Link>
             <figcaption className="movie__caption-title">Книготорговцы</figcaption>
             <button className="movie__like-active"></button>
@@ -87,7 +87,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic7} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic7} alt="Картина Когда я думаю о Гераминии ночью"/>
             </Link>
             <figcaption className="movie__caption-title">Когда я думаю о Германии ночью</figcaption>
             <button className="movie__like"></button>
@@ -98,7 +98,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic8} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic8} alt="Картина Gimme Danger"/>
             </Link>
             <figcaption className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</figcaption>
             <button className="movie__like"></button>
@@ -109,7 +109,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic9} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic9} alt="Картина Дженис"/>
             </Link>
             <figcaption className="movie__caption-title">Дженис: Маленькая девочка грустит</figcaption>
             <button className="movie__like-active"></button>
@@ -120,7 +120,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic10} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic10} alt="Картина Соберись перед прыжком"/>
             </Link>
             <figcaption className="movie__caption-title">Соберись перед прыжком</figcaption>
             <button className="movie__like-active"></button>
@@ -131,7 +131,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic11} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic11} alt="Картина Пи Джей Харви"/>
             </Link>
             <figcaption className="movie__caption-title">Пи Джей Харви: A dog called money</figcaption>
             <button className="movie__like"></button>
@@ -142,7 +142,7 @@ function MoviesCardList() {
         <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic12} alt="Сохраненный Фильм"/>
+              <img className="movie__poster" src={pic12} alt="Картина По волнам"/>
             </Link>
             <figcaption className="movie__caption-title">По волнам: Искусство звука в кино</figcaption>
             <button className="movie__like"></button>

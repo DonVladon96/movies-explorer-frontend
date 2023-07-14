@@ -35,7 +35,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster-saved" src={pic2} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster-saved" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
                 </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
@@ -48,7 +48,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster-saved" src={pic3} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster-saved" src={pic3} alt="В погоне за Бенкси"/>
                 </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">
