@@ -24,9 +24,9 @@ function Profile() {
   return (
     <>
       <HeaderLogedin/>
-      <section className="profile">
-        <main className='profile__container'>
-          <h2 className='profile__title'>Привет, Виталий!</h2>
+      <main className="profile">
+        <section className='profile__container'>
+          <h1 className='profile__title'>Привет, Виталий!</h1>
           <form className='profile__form'>
             <fieldset className='profile__inputs-container'>
               <label className='profile__lable-container'>
@@ -35,6 +35,8 @@ function Profile() {
                        type='text'
                        placeholder='Имя'
                        required
+                       minLength={2}
+                       maxLength={30}
                        onChange={(event) => setName(event.target.value)}
                 />
               </label>
@@ -52,7 +54,7 @@ function Profile() {
               </label>
             </fieldset>
             <div className='profile__navigate'>
-              <button className='profile__button-edit' type='submit' onClick={() => handleProfileUpdate(name, email)}
+              <button className='profile__button-edit' type={"button"} onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
               <Link to="/" className="profile__button-exit">
@@ -61,8 +63,8 @@ function Profile() {
 
             </div>
           </form>
-        </main>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

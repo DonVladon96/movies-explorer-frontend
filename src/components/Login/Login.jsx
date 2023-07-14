@@ -60,8 +60,9 @@ function Login() {
     }
   }, [errorMessageEmail, errorMessagePassword])
 
-  return (<section className="login">
-      <main className="login__container">
+  return (
+    <main className="login">
+      <section className="login__container">
         <div className="login__logo-container">
           <Link to="/">
             <img src={logo} alt="Логотип" className="login__logo anim-logo"/>
@@ -92,7 +93,7 @@ function Login() {
                      type="password"
                      name="password"
                      autoComplete="off"
-                     placeholder=""
+                     placeholder="Пароль"
                      minLength={4}
                      maxLength={8}
                      required={true}
@@ -110,8 +111,8 @@ function Login() {
             </Link>
           </div>
         </form>
-      </main>
-    </section>);
+      </section>
+    </main>);
 }
 
 export default Login;

@@ -18,137 +18,137 @@ function MoviesCardList() {
 
   return (
     <section className="movieCardList">
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic1} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">33 слова о дизайне</figcaption>
+            <figcaption className="movie__caption-title">33 слова о дизайне</figcaption>
             <button className="movie__like-active"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic2} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Киноальманах «100 лет дизайна»</figcaption>
+            <figcaption className="movie__caption-title">Киноальманах «100 лет дизайна»</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic3} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">В погоне за Бенкси</figcaption>
+            <figcaption className="movie__caption-title">В погоне за Бенкси</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic4} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Баския: Взрыв реальности</figcaption>
+            <figcaption className="movie__caption-title">Баския: Взрыв реальности</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic5} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Бег это свобода</figcaption>
+            <figcaption className="movie__caption-title">Бег это свобода</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic6} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Книготорговцы</figcaption>
+            <figcaption className="movie__caption-title">Книготорговцы</figcaption>
             <button className="movie__like-active"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic7} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Когда я думаю о Германии ночью</figcaption>
+            <figcaption className="movie__caption-title">Когда я думаю о Германии ночью</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic8} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Gimme Danger: История Игги и The Stooge...</figcaption>
+            <figcaption className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic9} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Дженис: Маленькая девочка грустит</figcaption>
+            <figcaption className="movie__caption-title">Дженис: Маленькая девочка грустит</figcaption>
             <button className="movie__like-active"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic10} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Соберись перед прыжком</figcaption>
+            <figcaption className="movie__caption-title">Соберись перед прыжком</figcaption>
             <button className="movie__like-active"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic11} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">Пи Джей Харви: A dog called money</figcaption>
+            <figcaption className="movie__caption-title">Пи Джей Харви: A dog called money</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
 
-        <div className="movie">
+        <article className="movie">
           <figure className="movie__container">
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic12} alt="Сохраненный Фильм"/>
             </Link>
-            <figcaption className="movie__caption">По волнам: Искусство звука в кино</figcaption>
+            <figcaption className="movie__caption-title">По волнам: Искусство звука в кино</figcaption>
             <button className="movie__like"></button>
           </figure>
           <p className="movie__time-line">1ч 47м</p>
-        </div>
+        </article>
     </section>
   );
 }

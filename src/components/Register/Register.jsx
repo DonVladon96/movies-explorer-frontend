@@ -80,8 +80,8 @@ function Register() {
   }
 
   return (
-    <section className="register">
-      <main className="register__container">
+    <main className="register">
+      <section className="register__container">
         <div className="register__logo-container">
           <Link to="/">
             <img src={logo} alt="Логотип" className="register__logo anim-logo"/>
@@ -142,8 +142,8 @@ function Register() {
             </Link>
           </div>
         </form>
-      </main>
-    </section>
+      </section>
+    </main>
   );
 }
 

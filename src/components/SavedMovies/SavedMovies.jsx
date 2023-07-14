@@ -8,7 +8,6 @@ import pic3 from "../../images/png3.png";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 import {Link} from "react-router-dom";
 
-
 function SavedMovies() {
 
   return (
@@ -18,16 +17,16 @@ function SavedMovies() {
         <SearchForm/>
 
         <section className="saveMovieCardList">
-          <div className="saveMovieCardList__container">
+          <ul className="saveMovieCardList__container">
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster" src={pic1} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster-saved" src={pic1} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
-                  <button className="saveMovie__like"></button>
-                  <button className="saveMovie__like_activee"></button>
+                  <button type={"button"} className="saveMovie__like"></button>
+                  <button type={"button"} className="saveMovie__like_activee"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 47м</p>
@@ -36,11 +35,11 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster" src={pic2} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster-saved" src={pic2} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
-                  <button className="saveMovie__like_active"></button>
+                  <button type={"button"} className="saveMovie__like_active"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 3м</p>
@@ -49,16 +48,16 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster" src={pic3} alt="Сохраненный Фильм"/>
+                  <img className="movie__poster-saved" src={pic3} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">
-                  <button className="saveMovie__like"></button>
+                  <button type={"button"} className="saveMovie__like"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 42м</p>
             </div>
-          </div>
+          </ul>
         </section>
       </main>
       <Footer/>

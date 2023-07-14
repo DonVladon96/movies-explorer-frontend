@@ -15,7 +15,7 @@ function HeaderLogedin() {
   }
 
   return (
-    <header className="header-logedin">
+    <nav className="header-logedin">
       <NavLink to="/">
         <img className="header-logedin__logedin-logo anim-logo" src={logo} alt="Логотип"/>
       </NavLink>
@@ -32,7 +32,7 @@ function HeaderLogedin() {
         <Navigation
           isOpenBurger={openBurger}/>
       </div>
-    </header>
+    </nav>
   );
 }
 

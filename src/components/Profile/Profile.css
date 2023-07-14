@@ -162,6 +162,11 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     cursor: pointer;
 }
 
+.profile__button-edit:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .profile__button-exit {
     text-align: center;
 }
@@ -177,6 +182,11 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.profile__button-text:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {

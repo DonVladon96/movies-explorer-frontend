@@ -99,6 +99,15 @@
     padding: 0;
 }
 
+@media screen and (max-width: 828px) {
+    .Promo__title {
+        max-width: 680px;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -1.6px;
+    }
+}
+
 @media screen and (max-width: 769px) {
     .Promo {
         margin-left: 20px;
