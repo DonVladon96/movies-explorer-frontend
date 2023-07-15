@@ -121,7 +121,11 @@
 
 @media screen and (max-width: 768px) {
     .movie__container {
-        margin-bottom: 17px;
+        margin-bottom: 12px;
+    }
+
+    .movie__time-line {
+        margin-bottom: 14px;
     }
 
     .movieCardList {
