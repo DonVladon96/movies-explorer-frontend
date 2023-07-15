@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 
 .movie__poster {
@@ -88,7 +88,7 @@
     line-height: normal;
     margin: 0;
     margin-left: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
     padding: 0;
 }
 
