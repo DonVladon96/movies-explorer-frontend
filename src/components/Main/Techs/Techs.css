@@ -44,7 +44,7 @@
     font-weight: 400;
     letter-spacing: -0.56px;
     display: flex;
-    width: 460px;
+    max-width: 460px;
     flex-direction: column;
     margin: auto;
 }
@@ -175,7 +175,6 @@
         line-height: 16px;
         letter-spacing: -0.44px;
         display: flex;
-        width: 292px;
         flex-direction: column;
         margin: 0 auto;
         padding: 0;

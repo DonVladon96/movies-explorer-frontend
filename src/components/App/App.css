@@ -1,6 +1,5 @@
 .app {
   max-width: 1280px;
-  min-width: 320px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -13,3 +12,8 @@
   width: 100%;
   font-weight: 400;
 }
+
+
+* { outline: 1px solid yellow; }
+
+/* 336 прокручивается */

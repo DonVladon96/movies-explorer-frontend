@@ -55,7 +55,6 @@
     width: 290px;
     flex-direction: column;
     flex-shrink: 0;
-    overflow: hidden;
     margin: 0;
     margin-left: 16px;
 }
