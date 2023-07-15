@@ -1,24 +1,27 @@
 import './Header.css';
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
+import Button from "../Button/Button";
 
 function Header() {
 
   return (<>
     <header className='header'>
       <nav className='header__container'>
-        <a className='header__logo anim-logo' href='/'></a>
+        <NavLink to="/">
+          <button type="button" className='header__logo anim-logo'/>
+        </NavLink>
 
         <ul className='header__button-container'>
-          <li>
-            <form action='/signup'>
-              <button type="submit" className='header__button-signup'>Регистрация</button>
-            </form>
-          </li>
-          <li>
-            <form action='/signup'>
-              <button type="submit" className={`header__button-signing`}>Войти</button>
-            </form>
-          </li>
+          <Link to="/signup">
+            <Button className='header__button-signup'>
+              Регистрация
+            </Button>
+          </Link>
+          <Link to="/signin">
+            <Button className={`header__button-signing header__button-green`}>
+              Войти
+            </Button>
+          </Link>
         </ul>
       </nav>
     </header>
