@@ -22,6 +22,10 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='app'>
+        <Helmet>
+          <title>Movies project</title>
+          <html lang="ru" />
+        </Helmet>
         <Routes>
           <Route exact path="/" element={<Main/>}/>
 
