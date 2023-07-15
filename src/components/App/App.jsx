@@ -9,7 +9,7 @@ import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Page404 from "../Page404/Page404";
-
+import { Helmet } from 'react-helmet';
 
 function App() {
 
