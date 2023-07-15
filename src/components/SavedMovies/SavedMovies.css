@@ -176,7 +176,7 @@
     }
 }
 
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 810px) {
     .saveMovie__container {
         margin-bottom: 7px;
         gap: 4px
@@ -224,7 +224,7 @@
 
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 760px) {
     .saveMovieCardList__container {
         grid-template-columns: 1fr;
         padding-left: 10px;
@@ -246,8 +246,8 @@
     }
 
     .saveMovie__container {
-        justify-content: normal;
-        gap: 6px;
+        gap: 0;
+        justify-content: space-between;
     }
 
     .saveMovie {

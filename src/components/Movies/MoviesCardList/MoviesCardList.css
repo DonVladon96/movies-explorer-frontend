@@ -92,7 +92,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 1212px) {
+@media screen and (max-width: 1234px) {
     .movie__container {
         margin-bottom: 7px;
     }
@@ -107,7 +107,7 @@
     }
 }
 
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 813px) {
     .movieCardList {
         grid-template-columns: 1fr;
         padding-left: 10px;
@@ -172,7 +172,7 @@
 
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 760px) {
     .movieCardList {
         grid-template-columns: 1fr;
         padding-left: 10px;
