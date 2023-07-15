@@ -7,21 +7,19 @@ function Header() {
   return (<>
     <header className='header'>
       <nav className='header__container'>
-        <NavLink to="/">
-          <button type="button" className='header__logo anim-logo'/>
-        </NavLink>
+        <a className='header__logo anim-logo' href='/'></a>
 
         <ul className='header__button-container'>
-          <Link to="/signup">
-            <Button className='header__button-signup'>
-              Регистрация
-            </Button>
-          </Link>
-          <Link to="/signin">
-            <Button className={`header__button-signing header__button-green`}>
-              Войти
-            </Button>
-          </Link>
+          <li>
+            <form action='/signup'>
+              <button type="submit" className='header__button-signup'>Регистрация</button>
+            </form>
+          </li>
+          <li>
+            <form action='/signup'>
+              <button type="submit" className={`header__button-signing header__button-green`}>Войти</button>
+            </form>
+          </li>
         </ul>
       </nav>
     </header>
