@@ -140,15 +140,13 @@
     .Promo__title {
         color: #FFF;
         text-align: center;
-        font-family: 'Inter', Arial, sans-serif;
         font-size: 29px;
         font-style: normal;
         font-weight: 400;
-        line-height: 37px;
+        line-height: 37px; /* 127.586% */
         letter-spacing: -1.16px;
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
+        /*max-width: 292px;*/
+        width: calc(100% + 32px);
     }
 
     .Promo__container {

@@ -1,6 +1,6 @@
 .header-logedin {
-    margin-left: 70px;
-    margin-right: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
     padding-top: 17px;
     align-items: center;
     display: grid;
