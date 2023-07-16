@@ -13,7 +13,7 @@ function SavedMovies() {
   return (
     <>
       <HeaderLogedin/>
-      <main className="main__container">
+      <main className="main-container">
         <SearchForm/>
 
         <section className="saveMovieCardList">
@@ -21,12 +21,12 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster-saved" src={pic1} alt="Сохраненный Фильм"/>
+                  <img className="saveMovie__poster-saved" src={pic1} alt="Сохраненный Фильм"/>
                 </Link>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
                   <button type={"button"} className="saveMovie__like"></button>
-                  <button type={"button"} className="saveMovie__like_activee"></button>
+                  <button type={"button"} className="saveMovie__like-activee"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 47м</p>
@@ -35,11 +35,11 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster-saved" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
+                  <img className="saveMovie__poster-saved" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
                 </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
-                  <button type={"button"} className="saveMovie__like_active"></button>
+                  <button type={"button"} className="saveMovie__like-active"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 3м</p>
@@ -48,7 +48,7 @@ function SavedMovies() {
             <div className="saveMovie">
               <figure className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="movie__poster-saved" src={pic3} alt="В погоне за Бенкси"/>
+                  <img className="saveMovie__poster-saved" src={pic3} alt="В погоне за Бенкси"/>
                 </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">

@@ -16,7 +16,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({
     name: 'Vlad',
     email: 'test1234@mail.ru',
-    loggeIn: false,
+    loggeIn: true,
   });
 
   return (

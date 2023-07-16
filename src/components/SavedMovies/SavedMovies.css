@@ -37,7 +37,7 @@
     gap: 17px;
 }
 
-.movie__poster-saved {
+.saveMovie__poster-saved {
     width: 364px;
     height: 203px;
     flex-shrink: 0;
@@ -60,7 +60,7 @@
     margin-left: 16px;
 }
 
-.saveMovie__like_active {
+.saveMovie__like-active {
     background-image: url("../../images/delete.svg");
     background-color: #222222;
     border: none;
@@ -90,7 +90,7 @@
     opacity: 0.8;
 }
 
-.saveMovie__like_activee {
+.saveMovie__like-activee {
     background-image: url("../../images/delete.svg");
     background-color: #222222;
     border: none;
@@ -104,13 +104,13 @@
 }
 
 
-.saveMovie__like_activee:hover {
+.saveMovie__like-activee:hover {
     cursor: pointer;
     opacity: 0.8;
 }
 
 
-.saveMovie__like_active:hover {
+.saveMovie__like-active:hover {
     cursor: pointer;
     opacity: 0.8;
 }
@@ -138,7 +138,7 @@
     left: 318px;
 }
 
-@media screen and (max-width: 1212px) {
+@media screen and (max-width: 1243px) {
     .saveMovie__container {
         margin-bottom: 7px;
     }
@@ -195,7 +195,7 @@
         margin-top: 7px;
     }
 
-    .movie__poster-saved {
+    .saveMovie__poster-saved {
         width: 339px;
         height: 190px;
         margin-bottom: 0;
@@ -217,7 +217,7 @@
         margin-right: 14px;
     }
 
-    .saveMovie__like_active {
+    .saveMovie__like-active {
         position: static;
         margin-right: 14px;
     }
@@ -234,7 +234,7 @@
         padding-top: 40px;
     }
 
-    .movie__poster-saved {
+    .saveMovie__poster-saved {
         width: 300px;
         height: 168px;
         margin-bottom: 0;
@@ -258,14 +258,14 @@
         font-size: 10px;
     }
 
-    .saveMovie__like_active {
+    .saveMovie__like-active {
         width: 30px;
         height: 30px;
         margin: 0;
         padding: 0;
     }
 
-    .saveMovie__like_activee {
+    .saveMovie__like-activee {
         display: block;
     }
 
@@ -285,7 +285,7 @@
         justify-content: space-between;
     }
 
-    .movie__poster-saved {
+    .saveMovie__poster-saved {
         width: 300px;
         height: 168px;
         margin-bottom: 6px;
@@ -302,7 +302,7 @@
         margin-bottom: 177px;
     }
 
-    .movie__poster-saved {
+    .saveMovie__poster-saved {
         margin-bottom: 2px;
     }
 }
