@@ -91,7 +91,7 @@ function Register() {
         <form className="register__form" noValidate name="register-form" onSubmit={e => e.preventDefault()}>
           <fieldset className="register__inputs-container">
             <label className="register__lable">
-              <label className="register__name">Имя</label>
+              <h2 className="register__name">Имя</h2>
               <input className="register__input"
                      type="text"
                      name="name"
@@ -106,7 +106,7 @@ function Register() {
             </label>
             {(nameDirty && errorMessageName) && <div className="register__error">{errorMessageName}</div>}
             <label>
-              <label className="register__email">E-mail</label>
+              <h2  className="register__email">E-mail</h2>
               <input className="register__input"
                      type="email"
                      name="email"
@@ -120,7 +120,7 @@ function Register() {
                      onChange={e => emailHandler(e)}/>
             </label>
             {(emailDirty && errorMessageEmail) && <div className="register__error">{errorMessageEmail}</div>}
-            <label>
+            <div>
               <label className="register__password" autocomplete="off">Пароль</label>
               <input className="register__input" type="password"
                      name="password"
@@ -131,7 +131,7 @@ function Register() {
                      required={true}
                      value={password}
                      onChange={e => passwordHandler(e)}/>
-            </label>
+            </div>
             {(passwordDirty && errorMessagePassword) && <div className="register__error">{errorMessagePassword}</div>}
           </fieldset>
           <div className="register__button-container">

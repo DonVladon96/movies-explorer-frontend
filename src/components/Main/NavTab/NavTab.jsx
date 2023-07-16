@@ -1,18 +1,19 @@
 import React from "react";
 import "./NavTab.css";
+import {Link} from "react-router-dom";
 
 function NavTab() {
   return (
     <nav className="navtab">
-      <form action="/#about" className="navtab__link-aboute">
+      <a href="/#about" className="navtab__link-aboute">
         <button type="button" className="navtab__button">О проекте</button>
-      </form>
-      <form action="/#techs" className="navtab__link-techs">
+      </a>
+      <a href="/#techs" className="navtab__link-techs">
         <button type="button" className="navtab__button">Технологии</button>
-      </form>
-      <form action='/#student' className="navtab__link-student">
+      </a>
+      <a href='/#student' className="navtab__link-student">
         <button type="button" className="navtab__button">Студент</button>
-      </form>
+      </a>
     </nav>
   );
 }
