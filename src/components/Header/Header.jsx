@@ -12,12 +12,12 @@ function Header() {
         <ul className='header__button-container'>
           <li>
             <form action='/signup'>
-              <button type="submit" className='header__button-signup'>Регистрация</button>
+              <button type="button" className='header__button-signup'>Регистрация</button>
             </form>
           </li>
           <li>
             <form action='/signup'>
-              <button type="submit" className={`header__button-signing header__button-green`}>Войти</button>
+              <button type="button" className={`header__button-signing header__button-green`}>Войти</button>
             </form>
           </li>
         </ul>

@@ -25,8 +25,8 @@ function SavedMovies() {
                 </Link>
                 <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
                 <div className="saveMovie__like-container">
-                  <button type={"button"} className="saveMovie__like"></button>
-                  <button type={"button"} className="saveMovie__like-activee"></button>
+                  <button type='submit' className="saveMovie__like"></button>
+                  <button type='submit' className="saveMovie__like-activee"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 47м</p>
@@ -39,7 +39,7 @@ function SavedMovies() {
                 </Link>
                 <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
                 <div className="saveMovie__like-container">
-                  <button type={"button"} className="saveMovie__like-active"></button>
+                  <button type='submit' className="saveMovie__like-active"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 3м</p>
@@ -52,7 +52,7 @@ function SavedMovies() {
                 </Link>
                 <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
                 <div className="saveMovie__like-container">
-                  <button type={"button"} className="saveMovie__like"></button>
+                  <button type='submit' className="saveMovie__like"></button>
                 </div>
               </figure>
               <p className="saveMovie__time-line">1ч 42м</p>

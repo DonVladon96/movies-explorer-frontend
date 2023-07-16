@@ -54,11 +54,11 @@ function Profile() {
               </label>
             </fieldset>
             <div className='profile__navigate'>
-              <button className='profile__button-edit' type={"button"} onClick={() => handleProfileUpdate(name, email)}
+              <button className='profile__button-edit' type="button" onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
               <Link to="/" className="profile__button-exit">
-                <button className='profile__button-text'>Выйти из аккаунта</button>
+                <button type="button" className='profile__button-text'>Выйти из аккаунта</button>
               </Link>
 
             </div>

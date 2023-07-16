@@ -22,7 +22,7 @@ function HeaderLogedin() {
 
       <div>
         <div className={`header-logedin__overlay ${openBurger ? 'header__overlay_active' : ''}`}/>
-        <button
+        <button type="button"
           className="header-logedin__burger"
           onClick={handleToggleBurger}>
           <div

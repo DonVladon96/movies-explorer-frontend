@@ -13,7 +13,7 @@ function BurgerMenu() {
     <div className="burgermenu">
 
       {!menuIsActive && <div className="burger-menu__notactive">
-        <button className="burger-menu__button" onClick={() => setMenuIsActive(prev => setMenuIsActive(!prev))}>
+        <button type={'button'} className="burger-menu__button" onClick={() => setMenuIsActive(prev => setMenuIsActive(!prev))}>
           <img className='burger-menu__button-icon' src={Logo} alt="меню"/>
         </button>
       </div>}
@@ -21,7 +21,7 @@ function BurgerMenu() {
       {menuIsActive &&
         <div className="burger-container">
           <div className="burger-menu__active">
-            <button className="burger-menu__close" onClick={() => setMenuIsActive(prev => setMenuIsActive(!prev))}>
+            <button type={'button'} className="burger-menu__close" onClick={() => setMenuIsActive(prev => setMenuIsActive(!prev))}>
               <img src={ButtonClose} alt="закрыть меню"/>
             </button>
             <nav className="burger-menu__links">

@@ -16,7 +16,7 @@ function Movies() {
         <SearchForm/>
         <MoviesCardList/>
         <div className="main__button-container">
-          <button type={"button"} className="movies-button">
+          <button type="button" className="movies-button">
             Еще
           </button>
         </div>

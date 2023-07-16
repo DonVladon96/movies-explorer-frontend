@@ -104,7 +104,7 @@ function Login() {
             </label>
           </fieldset>
           <div className="login__button-container">
-            <button className="login__button" type="submit" disabled={!inputValid}>Войти</button>
+            <button className="login__button" type="button" disabled={!inputValid}>Войти</button>
             <Link className="login__link" to="/signup">
               Ещё не зарегистрированы?
               <span className="login__register">Регистрация</span>

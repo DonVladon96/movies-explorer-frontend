@@ -5,13 +5,13 @@ function NavTab() {
   return (
     <nav className="navtab">
       <form action="/#about" className="navtab__link-aboute">
-        <button type={"submit"} className="navtab__button">О проекте</button>
+        <button type="button" className="navtab__button">О проекте</button>
       </form>
       <form action="/#techs" className="navtab__link-techs">
-        <button type={"submit"} className="navtab__button">Технологии</button>
+        <button type="button" className="navtab__button">Технологии</button>
       </form>
       <form action='/#student' className="navtab__link-student">
-        <button type={"submit"} className="navtab__button">Студент</button>
+        <button type="button" className="navtab__button">Студент</button>
       </form>
     </nav>
   );
