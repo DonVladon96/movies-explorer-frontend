@@ -18,137 +18,228 @@ function MoviesCardList() {
 
   return (
     <section className="movieCardList">
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic1} alt="картина 33 слова о дизайне"/>
-            </Link>
-            <figcaption className="movie__caption-title">33 слова о дизайне</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic1} alt="картина 33 слова о дизайне"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">33 слова о дизайне</li>
+
+          <li>
             <button className="movie__like-active"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic2} alt="картина Киноальманах «100 лет дизайна»"/>
-            </Link>
-            <figcaption className="movie__caption-title">Киноальманах «100 лет дизайна»</figcaption>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
+
+      <ul className="movie">
+        <li className="movie__container">
+
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic2} alt="картина Киноальманах «100 лет дизайна»"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Киноальманах «100 лет дизайна»</li>
+
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic3} alt="картина В погоне за Бенкси"/>
-            </Link>
-            <figcaption className="movie__caption-title">В погоне за Бенкси</figcaption>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
+
+      <ul className="movie">
+        <li className="movie__container">
+          <li>
+            <ul className='movie__list-style'>
+              <li>
+                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                  <img className="movie__poster" src={pic3} alt="картина В погоне за Бенкси"/>
+                </Link>
+              </li>
+            </ul>
+          </li>
+
+          <li className="movie__caption-title">В погоне за Бенкси</li>
+
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <p className="movie__time-line">1ч 47м</p>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic4} alt="картина Баския: Взрыв реальности"/>
-            </Link>
-            <figcaption className="movie__caption-title">Баския: Взрыв реальности</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic4} alt="картина Баския: Взрыв реальности"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Баския: Взрыв реальности</li>
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic5} alt="картина Бег это свобода"/>
-            </Link>
-            <figcaption className="movie__caption-title">Бег это свобода</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic5} alt="картина Бег это свобода"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Бег это свобода</li>
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic6} alt="Картина Книготворцы"/>
-            </Link>
-            <figcaption className="movie__caption-title">Книготорговцы</figcaption>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
+
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic6} alt="Картина Книготворцы"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Книготорговцы</li>
+          <li>
             <button className="movie__like-active"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic7} alt="Картина Когда я думаю о Гераминии ночью"/>
-            </Link>
-            <figcaption className="movie__caption-title">Когда я думаю о Германии ночью</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic7} alt="Картина Когда я думаю о Гераминии ночью"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Когда я думаю о Германии ночью</li>
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic8} alt="Картина Gimme Danger"/>
-            </Link>
-            <figcaption className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic8} alt="Картина Gimme Danger"/>
+              </Link>
+            </li>
+          </ul>
+          <li className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</li>
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic9} alt="Картина Дженис"/>
-            </Link>
-            <figcaption className="movie__caption-title">Дженис: Маленькая девочка грустит</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic9} alt="Картина Дженис"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Дженис: Маленькая девочка грустит</li>
+          <li>
             <button className="movie__like-active"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic10} alt="Картина Соберись перед прыжком"/>
-            </Link>
-            <figcaption className="movie__caption-title">Соберись перед прыжком</figcaption>
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic10} alt="Картина Соберись перед прыжком"/>
+              </Link>
+            </li>
+          </ul>
+
+          <li className="movie__caption-title">Соберись перед прыжком</li>
+          <li>
             <button className="movie__like-active"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
 
-        <article className="movie">
-          <figure className="movie__container">
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'></ul>
+          <li>
             <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
               <img className="movie__poster" src={pic11} alt="Картина Пи Джей Харви"/>
             </Link>
-            <figcaption className="movie__caption-title">Пи Джей Харви: A dog called money</figcaption>
-            <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
 
-        <article className="movie">
-          <figure className="movie__container">
-            <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-              <img className="movie__poster" src={pic12} alt="Картина По волнам"/>
-            </Link>
-            <figcaption className="movie__caption-title">По волнам: Искусство звука в кино</figcaption>
+          <li className="movie__caption-title">Пи Джей Харви: A dog called money</li>
+          <li>
             <button className="movie__like"></button>
-          </figure>
-          <p className="movie__time-line">1ч 47м</p>
-        </article>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
+
+      <ul className="movie">
+        <li className="movie__container">
+          <ul className='movie__list-style'>
+            <li>
+              <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
+                <img className="movie__poster" src={pic12} alt="Картина По волнам"/>
+              </Link>
+            </li>
+          </ul>
+          <li className="movie__caption-title">По волнам: Искусство звука в кино</li>
+          <li>
+            <button className="movie__like"></button>
+          </li>
+        </li>
+        <li className="movie__time-line">1ч 47м</li>
+      </ul>
     </section>
   );
 }
