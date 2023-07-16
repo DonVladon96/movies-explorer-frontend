@@ -55,6 +55,7 @@
     width: 290px;
     flex-direction: column;
     flex-shrink: 0;
+    overflow: hidden;
     margin: 0;
     margin-left: 16px;
 }
@@ -175,7 +176,7 @@
     }
 }
 
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 808px) {
     .saveMovie__container {
         margin-bottom: 7px;
         gap: 4px
@@ -223,7 +224,7 @@
 
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 760px) {
     .saveMovieCardList__container {
         grid-template-columns: 1fr;
         padding-left: 10px;

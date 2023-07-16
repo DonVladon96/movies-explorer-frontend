@@ -44,7 +44,7 @@
     font-weight: 400;
     letter-spacing: -0.56px;
     display: flex;
-    max-width: 460px;
+    width: 460px;
     flex-direction: column;
     margin: auto;
 }
@@ -88,7 +88,7 @@
 }
 
 
-@media screen and (max-width: 836px) {
+@media screen and (max-width: 769px) {
     .techs__container {
         padding-left: 50px;
         padding-right: 50px;
@@ -175,6 +175,7 @@
         line-height: 16px;
         letter-spacing: -0.44px;
         display: flex;
+        width: 292px;
         flex-direction: column;
         margin: 0 auto;
         padding: 0;
