@@ -4,7 +4,6 @@ import logo from "../../images/logo.svg"
 import {useEffect, useState} from "react";
 
 
-
 function Login() {
 
   const [email, setEmail] = useState('')
@@ -69,7 +68,7 @@ function Login() {
           </Link>
         </div>
         <h1 className="login__title">Рады видеть!</h1>
-        <form noValidate name="login__form" className="login__form" onSubmit={event=> event.preventDefault()}>
+        <form noValidate name="login__form" className="login__form" onSubmit={event => event.preventDefault()}>
           <div className="login__inputs-container">
             <div>
               <label className="login__email">E-mail</label>

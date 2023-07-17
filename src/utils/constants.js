@@ -1,7 +1,6 @@
 export
 const MAIN_API_SETTING = {
   baseUrl: 'https://api.krivo.nomoredomains.rocks',
-  // baseUrl: 'http://localhost:3000',
   headers: {
     authorization: 'bdecdc76-75a5-40e2-94d6-35ac4e7b5bcc',
     'Content-Type': 'application/json'
@@ -46,10 +45,10 @@ const REGISTER_FORM_SETTING = {
 }
 
 export
-const INPUT_ERROR_NAME = {
+const INPUT_NAME_ERROR = {
   name: 'Имя не должно быть короче 2 букв',
   email: 'Введите корректный email',
-  password: 'Пароль должен быть не короче 8 символов',
+  password: 'Пароль состоит минимум из 8 символов',
   searchMovies: 'Нужно ввести ключевое слово',
 }
 
