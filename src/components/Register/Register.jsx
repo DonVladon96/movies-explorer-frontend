@@ -89,43 +89,40 @@ function Register() {
         </div>
         <h1 className="register__title">Добро пожаловать!</h1>
         <form className="register__form" noValidate name="register-form" onSubmit={e => e.preventDefault()}>
-          <fieldset className="register__inputs-container">
-            <label className="register__lable">
-              <h2 className="register__name">Имя</h2>
+          <div className="register__inputs-container">
+            <div className="register__lable">
+              <label className="register__name">Имя</label>
               <input className="register__input"
                      type="text"
                      name="name"
                      placeholder="Введите Ваше Имя"
-                     autoComplete="off"
                      minLength={4}
                      maxLength={30}
                      pattern="^[A-Za-zА-Яа-яЁё /s -]{4,30}"
                      required={true}
                      value={name}
                      onChange={e => nameHandler(e)}/>
-            </label>
+            </div>
             {(nameDirty && errorMessageName) && <div className="register__error">{errorMessageName}</div>}
-            <label>
-              <h2  className="register__email">E-mail</h2>
+            <div>
+              <label  className="register__email">E-mail</label>
               <input className="register__input"
                      type="email"
                      name="email"
                      placeholder="Введите Ваш E-mail"
-                     autoComplete="off"
                      pattern="^[\w]+@[a-zA-Z]+\.[a-zA-Z]{2,30}$"
                      required={true}
                      minLength={2}
                      maxLength={30}
                      value={email}
                      onChange={e => emailHandler(e)}/>
-            </label>
+            </div>
             {(emailDirty && errorMessageEmail) && <div className="register__error">{errorMessageEmail}</div>}
             <div>
-              <label className="register__password" autocomplete="off">Пароль</label>
+              <label className="register__password" >Пароль</label>
               <input className="register__input" type="password"
                      name="password"
                      placeholder="Введите Ваш Пароль"
-                     autoComplete="off"
                      minLength={4}
                      maxLength={8}
                      required={true}
@@ -133,7 +130,7 @@ function Register() {
                      onChange={e => passwordHandler(e)}/>
             </div>
             {(passwordDirty && errorMessagePassword) && <div className="register__error">{errorMessagePassword}</div>}
-          </fieldset>
+          </div>
           <div className="register__button-container">
             <button className="register__button" type="submit" disabled={!inputValid}>Зарегистрироваться</button>
             <Link className="register__link" to="/signin">

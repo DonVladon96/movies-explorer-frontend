@@ -32,6 +32,9 @@
     outline: none;
     border: none;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button_type_green {
@@ -75,6 +78,9 @@
     border-radius: 3px;
     outline: none;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__button-signing:hover {

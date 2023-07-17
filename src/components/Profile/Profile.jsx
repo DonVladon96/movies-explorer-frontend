@@ -1,25 +1,30 @@
 import React, {useEffect, useState} from "react";
 import "./Profile.css";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {INPUT_ERROR_NAME as user} from "../../utils/constants";
 
 function Profile() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [isUpdate, setIsUpdate] = useState(false)
+  const navigate = useNavigate()
 
   const handleProfileUpdate = () => {
-    console.log ('Добавить функционал на 4 этапе')
+    console.log('Добавить функционал на 4 этапе')
   }
 
   useEffect(() => {
-    if((user.name !== name || user.email !== email)){
+    if ((user.name !== name || user.email !== email)) {
       setIsUpdate(true)
     } else {
       setIsUpdate(false)
     }
   }, [user, email, name])
+
+  const handleExitClick = () => {
+    navigate('/')
+  }
 
   return (
     <>
@@ -28,9 +33,9 @@ function Profile() {
         <section className='profile__container'>
           <h1 className='profile__title'>Привет, Виталий!</h1>
           <form className='profile__form'>
-            <fieldset className='profile__inputs-container'>
-              <label className='profile__lable-container'>
-                <p className='profile__name'>Имя</p>
+            <div className='profile__inputs-container'>
+              <div className='profile__lable-container'>
+                <label className='profile__name'>Имя</label>
                 <input className='profile__input'
                        type='text'
                        placeholder='Имя'
@@ -39,10 +44,10 @@ function Profile() {
                        maxLength={30}
                        onChange={(event) => setName(event.target.value)}
                 />
-              </label>
+              </div>
               <div className="profile__line"></div>
-              <label className='profile__lable-container'>
-                <p className='profile__email'>E-mail</p>
+              <div className='profile__lable-container'>
+                <label className='profile__email'>E-mail</label>
                 <input className='profile__input'
                        type='email'
                        name='email'
@@ -51,15 +56,14 @@ function Profile() {
                        onChange={(event) => setEmail(event.target.value)}
                        required
                 />
-              </label>
-            </fieldset>
+              </div>
+            </div>
             <div className='profile__navigate'>
               <button className='profile__button-edit' type="button" onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
-              <Link to="/" className="profile__button-exit">
-                <button type="button" className='profile__button-text'>Выйти из аккаунта</button>
-              </Link>
+              <button type="button" onClick={handleExitClick} className='profile__button-text'>Выйти из аккаунта</button>
+
 
             </div>
           </form>

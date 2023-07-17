@@ -4,6 +4,8 @@
     gap: 10px;
     justify-content: center;
     padding-left: 1px;
+    list-style: none;
+    text-decoration: none;
 }
 
 .navtab__button {

@@ -25,7 +25,10 @@
 
 .header__button-green {
   background-color: #2BE080;
-  color: #000000
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button_type_submit {

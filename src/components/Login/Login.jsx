@@ -70,8 +70,8 @@ function Login() {
         </div>
         <h1 className="login__title">Рады видеть!</h1>
         <form noValidate name="login__form" className="login__form" onSubmit={event=> event.preventDefault()}>
-          <fieldset className="login__inputs-container">
-            <label>
+          <div className="login__inputs-container">
+            <div>
               <label className="login__email">E-mail</label>
               <input className="login__input"
                      type="email"
@@ -85,9 +85,9 @@ function Login() {
                      value={email}
                      onChange={event => emailHandler(event)}/>
               {(emailDirty && errorMessageEmail) && <div className="login__error">{errorMessageEmail}</div>}
-            </label>
+            </div>
 
-            <label>
+            <div>
               <label className="login__password">Пароль</label>
               <input className="login__input"
                      type="password"
@@ -101,8 +101,8 @@ function Login() {
                      onChange={event => passwordHandler(event)}
               />
               {(passwordDirty && errorMessagePassword) && <div className="login__error">{errorMessagePassword}</div>}
-            </label>
-          </fieldset>
+            </div>
+          </div>
           <div className="login__button-container">
             <button className="login__button" type="button" disabled={!inputValid}>Войти</button>
             <Link className="login__link" to="/signup">
