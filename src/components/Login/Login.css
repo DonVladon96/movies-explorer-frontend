@@ -217,6 +217,10 @@
     .login__container {
         padding-top: 233px;
     }
+
+    .login__title {
+        margin-bottom: 33px;
+    }
 }
 
 @media screen and (max-width: 530px) {

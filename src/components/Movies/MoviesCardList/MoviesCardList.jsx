@@ -34,14 +34,14 @@ function MoviesCardList() {
       <ul className="movie">
         <li className="movie__container">
           <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-            <img className="movie__poster" src={pic2} alt="картина 33 слова о дизайне"/>
+            <img className="movie__poster" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Киноальманах «100 лет дизайна»</h3>
           <button className="movie__like-active"></button>
         </li>
 
-        <li className="movie__time-line">1ч 47м</li>
+        <li className="movie__time-line">1ч 3м</li>
       </ul>
 
       <ul className="movie">
@@ -50,7 +50,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic3} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">В погоне за Бенкси</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -63,7 +63,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic4} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Баския: Взрыв реальности</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -76,7 +76,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic5} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Бег это свобода</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -89,7 +89,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic6} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Книготорговцы</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -102,7 +102,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic7} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Когда я думаю о Германии ночью</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -115,7 +115,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic8} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -128,7 +128,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic9} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Дженис: Маленькая девочка грустит</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -141,7 +141,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic10} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Соберись перед прыжком</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -154,7 +154,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic11} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">Пи Джей Харви: A dog called money</h3>
           <button className="movie__like-active"></button>
         </li>
 
@@ -167,7 +167,7 @@ function MoviesCardList() {
             <img className="movie__poster" src={pic12} alt="картина 33 слова о дизайне"/>
           </Link>
 
-          <h3 className="movie__caption-title">33 слова о дизайне</h3>
+          <h3 className="movie__caption-title">По волнам: Искусство звука в кино</h3>
           <button className="movie__like-active"></button>
         </li>
 
