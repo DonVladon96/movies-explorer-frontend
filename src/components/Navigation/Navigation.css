@@ -33,6 +33,11 @@
     padding-bottom: 4px;
 }
 
+.navigation__list .active:hover {
+    opacity: 0.5;
+
+}
+
 .navigation__list {
     margin: 0;
     padding: 0;
@@ -143,6 +148,8 @@
         padding-bottom: 4px;
         font-size: 18px;
     }
+
+
 }
 
 @media screen and (min-width: 992px) {

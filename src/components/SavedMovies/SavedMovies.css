@@ -47,7 +47,7 @@
 .saveMovie__caption {
     color: #FFF;
     font-size: 13px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -106,9 +106,18 @@
 
 .saveMovie__like-activee:hover {
     cursor: pointer;
-    opacity: 0.8;
+    transition: .7s ease-in-out;
+    background-color: #2BE080;
+    border-radius: 3px;
 }
 
+
+.saveMovie__like-active:hover {
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    background-color: #2BE080;
+    border-radius: 5px;
+}
 
 .saveMovie__like-active:hover {
     cursor: pointer;
@@ -119,7 +128,7 @@
 .saveMovie__time-line {
     color: #8B8B8B;
     font-size: 11px;
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

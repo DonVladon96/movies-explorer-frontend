@@ -7,23 +7,23 @@ function NavTab() {
 
 
 
-    <nav className="navtab">
+    <ul className="navtab">
 
-      <li className="navtab__link-aboute">
+      <li className="navtab__button">
         <a
           href="/#about"
-          className="navtab__button">
+          className="navtab__link-aboute navtab__button">
           О проекте
         </a>
       </li>
-      <li>
+      <li className="navtab__button">
         <a
           href="/#techs"
           className="navtab__link-techs navtab__button">
           Технологии
         </a>
       </li>
-      <li>
+      <li className="navtab__button">
         <a
           href="/#student"
           className="navtab__link-student navtab__button">
@@ -31,18 +31,7 @@ function NavTab() {
         </a>
       </li>
 
-
-
-      <a href="/#about" className="navtab__link-aboute">
-        <button type="button" className="navtab__button">О проекте</button>
-      </a>
-      <a href="/#techs" className="navtab__link-techs">
-        <button type="button" className="navtab__button">Технологии</button>
-      </a>
-      <a href='/#student' className="navtab__link-student">
-        <button type="button" className="navtab__button">Студент</button>
-      </a>
-    </nav>
+    </ul>
   );
 }
 

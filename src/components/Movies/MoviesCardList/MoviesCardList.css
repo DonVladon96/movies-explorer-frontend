@@ -75,6 +75,13 @@
     cursor: pointer;
 }
 
+.movie__like-active:hover {
+    cursor: pointer;
+    transition: .7s ease-in-out;
+    background-color: #2BE080;
+    border-radius: 3px;
+}
+
 .movie__like {
     background-image: url("../../../images/like-disable.svg");
     background-color: #222222;

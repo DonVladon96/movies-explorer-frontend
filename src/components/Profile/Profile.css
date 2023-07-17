@@ -97,6 +97,11 @@
     background-color: #202020;
 }
 
+.profile__input:focus {
+    border-color: #48ff00;
+}
+
+
 .profile__input::-webkit-input-placeholder { /* WebKit browsers */
     color: #FFFFFF;
 }
