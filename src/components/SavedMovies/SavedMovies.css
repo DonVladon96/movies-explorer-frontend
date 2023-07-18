@@ -13,6 +13,7 @@
     margin: 0;
     margin-bottom: 258px;
     padding-top: 68px;
+    list-style-type: none;
 }
 
 .saveMovie {
@@ -35,6 +36,7 @@
     align-items: center;
     position: relative;
     gap: 17px;
+    list-style-type: none;
 }
 
 .saveMovie__poster-saved {

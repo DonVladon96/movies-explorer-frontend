@@ -18,45 +18,45 @@ function SavedMovies() {
 
         <section className="saveMovieCardList">
           <ul className="saveMovieCardList__container">
-            <div className="saveMovie">
-              <figure className="saveMovie__container">
+            <li className="saveMovie">
+              <div className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
                   <img className="saveMovie__poster-saved" src={pic1} alt="Сохраненный Фильм"/>
                 </Link>
-                <figcaption className="saveMovie__caption">33 слова о дизайне</figcaption>
+                <p className="saveMovie__caption">33 слова о дизайне</p>
                 <div className="saveMovie__like-container">
                   <button type="button" className="saveMovie__like"></button>
                   <button type="button" className="saveMovie__like-activee"></button>
                 </div>
-              </figure>
+              </div>
               <p className="saveMovie__time-line">1ч 47м</p>
-            </div>
+            </li>
 
-            <div className="saveMovie">
-              <figure className="saveMovie__container">
+            <li className="saveMovie">
+              <div className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
                   <img className="saveMovie__poster-saved" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
                 </Link>
-                <figcaption className="saveMovie__caption">Киноальманах «100 лет дизайна»</figcaption>
+                <p className="saveMovie__caption">Киноальманах «100 лет дизайна»</p>
                 <div className="saveMovie__like-container">
                   <button type="button" className="saveMovie__like-active"></button>
                 </div>
-              </figure>
+              </div>
               <p className="saveMovie__time-line">1ч 3м</p>
-            </div>
+            </li>
 
-            <div className="saveMovie">
-              <figure className="saveMovie__container">
+            <li className="saveMovie">
+              <div className="saveMovie__container">
                 <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
                   <img className="saveMovie__poster-saved" src={pic3} alt="В погоне за Бенкси"/>
                 </Link>
-                <figcaption className="saveMovie__caption">В погоне за Бенкси</figcaption>
+                <p className="saveMovie__caption">В погоне за Бенкси</p>
                 <div className="saveMovie__like-container">
                   <button type="button" className="saveMovie__like"></button>
                 </div>
-              </figure>
+              </div>
               <p className="saveMovie__time-line">1ч 42м</p>
-            </div>
+            </li>
           </ul>
         </section>
       </main>
