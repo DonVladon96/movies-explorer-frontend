@@ -107,7 +107,7 @@
     padding: 0;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1240px) {
     .movie__container {
         margin-bottom: 7px;
     }
