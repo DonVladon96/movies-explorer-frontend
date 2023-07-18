@@ -25,7 +25,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">33 слова о дизайне</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -38,7 +38,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Киноальманах «100 лет дизайна»</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 3м</li>
@@ -51,7 +51,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">В погоне за Бенкси</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -64,7 +64,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Баския: Взрыв реальности</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -77,7 +77,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Бег это свобода</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -90,7 +90,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Книготорговцы</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -103,7 +103,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Когда я думаю о Германии ночью</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -116,7 +116,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Gimme Danger: История Игги и The Stooge...</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -129,7 +129,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Дженис: Маленькая девочка грустит</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -142,7 +142,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Соберись перед прыжком</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -155,7 +155,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">Пи Джей Харви: A dog called money</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>
@@ -168,7 +168,7 @@ function MoviesCardList() {
           </Link>
 
           <h3 className="movie__caption-title">По волнам: Искусство звука в кино</h3>
-          <button className="movie__like-active"></button>
+          <button type="button" className="movie__like-active"></button>
         </li>
 
         <li className="movie__time-line">1ч 47м</li>

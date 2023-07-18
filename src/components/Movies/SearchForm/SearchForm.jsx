@@ -13,7 +13,7 @@ function SearchForm() {
                  required
                  placeholder="Фильмы"
           />
-          <button className="searchform__button"></button>
+          <button type="button" className="searchform__button"></button>
         </div>
         <fieldset className="searchform__switch">
           <label className="searchform__switch-container">
