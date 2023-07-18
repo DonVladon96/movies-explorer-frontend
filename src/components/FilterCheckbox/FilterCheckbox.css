@@ -21,7 +21,7 @@
   cursor: pointer;
   width: 36px;
   height: 20px;
-  background-color: #ebebeb;
+  background-color: #3DDC84;
   border-radius: 20px;
   position: relative;
   transition: 0.3s;
@@ -42,7 +42,7 @@
 
 .searchform-checkbox__input:checked + .searchform-checkbox__span::after {
   transform: translateX(16px);
-  background: #2BE080;
+  background: #FFFFFF;
 }
 
 @media screen and (max-width: 700px) {
