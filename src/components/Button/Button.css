@@ -1,0 +1,51 @@
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button_type_blue {
+  background-color: #4285f4;
+}
+
+.button_type_red {
+  background-color: #ee3465;
+}
+
+.header__button-green {
+  background-color: #2BE080;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_type_submit {
+  width: 100%;
+  padding: 13px 0;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1.21;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 500px) {
+  .button_type_submit {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 0;
+  }
+}
