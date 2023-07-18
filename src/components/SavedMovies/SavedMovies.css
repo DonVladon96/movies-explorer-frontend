@@ -3,7 +3,6 @@
 }
 
 .saveMovieCardList__container {
-    padding-top: 70px;
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 7px;
@@ -13,6 +12,7 @@
     grid-row-gap: 37px;
     margin: 0;
     margin-bottom: 258px;
+    padding-top: 68px;
 }
 
 .saveMovie {
