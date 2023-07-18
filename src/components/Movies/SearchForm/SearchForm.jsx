@@ -13,6 +13,7 @@ function SearchForm() {
                  type="text"
                  required
                  placeholder="Фильмы"
+                 pattern="^[A-Za-zА-Яа-яЁё /s -]{4,30}"
           />
           <button type="button" className="searchform__button"></button>
         </div>
