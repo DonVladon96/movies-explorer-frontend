@@ -12,7 +12,7 @@ function Main() {
 
   return (
     <div className="content-container">
-      <Header  theme={{ default: false }}/>
+      <Header />
       <main>
         <Promo/>
         <AboutProject/>
