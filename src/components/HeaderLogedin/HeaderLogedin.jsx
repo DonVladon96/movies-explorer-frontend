@@ -25,10 +25,12 @@ function HeaderLogedin() {
         <button type="button"
           className="header-logedin__burger"
           onClick={handleToggleBurger}>
-
+          <menu className='header-logedin__wrapper'>
+            <li
+              className={`header-logedin__burger-icon ${openBurger ? 'header__burger-active' : ''}`}/>
+          </menu>
         </button>
-        <div
-          className={`header-logedin__burger-icon ${openBurger ? 'header__burger-active' : ''}`}/>
+
         <Navigation
           isOpenBurger={openBurger}/>
       </div>
