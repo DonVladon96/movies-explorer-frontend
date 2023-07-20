@@ -1,7 +1,9 @@
 import "./Register.css";
 import logo from "../../images/logo.svg";
-import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {useContext, useEffect, useState} from "react";
+import ApiService from '../../utils/Api/MainApi'
+import {CurrentUserContext} from "../App/App";
 
 
 function Register() {
@@ -18,6 +20,32 @@ function Register() {
   const [errorMessageName, setErrorMessageName] = useState('Введите имя')
   const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
   const [errorMessagePassword, setErrorMessagePassword] = useState('Введите пароль')
+  const { setLogedId, openPopup } = useContext(CurrentUserContext);
+  const navigate = useNavigate();
+
+
+  const hendleRegister = async () => {
+   ApiService.signup({name, email, password})
+
+      .then(data => {
+        if(data.message){
+          openPopup(data.message)
+        } else {
+          ApiService.signin({email, password})
+            .then(data => {
+              if(data.message) {
+                console.error(data.message)
+              } else {
+                localStorage.setItem('token', data.token)
+                setLogedId(true)
+                navigate("/movies")
+              }
+            });
+        }
+      }).catch(error=>{
+      console.log('Ошибка в методе hendleRegister', error)
+    });
+  }
 
   useEffect(() => {
     if (errorMessageName || errorMessageEmail || errorMessagePassword) {
@@ -132,7 +160,7 @@ function Register() {
             {(passwordDirty && errorMessagePassword) && <div className="register__error">{errorMessagePassword}</div>}
           </div>
           <div className="register__button-container">
-            <button className="register__button" type="submit" disabled={!inputValid}>Зарегистрироваться</button>
+            <button className="register__button" onClick={hendleRegister} type="submit" disabled={!inputValid}>Зарегистрироваться</button>
             <Link className="register__link" to="/signin">
               Уже зарегистрированы?
               <span className="register__login">Войти</span>

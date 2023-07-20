@@ -10,7 +10,8 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 import Page404 from "../Page404/Page404";
 import {Helmet} from 'react-helmet';
 import {ProtectedRoute} from "../ProtectedRoute/ProtectedRoute";
-import {getProfile} from "../../utils/Api/MainApi";
+import Popup from '../Popup/Popup';
+import MainApi from "../../utils/Api/MainApi";
 
 // начинаю последний этап
 
@@ -25,10 +26,45 @@ function App() {
   const [cards, setCards] = useState([])
   const [films, setFilms] = useState([])
 
+  //состояния для попап
+  const [popupOpen, setPopupOpen] = useState(false)
+  const [popupMessage, setPopupMessage] = useState("");
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setPopupMessage("");
+  };
+
+  const openPopup = (message) => {
+    setPopupMessage(message);
+    setPopupOpen(true);
+  };
+
+
+
+  useEffect(() => {
+    if(!localStorage.getItem("token") || localStorage.getItem("token") === ''){
+      setLogedId(false)
+    }
+    else {
+      MainApi.getProfile()
+        .then(data=>{
+          if(data.message){
+            localStorage.removeItem("token")
+            setLogedId(false)
+            window.location.reload();
+          }
+        })
+        .catch(error => {
+          console.error('Ошибка при обработке getProfile ', error)
+        })
+    }
+  }, []);
+
 
   return (
     <BrowserRouter>
-      <CurrentUserContext.Provider value={{ user, setUser, logedId, setLogedId, cards, setCards, films, setFilms}}>
+      <CurrentUserContext.Provider value={{ user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup}}>
         <div className='app'>
           <Helmet>
             <title>Movies project</title>
@@ -79,6 +115,7 @@ function App() {
 
             <Route exact path="*" element={<Page404/>}/>
           </Routes>
+          <Popup popupOpen={popupOpen} popupMessage={popupMessage} closePopup={closePopup} />
         </div>
       </CurrentUserContext.Provider>
     </BrowserRouter>
