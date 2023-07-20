@@ -1,9 +1,11 @@
 class MainApi {
   constructor() {
     this.options = {
-      baseUrl: "https://api.movie43.nomoredomains.rocks/movies",
+      // baseUrl: "https://api.movie43.nomoredomains.rocks/movies",
+      baseUrl: "http://localhost:3000",
       headers: {
         "Content-type": "application/json",
+
       },
     };
   }

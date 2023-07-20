@@ -17,7 +17,7 @@
 
 .navigation_active {
     right: 0;
-    transition: right .4s ease-out;
+    transition: right .2s ease-out;
 }
 
 .navigation_active .active {
