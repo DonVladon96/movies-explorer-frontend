@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { PROFILE_UPDATE_OK_STATUS } from "../../utils/constants";
 import {CurrentUserContext} from "../App/App";
 import MainApi from "../../utils/Api/MainApi";
-import EditButton from '../EditButton/EditButton';
+
 
 function Profile() {
   const [isUpdate, setIsUpdate] = useState(false)
@@ -34,7 +34,7 @@ function Profile() {
         setEmail(data.email)
 
       }).catch(error=>{
-      console.error('getProfile error ', error)
+      console.error('Ошибка в методе getProfile ', error)
     })
   },[])
 
@@ -63,7 +63,6 @@ function Profile() {
         console.error('Введите данные в поля ввода', error)
       });
   }
-
 
 
   useEffect(() => {
@@ -108,9 +107,6 @@ function Profile() {
     }
   }
 
-  const handleSaveClick = () => {
-    setIsEditing(false);
-  };
 
   const emailHandler = (evt) => {
     blurHandler(evt)
@@ -124,7 +120,6 @@ function Profile() {
   }
 
 
-
   const handleEditClick = () => {
     setIsEditing(true);
     const nameInput = document.getElementById('name-input');
@@ -135,10 +130,10 @@ function Profile() {
 
   return (
     <>
-      <HeaderLogedin/>
+      <HeaderLogedin loged={true}/>
       <main className="profile">
         <section className='profile__container'>
-          <h1 className='profile__title'>Привет, Виталий!</h1>
+          <h1 className='profile__title'>Привет, {user?.name}</h1>
           <form className='profile__form'>
             <div className='profile__inputs-container'>
               <div className='profile__lable-container'>
@@ -150,7 +145,7 @@ function Profile() {
                        value={name}
                        minLength={4}
                        maxLength={30}
-                       pattern="^[A-Za-zА-Яа-яЁё /s -]{4,30}"
+                       pattern='[a-z0-9]+@[a-z]+\\.{1,1}[a-z]{2,}'
                        onChange={e => nameHandler(e)}
                        id='name-input'
                 />
@@ -177,7 +172,6 @@ function Profile() {
               <button className='profile__button-edit' type="button" onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
-              <EditButton />
               <button type="button" onClick={handleExitClick} className='profile__button-text'>Выйти из аккаунта
               </button>
 

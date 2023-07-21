@@ -110,7 +110,7 @@ function Login() {
                      maxLength={30}
                      pattern="^[\w]+@[a-zA-Z]+\.[a-zA-Z]{2,30}$"
                      required={true}
-                     value={email}
+                     value={email || ''}
                      onChange={event => emailHandler(event)}/>
               {(emailDirty && errorEmailState) && <div className="login__error">{errorEmailState}</div>}
             </div>
@@ -125,7 +125,7 @@ function Login() {
                      minLength={4}
                      maxLength={8}
                      required={true}
-                     value={password}
+                     value={password || ''}
                      onChange={event => passwordHandler(event)}
               />
               {(passwordDirty && errorMessagePassword) && <div className="login__error">{errorMessagePassword}</div>}
