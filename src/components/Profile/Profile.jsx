@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { PROFILE_UPDATE_OK_STATUS } from "../../utils/constants";
 import {CurrentUserContext} from "../App/App";
 import MainApi from "../../utils/Api/MainApi";
+import EditButton from '../EditButton/EditButton';
 
 function Profile() {
   const [isUpdate, setIsUpdate] = useState(false)
@@ -14,15 +15,27 @@ function Profile() {
   const [name, setName] = useState(user.name)
   const [email, setEmail] = useState(user.email)
 
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [nameDirty, setNameDirty] = useState(false)
+  const [emailDirty, setEmailDirty] = useState(false)
+  const [passwordDirty, setPasswordDirty] = useState(false)
+
+
+  const [errorMessageName, setErrorMessageName] = useState('Введите имя')
+  const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
+
+
   useEffect(()=>{
     MainApi.getProfile()
       .then(data => {
         setUser(data);
         setName(data.name)
         setEmail(data.email)
+
       }).catch(error=>{
       console.error('getProfile error ', error)
-    });
+    })
   },[])
 
   useEffect(() => {
@@ -34,6 +47,8 @@ function Profile() {
   }, [user, email, name])
 
   const handleProfileUpdate = (name, email) => {
+    handleEditClick()
+
      MainApi.updateProfile({name: name, email: email})
       .then(data => {
         setUser(data);
@@ -42,20 +57,13 @@ function Profile() {
         } else {
           openPopup(PROFILE_UPDATE_OK_STATUS)
         }
-      })
+      }
+      )
       .catch(error => {
-        console.error('В методе handleProfileUpdate произошла ошибка', error)
+        console.error('Введите данные в поля ввода', error)
       });
   }
 
-
-  const [nameDirty, setNameDirty] = useState(false)
-  const [emailDirty, setEmailDirty] = useState(false)
-  const [passwordDirty, setPasswordDirty] = useState(false)
-
-
-  const [errorMessageName, setErrorMessageName] = useState('Введите имя')
-  const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
 
 
   useEffect(() => {
@@ -100,6 +108,10 @@ function Profile() {
     }
   }
 
+  const handleSaveClick = () => {
+    setIsEditing(false);
+  };
+
   const emailHandler = (evt) => {
     blurHandler(evt)
     setEmail(evt.target.value)
@@ -110,6 +122,16 @@ function Profile() {
       setErrorMessageEmail("")
     }
   }
+
+
+
+  const handleEditClick = () => {
+    setIsEditing(true);
+    const nameInput = document.getElementById('name-input');
+    const emailInput = document.getElementById('email-input');
+    nameInput.focus();
+    emailInput.focus();
+  };
 
   return (
     <>
@@ -130,6 +152,7 @@ function Profile() {
                        maxLength={30}
                        pattern="^[A-Za-zА-Яа-яЁё /s -]{4,30}"
                        onChange={e => nameHandler(e)}
+                       id='name-input'
                 />
               </div>
               {(nameDirty && errorMessageName) && <div className="register__error">{errorMessageName}</div>}
@@ -145,6 +168,7 @@ function Profile() {
                        required={true}
                        minLength={2}
                        maxLength={30}
+                       id='email-input'
                        onChange={e => emailHandler(e)}/>
               </div>
               {(emailDirty && errorMessageEmail) && <div className="register__error">{errorMessageEmail}</div>}
@@ -153,6 +177,7 @@ function Profile() {
               <button className='profile__button-edit' type="button" onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
+              <EditButton />
               <button type="button" onClick={handleExitClick} className='profile__button-text'>Выйти из аккаунта
               </button>
 

@@ -75,7 +75,7 @@ function App() {
 
             <Route exact path="/signin"
                    element={
-                     <ProtectedRoute logedId={logedId}>
+                     <ProtectedRoute logedId={!logedId}>
                        <Login/>
                      </ProtectedRoute>
                    }
