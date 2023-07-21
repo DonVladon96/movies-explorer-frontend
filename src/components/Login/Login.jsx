@@ -1,7 +1,10 @@
 import "./Login.css";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import logo from "../../images/logo.svg"
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import MainApi from "../../utils/Api/MainApi";
+import {CurrentUserContext} from "../App/App";
+import {LOGIN_ERROR_STATUS} from "../../utils/constants";
 
 
 function Login() {
@@ -9,10 +12,36 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [emailDirty, setEmailDirty] = useState(false)
-  const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
+  const [errorEmailState, setErrorEmailState] = useState('Введите email')
   const [passwordDirty, setPasswordDirty] = useState(false)
   const [errorMessagePassword, setErrorMessagePassword] = useState('Введите пароль')
   const [inputValid, setInputValid] = useState(false)
+  const { setLogedId } = useContext(CurrentUserContext);
+  const navigate = useNavigate();
+
+  const hendleLoginClick = async () => {
+    MainApi.signin({email, password})
+      .then(data => {
+        if(data.message) {
+          console.error(data.message)
+        } else {
+          localStorage.setItem('token', data.token)
+          setLogedId(true)
+          navigate("/movies")
+        }
+      }).catch(error=>{
+      console.log(LOGIN_ERROR_STATUS, error)
+    });
+  }
+
+  useEffect(() => {
+    if (errorEmailState || errorMessagePassword) {
+      setInputValid(false)
+    } else {
+      setInputValid(true)
+    }
+  }, [errorEmailState, errorMessagePassword])
+
 
 
   const emailHandler = (event) => {
@@ -20,9 +49,9 @@ function Login() {
     setEmail(event.target.value)
     const pattern = /^\w+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/
     if (!pattern.test(String(event.target.value).toLocaleLowerCase())) {
-      setErrorMessageEmail("Неккоректный email")
+      setErrorEmailState("Неккоректный email")
     } else {
-      setErrorMessageEmail("")
+      setErrorEmailState("")
     }
   }
 
@@ -52,12 +81,12 @@ function Login() {
   }
 
   useEffect(() => {
-    if (errorMessageEmail || errorMessagePassword) {
+    if (errorEmailState || errorMessagePassword) {
       setInputValid(false)
     } else {
       setInputValid(true)
     }
-  }, [errorMessageEmail, errorMessagePassword])
+  }, [errorEmailState, errorMessagePassword])
 
   return (
     <main className="login">
@@ -83,7 +112,7 @@ function Login() {
                      required={true}
                      value={email}
                      onChange={event => emailHandler(event)}/>
-              {(emailDirty && errorMessageEmail) && <div className="login__error">{errorMessageEmail}</div>}
+              {(emailDirty && errorEmailState) && <div className="login__error">{errorEmailState}</div>}
             </div>
 
             <div>
@@ -103,7 +132,7 @@ function Login() {
             </div>
           </div>
           <div className="login__button-container">
-            <button className="login__button" type="button" disabled={!inputValid}>Войти</button>
+            <button className="login__button" type="submit" onClick={hendleLoginClick} disabled={!inputValid}>Войти</button>
             <Link className="login__link" to="/signup">
               Ещё не зарегистрированы?
               <span className="login__register">Регистрация</span>

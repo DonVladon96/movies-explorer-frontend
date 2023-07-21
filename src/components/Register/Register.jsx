@@ -2,8 +2,8 @@ import "./Register.css";
 import logo from "../../images/logo.svg";
 import {Link, useNavigate} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
-import ApiService from '../../utils/Api/MainApi'
 import {CurrentUserContext} from "../App/App";
+import MainApi from "../../utils/Api/MainApi";
 
 
 function Register() {
@@ -24,14 +24,14 @@ function Register() {
   const navigate = useNavigate();
 
 
-  const hendleRegister = async () => {
-   ApiService.signup({name, email, password})
+  const hendleRegisterClick = async () => {
+   MainApi.signup({name, email, password})
 
       .then(data => {
         if(data.message){
           openPopup(data.message)
         } else {
-          ApiService.signin({email, password})
+          MainApi.signin({email, password})
             .then(data => {
               if(data.message) {
                 console.error(data.message)
@@ -43,7 +43,7 @@ function Register() {
             });
         }
       }).catch(error=>{
-      console.log('Ошибка в методе hendleRegister', error)
+      console.log('Ошибка в методе hendleRegisterClick', error)
     });
   }
 
@@ -160,7 +160,7 @@ function Register() {
             {(passwordDirty && errorMessagePassword) && <div className="register__error">{errorMessagePassword}</div>}
           </div>
           <div className="register__button-container">
-            <button className="register__button" onClick={hendleRegister} type="submit" disabled={!inputValid}>Зарегистрироваться</button>
+            <button className="register__button" onClick={hendleRegisterClick} type="submit" disabled={!inputValid}>Зарегистрироваться</button>
             <Link className="register__link" to="/signin">
               Уже зарегистрированы?
               <span className="register__login">Войти</span>
