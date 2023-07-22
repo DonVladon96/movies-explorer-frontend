@@ -1,7 +1,8 @@
 class ApiFilm {
   constructor() {
     this.options = {
-      baseUrl: "https://api.movie43.nomoredomains.rocks/movies",
+      // baseUrl: "https://api.movie43.nomoredomains.rocks/movies",
+      baseUrl: "https://api.nomoreparties.co/beatfilm-movies",
       headers: {
         "Content-type": "application/json",
       },

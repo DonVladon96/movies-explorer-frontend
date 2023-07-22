@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./SavedMovies.css";
 import Footer from "../Footer/Footer";
 import SearchForm from "../Movies/SearchForm/SearchForm";
@@ -7,8 +7,49 @@ import pic2 from "../../images/pic2.png";
 import pic3 from "../../images/png3.png";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 import {Link} from "react-router-dom";
+import {CurrentUserContext} from "../App/App";
+import {useResize} from "../../utils/HOOKS/UseResize";
 
-function SavedMovies() {
+function SavedMovies(props) {
+
+  //
+  // const [preloader, setPreloader] = useState(false)
+  // const [counterCard, setCounterCard] = useState(0)
+  // const [switchCheked, setSwitchCheked] = useState(false)
+  // const [isOther, setisOther] = useState(false)
+  // const [durationLength, setDurationLength] = useState(0);
+  // const [isSearch, setIsSearch] = useState(false);
+  // const {currentScreen} = useResize();
+  // const titleName = "SaveMoviesSearch";
+  // const {
+  //   findeSaveMoviesStore,
+  //   setFindeSaveMoviesStore,
+  //   saveMoviesStore,
+  //   setSaveMoviesStore,
+  //   setSearchText
+  // } = useContext(CurrentUserContext);
+  //
+  //
+  // const deliteFilm = (id) => {
+  //   setSaveMoviesStore(prev => prev.filter(film => film._id !== id))
+  //   setFindeSaveMoviesStore(prev => prev.filter(film => film._id !== id))
+  // }
+  //
+  // const switchHandler = (status) => {
+  //   setSwitchCheked(status)
+  //   setIsSearch(true)
+  // }
+  //
+  // useEffect(() => {
+  //   if (switchCheked && durationLength > counterCard) {
+  //     setisOther(true)
+  //   } else if (!switchCheked && (findeSaveMoviesStore.length > 0 && findeSaveMoviesStore.length > counterCard)) {
+  //     setisOther(true)
+  //   } else {
+  //     setisOther(false)
+  //   }
+  // }, [findeSaveMoviesStore, counterCard, switchCheked, durationLength])
+
 
   return (
     <>

@@ -25,10 +25,14 @@ function App() {
   //хуки для карточек и фильмов
   const [cards, setCards] = useState([])
   const [films, setFilms] = useState([])
+  const [saveMoviesStore, setSaveMoviesStore] = useState([]);
+  const [findeSaveMoviesStore, setFindeSaveMoviesStore] = useState([]);
 
   //состояния для попап
   const [popupOpen, setPopupOpen] = useState(false)
   const [popupMessage, setPopupMessage] = useState("");
+
+  const [searchFormState, setSearchFormState] = useState('')
 
   const closePopup = () => {
     setPopupOpen(false);
@@ -61,10 +65,27 @@ function App() {
     }
   }, []);
 
+  const searchHandler = (text, name) =>{
+
+    if(name === 'MoviesSearch'){
+      const settings =  localStorage.getItem(`settings_${name}`)
+      if(settings){
+        const obj = JSON.parse(settings);
+        obj.searchText = text;
+        localStorage.setItem(`settings_${name}`, JSON.stringify(obj))
+      } else {
+        localStorage.setItem(`settings_${name}`, `{"searchText": "${text}", "shortSwich": ${false}}`)
+      }
+    }
+    setSearchFormState(text)
+  }
+
 
   return (
     <BrowserRouter>
-      <CurrentUserContext.Provider value={{ user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup}}>
+      <CurrentUserContext.Provider value={{
+        saveMoviesStore, setSaveMoviesStore,  findeSaveMoviesStore, setFindeSaveMoviesStore,
+        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchFormState}}>
         <div className='app'>
           <Helmet>
             <title>Movies project</title>
@@ -100,7 +121,7 @@ function App() {
             <Route exact path="/Movies"
                    element={
                      <ProtectedRoute logedId={logedId}>
-                       <Movies />
+                       <Movies searchText={searchFormState} searchHandler={searchHandler}/>
                      </ProtectedRoute>
                    }
             />
@@ -108,7 +129,7 @@ function App() {
             <Route exact path="/saved-movies"
                    element={
                      <ProtectedRoute logedId={logedId}>
-                       <SavedMovies />
+                       <SavedMovies searchText={searchFormState} searchHandler={searchHandler}/>
                      </ProtectedRoute>
                    }
             />
