@@ -5,7 +5,7 @@ import "../../FilterCheckbox/FilterCheckbox.css"
 function SearchForm(props) {
 
   const [filmDirty, setFilmDirty] = useState(false)
-  const [errorMessageFilm, setErrorMessageFilm] = useState('Поиск фильма')
+  const [errorMessageFilm, setErrorMessageFilm] = useState('Заполните строку поиска или нажмите на лупу')
   const {searchText, searchHandler, findeMovies, switchHandler, switchCheked, nameLocal} = props;
 
   useEffect(() => {

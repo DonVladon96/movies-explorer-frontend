@@ -176,6 +176,12 @@
     padding: 0;
 }
 
+.error {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 @media screen and (max-width: 768px) {
     .searchform{
         padding-top: 93px;

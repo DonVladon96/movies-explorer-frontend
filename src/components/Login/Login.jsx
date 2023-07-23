@@ -1,13 +1,14 @@
 import "./Login.css";
 import {Link, useNavigate} from "react-router-dom";
 import logo from "../../images/logo.svg"
-import {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import MainApi from "../../utils/Api/MainApi";
 import {CurrentUserContext} from "../App/App";
 import {LOGIN_ERROR_STATUS} from "../../utils/constants";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 
 
-function Login() {
+function Login( ) {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -16,8 +17,11 @@ function Login() {
   const [passwordDirty, setPasswordDirty] = useState(false)
   const [errorMessagePassword, setErrorMessagePassword] = useState('Введите пароль')
   const [inputValid, setInputValid] = useState(false)
-  const { setLogedId } = useContext(CurrentUserContext);
+  const { setLogedId, setInfoMessage, isInfoMessage, closePopup, closePopupHello } = useContext(CurrentUserContext);
   const navigate = useNavigate();
+
+
+
 
   const hendleLoginClick = async () => {
     MainApi.signin({email, password})
@@ -28,9 +32,20 @@ function Login() {
           localStorage.setItem('token', data.token)
           setLogedId(true)
           navigate("/movies")
+          setInfoMessage('Вы успешно вошли!')
+          handleShowInfoMessage({
+            text: 'Вы успешно вошли!',
+            isSuccess: true
+          })
+          setTimeout(closePopupHello, 1500);
         }
       }).catch(error=>{
       console.log(LOGIN_ERROR_STATUS, error)
+      const text = 'Что-то пошло не так! Попробуйте еще раз.';
+      handleShowInfoMessage({
+        text: text,
+        isSuccess: false
+      });
     });
   }
 
@@ -88,6 +103,30 @@ function Login() {
     }
   }, [errorEmailState, errorMessagePassword])
 
+  function handleShowInfoMessage(message) {
+    setInfoMessage(message);
+  }
+
+  const [popupOpen, setPopupOpen] = useState(false)
+  const [popupMessage, setPopupMessage] = useState("");
+
+
+
+  const openPopup = (message) => {
+    setPopupMessage(message);
+    setPopupOpen(true);
+  };
+
+  function closePopupsOnOutsideClick(evt) {
+    const target = evt.target;
+    const checkSelector = (selector) => target.classList.contains(selector);
+
+    if (checkSelector('popup_opened') || checkSelector('popup__close')) {
+      closePopupHello();
+    }
+    setInfoMessage(null)
+  }
+
   return (
     <main className="login">
       <section className="login__container">
@@ -139,6 +178,12 @@ function Login() {
             </Link>
           </div>
         </form>
+        <InfoTooltip
+          message={isInfoMessage}
+          closePopupHello={closePopupHello}
+          closePopupsOnOutsideClick={closePopupsOnOutsideClick}
+
+        />
       </section>
     </main>);
 }

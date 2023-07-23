@@ -8,7 +8,9 @@ import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 import {CurrentUserContext} from "../App/App";
 import {useResize} from "../../utils/HOOKS/UseResize";
 import {
-  ADD_MOVIES_SIZE_1280, ADD_MOVIES_SIZE_480, ADD_MOVIES_SIZE_768,
+  ADD_MOVIES_SIZE_1280,
+  ADD_MOVIES_SIZE_480,
+  ADD_MOVIES_SIZE_768,
   MOVIES_SIZE_CARDS_1280,
   MOVIES_SIZE_CARDS_480,
   MOVIES_SIZE_CARDS_768,
@@ -29,13 +31,19 @@ function SavedMovies(props) {
   const [isOther, setisOther] = useState(false)
   const [durationLength, setDurationLength] = useState(0);
   const [isSearch, setIsSearch] = useState(false);
-  const { currentScreen } = useResize();
-  const { findeSaveMoviesStore, setFindeSaveMoviesStore, saveMoviesStore, setSaveMoviesStore, setSearchFormState } = useContext(CurrentUserContext);
-  const titleName =  "SaveMoviesSearch";
+  const {currentScreen} = useResize();
+  const {
+    findeSaveMoviesStore,
+    setFindeSaveMoviesStore,
+    saveMoviesStore,
+    setSaveMoviesStore,
+    setSearchText,
+  } = useContext(CurrentUserContext);
+  const titleName = "SaveMoviesSearch";
 
   const deliteFilm = (id) => {
-    setSaveMoviesStore(prev=> prev.filter(film=> film._id !== id))
-    setFindeSaveMoviesStore(prev=> prev.filter(film=> film._id !== id))
+    setSaveMoviesStore(prev => prev.filter(film => film._id !== id))
+    setFindeSaveMoviesStore(prev => prev.filter(film => film._id !== id))
   }
 
   const switchHandler = (status) => {
@@ -44,9 +52,9 @@ function SavedMovies(props) {
   }
 
   useEffect(() => {
-    if(switchCheked && durationLength > counterCard){
+    if (switchCheked && durationLength > counterCard) {
       setisOther(true)
-    } else if(!switchCheked && (findeSaveMoviesStore.length > 0 && findeSaveMoviesStore.length > counterCard)){
+    } else if (!switchCheked && (findeSaveMoviesStore.length > 0 && findeSaveMoviesStore.length > counterCard)) {
       setisOther(true)
     } else {
       setisOther(false)
@@ -54,8 +62,8 @@ function SavedMovies(props) {
   }, [findeSaveMoviesStore, counterCard, switchCheked, durationLength])
 
 
-  useEffect(()=>{
-    switch(currentScreen) {
+  useEffect(() => {
+    switch (currentScreen) {
       case 'SCREEN_SIZE_1400':
         setCounterCard(MOVIES_SIZE_CARDS_1280)
         break;
@@ -72,12 +80,12 @@ function SavedMovies(props) {
         setCounterCard(MOVIES_SIZE_CARDS_480)
         break;
     }
-  },[currentScreen])
+  }, [currentScreen])
 
   useEffect(() => {
     setPreloader(true)
     const data = getLocalStorage(titleName);
-    if(!data?.length && findeSaveMoviesStore.length === 0){
+    if (!data?.length && findeSaveMoviesStore.length === 0) {
       const fetchData = async () => {
         const saves = await MainApi.getSaveMovies();
         const data = await ApiFilm.getMovies();
@@ -86,12 +94,12 @@ function SavedMovies(props) {
         setFindeSaveMoviesStore(convertSaves)
       }
       fetchData();
-    } else if(data?.length && findeSaveMoviesStore.length === 0 ) {
+    } else if (data?.length && findeSaveMoviesStore.length === 0) {
       setSaveMoviesStore(data);
       setFindeSaveMoviesStore(data)
     }
     setPreloader(false)
-    setSearchFormState('')
+    setSearchText('')
   }, []);
 
   useEffect(() => {
@@ -100,7 +108,7 @@ function SavedMovies(props) {
 
   const findeMovies = (text) => {
     setPreloader(true)
-    if(text.length > 0) {
+    if (text.length > 0) {
       const a = text.toLowerCase().trim()
       setFindeSaveMoviesStore(saveMoviesStore.filter((obg) => obg.nameRU.toLowerCase().indexOf(a) !== -1 || obg.nameEN.toLowerCase().indexOf(a) !== -1))
     }
@@ -108,11 +116,11 @@ function SavedMovies(props) {
     setPreloader(false)
   }
 
-  const addMoviesCard = () =>{
+  const addMoviesCard = () => {
     let add = ADD_MOVIES_SIZE_1280;
-    if(currentScreen === 'SCREEN_SIZE_768'){
+    if (currentScreen === 'SCREEN_SIZE_768') {
       add = ADD_MOVIES_SIZE_768
-    } else if(currentScreen === 'SCREEN_SIZE_480'){
+    } else if (currentScreen === 'SCREEN_SIZE_480') {
       add = ADD_MOVIES_SIZE_480
     }
     setCounterCard(prev => prev + add)
@@ -123,12 +131,14 @@ function SavedMovies(props) {
     <>
       <HeaderLogedin/>
       <main className="main-container">
-        <SearchForm nameLocal={titleName} {...props} findeMovies={findeMovies} switchCheked={switchCheked} switchHandler={switchHandler}/>
-        {preloader && <Preloader />}
-        <section className="movieCardList">
-          {!preloader && <MoviesCardList titleName={titleName}  {...props} cards={findeSaveMoviesStore} switchCheked={switchCheked} counterCard={counterCard} setDurationLength={setDurationLength} saveMoviesCards deliteFilm={deliteFilm}  isSearch={isSearch}/>}
-          {isOther && <button className="main__button-container" onClick={addMoviesCard}>Еще</button>}
-        </section>
+        <SearchForm nameLocal={titleName} {...props} findeMovies={findeMovies} switchCheked={switchCheked}
+                    switchHandler={switchHandler}/>
+        {preloader && <Preloader/>}
+        {!preloader &&
+          <MoviesCardList titleName={titleName}  {...props} cards={findeSaveMoviesStore} switchCheked={switchCheked}
+                          counterCard={counterCard} setDurationLength={setDurationLength} saveMoviesCards
+                          deliteFilm={deliteFilm} isSearch={isSearch}/>}
+        {isOther && <button className="main__button-container" onClick={addMoviesCard}>Еще</button>}
       </main>
       <Footer/>
     </>

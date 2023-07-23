@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import "./Movies.css";
 import SearchForm from "./SearchForm/SearchForm";
-import { getMovies } from "../../utils/Api/ApiFilm";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 import {CurrentUserContext} from "../App/App";
@@ -43,7 +42,7 @@ function Movies(props) {
     setCards,
     films,
     setFilms,
-    setSearchFormState
+    setSearchText,
   } = useContext(CurrentUserContext);
 
   const switchHandler = (status) => {
@@ -96,7 +95,7 @@ function Movies(props) {
   useEffect(() => {
     const searchSetings = getLocalStorage(`settings_${titleName}`);
     if (searchSetings?.searchText) {
-      setSearchFormState(searchSetings.searchText)
+      setSearchText(searchSetings.searchText)
       setIsSearch(true)
     }
     if (searchSetings?.shortSwich) {
@@ -138,7 +137,7 @@ function Movies(props) {
 
   useEffect(() => {
     if (flag) {
-      setSearchFormState('');
+      setSearchText('');
       const settings = localStorage.getItem(`settings_${titleName}`);
       if (settings) {
         const obj = JSON.parse(settings);
@@ -178,6 +177,7 @@ function Movies(props) {
     }
     setCounterCard((prev) => prev + add);
   };
+
 
   return (
     <>

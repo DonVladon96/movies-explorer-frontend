@@ -4,8 +4,6 @@ import "./MoviesCard.css";
 import {CurrentUserContext} from "../../App/App";
 import {setLocalStorage} from "../../localStorage/localStorage";
 import MainApi from "../../../utils/Api/MainApi";
-import saveButton from "../../../images/save-button.svg";
-import saveFilmButton from "../../../images/save-icone.svg"
 import {DURATION_CONVERT} from "../../../utils/constants";
 
 
@@ -90,12 +88,11 @@ function MoviesCard({card, saveMoviesCards, deliteFilm}) {
 
 
         {location.pathname === "/movies" &&
-          <button type="button" aria-label="сохранить"
-                  className={isSaved ? "movie__button-save" : "movie__button"}
-                  onClick={handleClick}>
-            {isSaved ? <img className="moviesCard__delete" alt="добавлено" src={saveButton}/> :
-              <img className="moviesCard__add" alt="добавить" src={saveFilmButton}/>}
-          </button>}
+        <button type="button" aria-label="сохранить"
+                className={isSaved ? "movie__like-active" : "movie__like"}
+                onClick={handleClick}>
+
+        </button>}
 
       </li>
 

@@ -12,6 +12,7 @@ import {Helmet} from 'react-helmet';
 import {ProtectedRoute} from "../ProtectedRoute/ProtectedRoute";
 import Popup from '../Popup/Popup';
 import MainApi from "../../utils/Api/MainApi";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 
 // начинаю последний этап
 
@@ -32,9 +33,14 @@ function App() {
   const [popupOpen, setPopupOpen] = useState(false)
   const [popupMessage, setPopupMessage] = useState("");
 
-  const [searchFormState, setSearchFormState] = useState('')
+  const [searchText, setSearchText] = useState('')
 
   const closePopup = () => {
+    setPopupOpen(false);
+    setPopupMessage("");
+  };
+
+  const closePopupHello = () => {
     setPopupOpen(false);
     setPopupMessage("");
   };
@@ -44,6 +50,7 @@ function App() {
     setPopupOpen(true);
   };
 
+  const [isInfoMessage, setInfoMessage] = useState(null);
 
 
   useEffect(() => {
@@ -77,15 +84,28 @@ function App() {
         localStorage.setItem(`settings_${name}`, `{"searchText": "${text}", "shortSwich": ${false}}`)
       }
     }
-    setSearchFormState(text)
+    setSearchText(text)
   }
 
+  function closePopupsOnOutsideClick(evt) {
+    const target = evt.target;
+    const checkSelector = (selector) => target.classList.contains(selector);
+
+    if (checkSelector('popup_opened') || checkSelector('popup__close')) {
+      closePopupHello();
+    }
+    setInfoMessage(null)
+  }
+
+  function handleShowInfoMessage(message) {
+    setInfoMessage(message);
+  }
 
   return (
     <BrowserRouter>
-      <CurrentUserContext.Provider value={{
+      <CurrentUserContext.Provider value={{setInfoMessage,
         saveMoviesStore, setSaveMoviesStore,  findeSaveMoviesStore, setFindeSaveMoviesStore,
-        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchFormState}}>
+        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText, closePopupHello}}>
         <div className='app'>
           <Helmet>
             <title>Movies project</title>
@@ -97,7 +117,7 @@ function App() {
             <Route exact path="/signin"
                    element={
                      <ProtectedRoute logedId={!logedId}>
-                       <Login/>
+                       <Login  handleShowInfoMessage={handleShowInfoMessage} />
                      </ProtectedRoute>
                    }
             />
@@ -121,7 +141,7 @@ function App() {
             <Route exact path="/Movies"
                    element={
                      <ProtectedRoute logedId={logedId}>
-                       <Movies searchText={searchFormState} searchHandler={searchHandler}/>
+                       <Movies searchText={searchText} searchHandler={searchHandler}/>
                      </ProtectedRoute>
                    }
             />
@@ -129,7 +149,7 @@ function App() {
             <Route exact path="/saved-movies"
                    element={
                      <ProtectedRoute logedId={logedId}>
-                       <SavedMovies searchText={searchFormState} searchHandler={searchHandler}/>
+                       <SavedMovies searchText={searchText} searchHandler={searchHandler}/>
                      </ProtectedRoute>
                    }
             />
@@ -137,6 +157,11 @@ function App() {
             <Route exact path="*" element={<Page404/>}/>
           </Routes>
           <Popup popupOpen={popupOpen} popupMessage={popupMessage} closePopup={closePopup} />
+          <InfoTooltip
+            message={isInfoMessage}
+            onClick={closePopupHello}
+            closePopupsOnOutsideClick={closePopupsOnOutsideClick}
+          />
         </div>
       </CurrentUserContext.Provider>
     </BrowserRouter>
