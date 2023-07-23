@@ -9,7 +9,7 @@ export const MOVIES_SIZE_CARDS_480 = 5;
 
 export const SCREEN_SIZE_480 = 480;
 export const SCREEN_SIZE_768 = 768;
-export const SCREEN_SIZE_1240 = 992;
+export const SCREEN_SIZE_1240 = 1240;
 export const SCREEN_SIZE_1200 = 1200;
 export const SCREEN_SIZE_1400 = 1400;
 
