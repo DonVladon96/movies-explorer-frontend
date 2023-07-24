@@ -3,7 +3,7 @@ import "./MoviesCardList.css";
 import {SHORTS_MOVIES_40MIN} from "../../../utils/constants";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList({cards, switchCheked, counterCard, setDurationLength, saveMoviesCards, deliteFilm, isSearch}) {
+function MoviesCardList  ({cards, switchCheked, counterCard, setDurationLength, saveMoviesCards, deliteFilm, isSearch}) {
 
   let films = cards;
   if(switchCheked){

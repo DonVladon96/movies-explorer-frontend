@@ -8,10 +8,8 @@ import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Page404 from "../Page404/Page404";
-import {Helmet} from 'react-helmet';
 import {ProtectedRoute} from "../ProtectedRoute/ProtectedRoute";
 import Popup from '../Popup/Popup';
-// import MainApi from "../../utils/Api/MainApi";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
 import {getProfile} from "../../utils/Api/MainApi";
 
@@ -110,10 +108,6 @@ function App() {
         saveMoviesStore, setSaveMoviesStore,  findeSaveMoviesStore, setFindeSaveMoviesStore,
         user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText, closePopupHello}}>
         <div className='app'>
-          <Helmet>
-            <title>Movies project</title>
-            <html lang="ru"/>
-          </Helmet>
           <Routes>
             <Route exact path="/" element={<Main/>}/>
 

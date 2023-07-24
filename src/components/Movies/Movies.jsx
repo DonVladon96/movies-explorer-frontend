@@ -14,8 +14,8 @@ import {
 } from "../../utils/constants";
 import {useResize} from "../../utils/HOOKS/UseResize";
 import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
-import MainApi, {getSaveMovies} from "../../utils/Api/MainApi";
-import ApiFilm, {getMovies} from "../../utils/Api/ApiFilm";
+import  {getSaveMovies} from "../../utils/Api/MainApi";
+import  {getMovies} from "../../utils/Api/ApiFilm";
 import {convertSaveMoviesData} from "../scripts/convertSaveMoviesData";
 import Preloader from "../Preloader/Preloader";
 import Footer from "../Footer/Footer";
@@ -43,6 +43,7 @@ function Movies(props) {
     films,
     setFilms,
     setSearchText,
+    movies
   } = useContext(CurrentUserContext);
 
   const switchHandler = (status) => {
@@ -132,6 +133,15 @@ function Movies(props) {
   }, []);
 
   useEffect(() => {
+    const savedMovies = JSON.parse(localStorage.getItem('movies')) || [];
+    setSaveMoviesStore(savedMovies);
+    setSearchText('');
+    setCards([]);
+    setFindeSaveMoviesStore([]);
+  }, [movies, setSaveMoviesStore, setSearchText, setCards, setFindeSaveMoviesStore]);
+
+
+  useEffect(() => {
     setLocalStorage(titleName, cards);
   }, [cards])
 
@@ -177,6 +187,8 @@ function Movies(props) {
     }
     setCounterCard((prev) => prev + add);
   };
+
+  //тест другого подхода
 
 
   return (

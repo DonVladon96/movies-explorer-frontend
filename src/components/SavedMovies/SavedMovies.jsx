@@ -102,9 +102,13 @@ function SavedMovies(props) {
     setSearchText('')
   }, []);
 
+
   useEffect(() => {
     setLocalStorage(titleName, saveMoviesStore);
   }, [saveMoviesStore])
+
+
+
 
   const findeMovies = (text) => {
     setPreloader(true)

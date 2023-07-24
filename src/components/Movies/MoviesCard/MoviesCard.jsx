@@ -3,7 +3,7 @@ import React, {useContext, useState} from "react";
 import "./MoviesCard.css";
 import {CurrentUserContext} from "../../App/App";
 import {setLocalStorage} from "../../localStorage/localStorage";
-import MainApi, {deleteSaveMovies, saveMovies} from "../../../utils/Api/MainApi";
+import  {deleteSaveMovies, saveMovies} from "../../../utils/Api/MainApi";
 import {DURATION_CONVERT} from "../../../utils/constants";
 
 

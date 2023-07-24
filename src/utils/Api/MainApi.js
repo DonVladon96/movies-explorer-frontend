@@ -100,7 +100,3 @@ export const deleteSaveMovies = (id) => {
     },
   }).then(response => response.json())
 }
-
-
-
-
