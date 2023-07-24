@@ -2,7 +2,7 @@ import "./Login.css";
 import {Link, useNavigate} from "react-router-dom";
 import logo from "../../images/logo.svg"
 import React, {useContext, useEffect, useState} from "react";
-import MainApi from "../../utils/Api/MainApi";
+import MainApi, {signin} from "../../utils/Api/MainApi";
 import {CurrentUserContext} from "../App/App";
 import {LOGIN_ERROR_STATUS} from "../../utils/constants";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
@@ -24,7 +24,7 @@ function Login( ) {
 
 
   const hendleLoginClick = async () => {
-    MainApi.signin({email, password})
+    signin({email, password})
       .then(data => {
         if(data.message) {
           console.error(data.message)

@@ -29,7 +29,7 @@ function SearchForm(props) {
                    searchHandler(event.target.value, nameLocal)
                  }}
                  value={searchText}
-                 onClick={e => setFilmDirty(true)}
+                 onClick={() => setFilmDirty(true)}
                  placeholder="Фильмы"
           />
           <button type="button" onClick={() => findeMovies(searchText)} className="searchform__button"></button>

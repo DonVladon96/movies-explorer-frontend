@@ -3,7 +3,7 @@ import logo from "../../images/logo.svg";
 import {Link, useNavigate} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import {CurrentUserContext} from "../App/App";
-import MainApi from "../../utils/Api/MainApi";
+import {signin, signup} from "../../utils/Api/MainApi";
 
 
 function Register() {
@@ -25,13 +25,13 @@ function Register() {
 
 
   const hendleRegisterClick = async () => {
-   MainApi.signup({name, email, password})
+   signup({name, email, password})
 
       .then(data => {
         if(data.message){
           openPopup(data.message)
         } else {
-          MainApi.signin({email, password})
+          signin({email, password})
             .then(data => {
               if(data.message) {
                 console.error(data.message)

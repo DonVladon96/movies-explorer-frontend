@@ -9,7 +9,7 @@ import {
 
 export const useResize = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const [currentScreen, setCurrentScreen] = useState("SCREEN_SM");
+  const [currentScreen, setCurrentScreen] = useState("SCREEN_SIZE_480");
 
   useEffect(() => {
     const handleResize = (event) => {

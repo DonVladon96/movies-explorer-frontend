@@ -11,8 +11,9 @@ import Page404 from "../Page404/Page404";
 import {Helmet} from 'react-helmet';
 import {ProtectedRoute} from "../ProtectedRoute/ProtectedRoute";
 import Popup from '../Popup/Popup';
-import MainApi from "../../utils/Api/MainApi";
+// import MainApi from "../../utils/Api/MainApi";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
+import {getProfile} from "../../utils/Api/MainApi";
 
 // начинаю последний этап
 
@@ -26,6 +27,7 @@ function App() {
   //хуки для карточек и фильмов
   const [cards, setCards] = useState([])
   const [films, setFilms] = useState([])
+
   const [saveMoviesStore, setSaveMoviesStore] = useState([]);
   const [findeSaveMoviesStore, setFindeSaveMoviesStore] = useState([]);
 
@@ -34,6 +36,7 @@ function App() {
   const [popupMessage, setPopupMessage] = useState("");
 
   const [searchText, setSearchText] = useState('')
+  const [isInfoMessage, setInfoMessage] = useState(null);
 
   const closePopup = () => {
     setPopupOpen(false);
@@ -50,7 +53,7 @@ function App() {
     setPopupOpen(true);
   };
 
-  const [isInfoMessage, setInfoMessage] = useState(null);
+
 
 
   useEffect(() => {
@@ -58,7 +61,7 @@ function App() {
       setLogedId(false)
     }
     else {
-      MainApi.getProfile()
+      getProfile()
         .then(data=>{
           if(data.message){
             localStorage.removeItem("token")
@@ -105,7 +108,7 @@ function App() {
     <BrowserRouter>
       <CurrentUserContext.Provider value={{setInfoMessage,
         saveMoviesStore, setSaveMoviesStore,  findeSaveMoviesStore, setFindeSaveMoviesStore,
-        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText,closePopupsOnOutsideClick, closePopupHello}}>
+        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText, closePopupHello}}>
         <div className='app'>
           <Helmet>
             <title>Movies project</title>

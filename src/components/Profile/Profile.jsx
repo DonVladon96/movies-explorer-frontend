@@ -4,7 +4,7 @@ import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
 import {useNavigate} from "react-router-dom";
 import { PROFILE_UPDATE_OK_STATUS } from "../../utils/constants";
 import {CurrentUserContext} from "../App/App";
-import MainApi from "../../utils/Api/MainApi";
+import {getProfile, updateProfile} from "../../utils/Api/MainApi";
 
 
 function Profile() {
@@ -27,7 +27,7 @@ function Profile() {
 
 
   useEffect(()=>{
-    MainApi.getProfile()
+    getProfile()
       .then(data => {
         setUser(data);
         setName(data.name)
@@ -49,7 +49,7 @@ function Profile() {
   const handleProfileUpdate = (name, email) => {
     handleEditClick()
 
-     MainApi.updateProfile({name: name, email: email})
+     updateProfile({name: name, email: email})
       .then(data => {
         setUser(data);
         if (data.message) {

@@ -14,11 +14,11 @@ import {
   MOVIES_SIZE_CARDS_1280,
   MOVIES_SIZE_CARDS_480,
   MOVIES_SIZE_CARDS_768,
-  SCREEN_SIZE_1240
+
 } from "../../utils/constants";
 import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
-import MainApi from "../../utils/Api/MainApi";
-import ApiFilm from "../../utils/Api/ApiFilm";
+import  {getSaveMovies} from "../../utils/Api/MainApi";
+import  {getMovies} from "../../utils/Api/ApiFilm";
 import {convertSaveMoviesData} from "../scripts/convertSaveMoviesData";
 import Preloader from "../Preloader/Preloader";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
@@ -87,8 +87,8 @@ function SavedMovies(props) {
     const data = getLocalStorage(titleName);
     if (!data?.length && findeSaveMoviesStore.length === 0) {
       const fetchData = async () => {
-        const saves = await MainApi.getSaveMovies();
-        const data = await ApiFilm.getMovies();
+        const saves = await getSaveMovies();
+        const data = await getMovies();
         const convertSaves = await convertSaveMoviesData(data, saves)
         setSaveMoviesStore(convertSaves);
         setFindeSaveMoviesStore(convertSaves)

@@ -3,11 +3,11 @@ import React, {useContext, useState} from "react";
 import "./MoviesCard.css";
 import {CurrentUserContext} from "../../App/App";
 import {setLocalStorage} from "../../localStorage/localStorage";
-import MainApi from "../../../utils/Api/MainApi";
+import MainApi, {deleteSaveMovies, saveMovies} from "../../../utils/Api/MainApi";
 import {DURATION_CONVERT} from "../../../utils/constants";
 
 
-function MoviesCard({card, saveMoviesCards, deliteFilm}) {
+function MoviesCard({card, deliteFilm}) {
 
   const location = useLocation();
   const [isSaved, setIsSaved] = useState(card.inSaved);
@@ -28,10 +28,10 @@ function MoviesCard({card, saveMoviesCards, deliteFilm}) {
         return newData
       })
       setFindeSaveMoviesStore(prev => prev.filter(item => item.id !== card.id))
-      MainApi.deleteSaveMovies(card._id)
+      deleteSaveMovies(card._id)
     } else {
 
-      MainApi.saveMovies(card).then(data => {
+      saveMovies(card).then(data => {
 
         setCards(prev => prev.map(item => {
           if (data.movieId === item.id) {
@@ -69,7 +69,7 @@ function MoviesCard({card, saveMoviesCards, deliteFilm}) {
       return item
     }))
     deliteFilm(card._id)
-    MainApi.deleteSaveMovies(card._id)
+    deleteSaveMovies(card._id)
   }
 
   return (

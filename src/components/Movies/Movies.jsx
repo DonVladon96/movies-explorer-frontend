@@ -14,8 +14,8 @@ import {
 } from "../../utils/constants";
 import {useResize} from "../../utils/HOOKS/UseResize";
 import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
-import MainApi from "../../utils/Api/MainApi";
-import ApiFilm from "../../utils/Api/ApiFilm";
+import MainApi, {getSaveMovies} from "../../utils/Api/MainApi";
+import ApiFilm, {getMovies} from "../../utils/Api/ApiFilm";
 import {convertSaveMoviesData} from "../scripts/convertSaveMoviesData";
 import Preloader from "../Preloader/Preloader";
 import Footer from "../Footer/Footer";
@@ -108,8 +108,8 @@ function Movies(props) {
         const MoviesSearchData = await getLocalStorage(titleName);
 
         if (!MoviesSearchData?.length) {
-          const saves = await MainApi.getSaveMovies();
-          const data = await ApiFilm.getMovies();
+          const saves = await getSaveMovies();
+          const data = await getMovies();
           const convertSaves = await convertSaveMoviesData(data, saves)
           setSaveMoviesStore(convertSaves);
           setFindeSaveMoviesStore(convertSaves);
@@ -205,15 +205,15 @@ function Movies(props) {
         )}
         {isOther && (
           <div className="main__button-container">
-          <button type="button" className="movies-button" onClick={addMoviesCard}>
-          Еще
-          </button>
+            <button type="button" className="movies-button" onClick={addMoviesCard}>
+              Еще
+            </button>
           </div>
         )}
-          </main>
-          <Footer/>
-          </>
-          );
-        }
+      </main>
+      <Footer/>
+    </>
+  );
+}
 
-        export default Movies;
+export default Movies;
