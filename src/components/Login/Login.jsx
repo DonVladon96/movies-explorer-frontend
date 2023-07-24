@@ -37,7 +37,7 @@ function Login( ) {
             text: 'Вы успешно вошли!',
             isSuccess: true
           })
-          setTimeout(closePopupHello, 1500);
+          setTimeout(closePopupTimer, 2000);
         }
       }).catch(error=>{
       console.log(LOGIN_ERROR_STATUS, error)
@@ -116,6 +116,11 @@ function Login( ) {
     setPopupMessage(message);
     setPopupOpen(true);
   };
+
+  function closePopupTimer() {
+    closePopupHello();
+    setInfoMessage(null)
+  }
 
   function closePopupsOnOutsideClick(evt) {
     const target = evt.target;

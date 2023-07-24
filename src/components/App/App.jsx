@@ -105,7 +105,7 @@ function App() {
     <BrowserRouter>
       <CurrentUserContext.Provider value={{setInfoMessage,
         saveMoviesStore, setSaveMoviesStore,  findeSaveMoviesStore, setFindeSaveMoviesStore,
-        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText, closePopupHello}}>
+        user, setUser, logedId, setLogedId, cards, setCards, films, setFilms, openPopup, setSearchText,closePopupsOnOutsideClick, closePopupHello}}>
         <div className='app'>
           <Helmet>
             <title>Movies project</title>
