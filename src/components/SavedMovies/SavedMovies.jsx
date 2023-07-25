@@ -19,7 +19,7 @@ import {
 import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
 import  {getSaveMovies} from "../../utils/Api/MainApi";
 import  {getMovies} from "../../utils/Api/ApiFilm";
-import {convertSaveMoviesData} from "../scripts/convertSaveMoviesData";
+import {arrMoviesData} from "../scripts/arrMoviesData";
 import Preloader from "../Preloader/Preloader";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 
@@ -62,6 +62,8 @@ function SavedMovies(props) {
   }, [findeSaveMoviesStore, counterCard, switchCheked, durationLength])
 
 
+
+
   useEffect(() => {
     switch (currentScreen) {
       case 'SCREEN_SIZE_1400':
@@ -89,7 +91,7 @@ function SavedMovies(props) {
       const fetchData = async () => {
         const saves = await getSaveMovies();
         const data = await getMovies();
-        const convertSaves = await convertSaveMoviesData(data, saves)
+        const convertSaves = await arrMoviesData(data, saves)
         setSaveMoviesStore(convertSaves);
         setFindeSaveMoviesStore(convertSaves)
       }
@@ -107,14 +109,17 @@ function SavedMovies(props) {
     setLocalStorage(titleName, saveMoviesStore);
   }, [saveMoviesStore])
 
-
-
-
   const findeMovies = (text) => {
     setPreloader(true)
+
     if (text.length > 0) {
-      const a = text.toLowerCase().trim()
-      setFindeSaveMoviesStore(saveMoviesStore.filter((obg) => obg.nameRU.toLowerCase().indexOf(a) !== -1 || obg.nameEN.toLowerCase().indexOf(a) !== -1))
+      const searchTerm = text.toLowerCase().trim();
+      const filteredMovies = saveMoviesStore.filter(movie => {
+        const nameRU = movie.nameRU.toLowerCase();
+        const nameEN = movie.nameEN.toLowerCase();
+        return nameRU.includes(searchTerm) || nameEN.includes(searchTerm);
+      });
+      setFindeSaveMoviesStore(filteredMovies);
     }
     setIsSearch(true)
     setPreloader(false)

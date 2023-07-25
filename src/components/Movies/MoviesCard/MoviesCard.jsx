@@ -13,21 +13,13 @@ function MoviesCard({card, deliteFilm}) {
   const [isSaved, setIsSaved] = useState(card.inSaved);
   const {setFindeSaveMoviesStore, setSaveMoviesStore, setFilms, setCards} = useContext(CurrentUserContext);
 
-
   let src = `https://api.nomoreparties.co/${card.image.url}`;
 
   function handleClick() {
     if (isSaved) {
 
-      setCards(prev => prev.map(item => item.id === card.id ? {...item, inSaved: false} : item))
-      setFilms(prev => prev.map(item => item.id === card.id ? {...item, inSaved: false} : item))
-
-      setSaveMoviesStore(prev => {
-        const newData = prev.filter(item => item.id !== card.id)
-        setLocalStorage("SaveMoviesSearch", newData)
-        return newData
-      })
-      setFindeSaveMoviesStore(prev => prev.filter(item => item.id !== card.id))
+      deletFilmLocalStorage()
+      // console.log(card)
       deleteSaveMovies(card._id)
     } else {
 
@@ -50,26 +42,41 @@ function MoviesCard({card, deliteFilm}) {
 
         setFindeSaveMoviesStore(prev => [...prev, saveCard])
         setSaveMoviesStore(prev => [...prev, saveCard])
+
       });
     }
     setIsSaved(!isSaved);
+    // console.log(card._id)
+  }
+
+  const deletFilmLocalStorage = () => {
+    setCards(prev => prev.map(item => item.id === card.id ? {...item, inSaved: false} : item))
+    setFilms(prev => prev.map(item => item.id === card.id ? {...item, inSaved: false} : item))
+
+    setSaveMoviesStore(prev => {
+      const newData = prev.filter(item => item.id !== card.id)
+      setLocalStorage("SaveMoviesSearch", newData)
+      return newData
+    })
+    setFindeSaveMoviesStore(prev => prev.filter(item => item.id !== card.id))
   }
 
   const handleDelete = () => {
     setFilms(prev => prev.map(item => {
-      if (item.id === card.id) {
+      if (item.id === card._id) {
         item.inSaved = false;
       }
       return item
     }))
     setCards(prev => prev.map(item => {
-      if (item.id === card.id) {
+      if (item.id === card._id) {
         item.inSaved = false;
       }
       return item
     }))
     deliteFilm(card._id)
     deleteSaveMovies(card._id)
+    deletFilmLocalStorage()
   }
 
   return (

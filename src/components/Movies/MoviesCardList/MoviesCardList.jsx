@@ -3,21 +3,27 @@ import "./MoviesCardList.css";
 import {SHORTS_MOVIES_40MIN} from "../../../utils/constants";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList  ({cards, switchCheked, counterCard, setDurationLength, saveMoviesCards, deliteFilm, isSearch}) {
+function MoviesCardList  ({cards, switchCheked, counterCard,  saveMoviesCards, deliteFilm, isSearch}) {
 
-  let films = cards;
-  if(switchCheked){
-    films =  cards.filter(film => film.duration < SHORTS_MOVIES_40MIN)
-    setDurationLength(films.length)
-  }
-  films = films.filter((a, index)=> index < counterCard)
+  const filteredMovies = () => {
+    let filtered = cards;
+    if (switchCheked) {
+      filtered = filtered.filter(film => film.duration < SHORTS_MOVIES_40MIN);
+    }
+    return filtered.slice(0, counterCard);
+  };
 
+  const filteredMoviesList = filteredMovies();
 
   return (
     <section className="movieCardList">
-      {films.length ? films.map((card) => (
+      {filteredMoviesList.length? filteredMoviesList.map(card => (
         <MoviesCard key={card.id} card={card} saveMoviesCards={saveMoviesCards} deliteFilm={deliteFilm} />
-      )) : isSearch ? <>Ничего не найдено!</>: ''}
+      )) : isSearch? (
+        <p>Ничего не найдено!</p>
+      ) : (
+        ''
+      )}
     </section>
   );
 }

@@ -16,19 +16,19 @@ import {useResize} from "../../utils/HOOKS/UseResize";
 import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
 import  {getSaveMovies} from "../../utils/Api/MainApi";
 import  {getMovies} from "../../utils/Api/ApiFilm";
-import {convertSaveMoviesData} from "../scripts/convertSaveMoviesData";
+import {arrMoviesData} from "../scripts/arrMoviesData";
 import Preloader from "../Preloader/Preloader";
 import Footer from "../Footer/Footer";
 
 function Movies(props) {
   const {searchHandler} = props;
   const titleName = "MoviesSearch";
-  const [switchCheked, setSwitchCheked] = useState(false);
+  const [switchTumbler, setSwitchTumbler] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
 
 
   const [preloader, setPreloader] = useState(false);
-  const [counterCard, setCounterCard] = useState(0);
+  const [standCard, setStandCard] = useState(0);
 
   const [isOther, setisOther] = useState(false);
   const [flag, setFlag] = useState(false);
@@ -55,40 +55,40 @@ function Movies(props) {
     } else {
       localStorage.setItem(`settings_${titleName}`, `{"searchText": "", "shortSwich": ${status}}`)
     }
-    setSwitchCheked(status);
+    setSwitchTumbler(status);
     setIsSearch(true);
   };
 
   useEffect(() => {
-    if (switchCheked && durationLength > counterCard) {
+    if (switchTumbler && durationLength > standCard) {
       setisOther(true);
     } else if (
-      !switchCheked &&
+      !switchTumbler &&
       films.length > 0 &&
-      films.length > counterCard
+      films.length > standCard
     ) {
       setisOther(true);
     } else {
       setisOther(false);
     }
-  }, [films, counterCard, switchCheked, durationLength]);
+  }, [films, standCard, switchTumbler, durationLength]);
 
   useEffect(() => {
     switch (currentScreen) {
       case "SCREEN_SIZE_1400":
-        setCounterCard(MOVIES_SIZE_CARDS_1280);
+        setStandCard(MOVIES_SIZE_CARDS_1280);
         break;
       case "SCREEN_SIZE_1200":
-        setCounterCard(MOVIES_SIZE_CARDS_1280);
+        setStandCard(MOVIES_SIZE_CARDS_1280);
         break;
       case "SCREEN_SIZE_1240":
-        setCounterCard(MOVIES_SIZE_CARDS_1280);
+        setStandCard(MOVIES_SIZE_CARDS_1280);
         break;
       case "SCREEN_SIZE_768":
-        setCounterCard(MOVIES_SIZE_CARDS_768);
+        setStandCard(MOVIES_SIZE_CARDS_768);
         break;
       default:
-        setCounterCard(MOVIES_SIZE_CARDS_480);
+        setStandCard(MOVIES_SIZE_CARDS_480);
         break;
     }
   }, [currentScreen]);
@@ -100,7 +100,7 @@ function Movies(props) {
       setIsSearch(true)
     }
     if (searchSetings?.shortSwich) {
-      setSwitchCheked(searchSetings.shortSwich)
+      setSwitchTumbler(searchSetings.shortSwich)
     }
 
     if (!cards.length) {
@@ -111,7 +111,7 @@ function Movies(props) {
         if (!MoviesSearchData?.length) {
           const saves = await getSaveMovies();
           const data = await getMovies();
-          const convertSaves = await convertSaveMoviesData(data, saves)
+          const convertSaves = await arrMoviesData(data, saves)
           setSaveMoviesStore(convertSaves);
           setFindeSaveMoviesStore(convertSaves);
 
@@ -155,24 +155,23 @@ function Movies(props) {
           searchHandler(obj.searchText, titleName);
           findeMovies(obj.searchText);
         }
-        setSwitchCheked(obj.shortSwich);
+        setSwitchTumbler(obj.shortSwich);
       }
     }
   }, [flag])
 
   const findeMovies = (text) => {
     setPreloader(true);
+
     if (text.length < 2) {
       setFilms(cards);
     } else {
-      const a = text.toLowerCase().trim();
-      setFilms(
-        cards.filter(
-          (obg) =>
-            obg.nameRU.toLowerCase().indexOf(a) !== -1 ||
-            obg.nameEN.toLowerCase().indexOf(a) !== -1
-        )
-      );
+      const searchText = text.toLowerCase().trim();
+      const filteredCards = cards.filter(card => {
+        const isMatch = card.nameRU.toLowerCase().includes(searchText) || card.nameEN.toLowerCase().includes(searchText);
+        return isMatch;
+      });
+      setFilms(filteredCards);
     }
     setIsSearch(true);
     setPreloader(false);
@@ -185,7 +184,7 @@ function Movies(props) {
     } else if (currentScreen === "SCREEN_SIZE_480") {
       add = ADD_MOVIES_SIZE_480;
     }
-    setCounterCard((prev) => prev + add);
+    setStandCard((prev) => prev + add);
   };
 
   //тест другого подхода
@@ -200,7 +199,7 @@ function Movies(props) {
           nameLocal={titleName}
           {...props}
           findeMovies={findeMovies}
-          switchCheked={switchCheked}
+          switchCheked={switchTumbler}
           switchHandler={switchHandler}
         />
         {preloader && <Preloader/>}
@@ -209,8 +208,8 @@ function Movies(props) {
             {...props}
             titleName={titleName}
             cards={films}
-            switchCheked={switchCheked}
-            counterCard={counterCard}
+            switchCheked={switchTumbler}
+            counterCard={standCard}
             setDurationLength={setDurationLength}
             isSearch={isSearch}
           />
