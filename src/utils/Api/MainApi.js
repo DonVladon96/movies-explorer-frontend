@@ -1,5 +1,5 @@
 const options = {
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://api.movie43.nomoredomains.rocks/movies",
   headers: {
     "Content-type": "application/json",
   },
