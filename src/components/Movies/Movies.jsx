@@ -133,17 +133,9 @@ function Movies(props) {
   }, []);
 
   useEffect(() => {
-    const savedMovies = JSON.parse(localStorage.getItem('movies')) || [];
-    setSaveMoviesStore(savedMovies);
-    setSearchText('');
-    setCards([]);
-    setFindeSaveMoviesStore([]);
-  }, [movies, setSaveMoviesStore, setSearchText, setCards, setFindeSaveMoviesStore]);
-
-
-  useEffect(() => {
     setLocalStorage(titleName, cards);
   }, [cards])
+
 
   useEffect(() => {
     if (flag) {
@@ -166,16 +158,20 @@ function Movies(props) {
     if (text.length < 2) {
       setFilms(cards);
     } else {
-      const searchText = text.toLowerCase().trim();
-      const filteredCards = cards.filter(card => {
-        const isMatch = card.nameRU.toLowerCase().includes(searchText) || card.nameEN.toLowerCase().includes(searchText);
-        return isMatch;
-      });
-      setFilms(filteredCards);
+      const a = text.toLowerCase().trim();
+      setFilms(
+        cards.filter(
+          (obg) =>
+            obg.nameRU.toLowerCase().indexOf(a) !== -1 ||
+            obg.nameEN.toLowerCase().indexOf(a) !== -1
+        )
+      );
     }
     setIsSearch(true);
     setPreloader(false);
   };
+
+
 
   const addMoviesCard = () => {
     let add = ADD_MOVIES_SIZE_1280;
