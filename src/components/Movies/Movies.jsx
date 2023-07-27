@@ -172,7 +172,6 @@ function Movies(props) {
   };
 
 
-
   const addMoviesCard = () => {
     let add = ADD_MOVIES_SIZE_1280;
     if (currentScreen === "SCREEN_SIZE_768") {

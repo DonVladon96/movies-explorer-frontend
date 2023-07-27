@@ -32,7 +32,7 @@ export const getProfile = () => {
     },
   }).then(response => response.json())
 }
-
+//пофиксил ошибку при попытке пользователя сохранить адрес почты, который принадлежит другому пользователю. (см. коммиты с бэкенда)
 export const updateProfile = (user) => {
   const token = localStorage.getItem("token");
   return fetch(`${options.baseUrl}/users/me`, {
