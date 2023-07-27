@@ -21,12 +21,12 @@ function Register() {
   const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
   const [errorMessagePassword, setErrorMessagePassword] = useState('Введите пароль')
   const { setLogedId, openPopup } = useContext(CurrentUserContext);
-  const [stateDisabledInput, setStateDisabledInput] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
 
   const hendleRegisterClick = async () => {
-    setStateDisabledInput(true)
+    setIsLoading(true);
    signup({name, email, password})
 
       .then(data => {
@@ -46,7 +46,10 @@ function Register() {
         }
       }).catch(error=>{
       console.log('Ошибка в методе hendleRegisterClick', error)
-    }).finally(() => setStateDisabledInput(false))
+    }).finally(() => {
+     setIsLoading(false);
+     // Дизайблируем инпуты
+   });
   }
 
   useEffect(() => {
@@ -162,7 +165,7 @@ function Register() {
             {(passwordDirty && errorMessagePassword) && <div className="register__error">{errorMessagePassword}</div>}
           </div>
           <div className="register__button-container">
-            <button className="register__button" onClick={hendleRegisterClick} type="submit" disabled={!inputValid}>Зарегистрироваться</button>
+            <button className="register__button" onClick={hendleRegisterClick} type="submit" disabled={!inputValid || isLoading}>{isLoading? 'Загрузка...' : 'Зарегистрироваться'}</button>
             <Link className="register__link" to="/signin">
               Уже зарегистрированы?
               <span className="register__login">Войти</span>

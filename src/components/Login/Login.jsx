@@ -19,11 +19,10 @@ function Login( ) {
   const [inputValid, setInputValid] = useState(false)
   const { setLogedId, setInfoMessage, isInfoMessage, closePopup, closePopupHello } = useContext(CurrentUserContext);
   const navigate = useNavigate();
-  const [stateDisabledInput, setStateDisabledInput] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
 
   const hendleLoginClick = async () => {
-    setStateDisabledInput(true)
+    setIsLoading(true);
     signin({email, password})
       .then(data => {
         if(data.message) {
@@ -46,7 +45,11 @@ function Login( ) {
         text: text,
         isSuccess: false
       });
-    }).finally(() => setStateDisabledInput(false))
+    }).finally(() => {
+      setIsLoading(false);
+      // Дизайблируем инпуты
+
+    });
   }
 
   useEffect(() => {
@@ -176,7 +179,7 @@ function Login( ) {
             </div>
           </div>
           <div className="login__button-container">
-            <button className="login__button" type="submit" onClick={hendleLoginClick} disabled={!inputValid}>Войти</button>
+            <button className="login__button" type="submit" onClick={hendleLoginClick} disabled={!inputValid || isLoading}>{isLoading? 'Загрузка...' : 'Войти'}</button>
             <Link className="login__link" to="/signup">
               Ещё не зарегистрированы?
               <span className="login__register">Регистрация</span>
