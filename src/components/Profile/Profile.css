@@ -168,6 +168,11 @@ profile__input:-ms-input-placeholder { /* Internet Explorer 10+ */
     cursor: pointer;
 }
 
+.profile__button-edit:disabled {
+
+    opacity: 0.222222;
+}
+
 .profile__button-edit:hover {
     cursor: pointer;
     opacity: 0.8;

@@ -65,14 +65,6 @@ function Profile() {
   }
 
 
-  useEffect(() => {
-    if ((user.name !== name || user.email !== email)) {
-      setIsUpdate(true)
-    } else {
-      setIsUpdate(false)
-    }
-  }, [user, email, name])
-
   const handleExitClick = () => {
     localStorage.clear();
     setLogedId(false);
@@ -169,7 +161,7 @@ function Profile() {
               {(emailDirty && errorMessageEmail) && <div className="register__error">{errorMessageEmail}</div>}
             </div>
             <div className='profile__navigate'>
-              <button className='profile__button-edit' type="button" onClick={() => handleProfileUpdate(name, email)}
+              <button className='profile__button-edit' type="submit" onClick={() => handleProfileUpdate(name, email)}
                       disabled={!isUpdate}>Редактировать
               </button>
               <button type="button" onClick={handleExitClick} className='profile__button-text'>Выйти из аккаунта
