@@ -21,10 +21,12 @@ function Register() {
   const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
   const [errorMessagePassword, setErrorMessagePassword] = useState('Введите пароль')
   const { setLogedId, openPopup } = useContext(CurrentUserContext);
+  const [stateDisabledInput, setStateDisabledInput] = useState(false);
   const navigate = useNavigate();
 
 
   const hendleRegisterClick = async () => {
+    setStateDisabledInput(true)
    signup({name, email, password})
 
       .then(data => {
@@ -44,7 +46,7 @@ function Register() {
         }
       }).catch(error=>{
       console.log('Ошибка в методе hendleRegisterClick', error)
-    });
+    }).finally(() => setStateDisabledInput(false))
   }
 
   useEffect(() => {

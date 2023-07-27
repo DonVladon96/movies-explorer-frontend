@@ -19,11 +19,11 @@ function Login( ) {
   const [inputValid, setInputValid] = useState(false)
   const { setLogedId, setInfoMessage, isInfoMessage, closePopup, closePopupHello } = useContext(CurrentUserContext);
   const navigate = useNavigate();
-
-
+  const [stateDisabledInput, setStateDisabledInput] = useState(false);
 
 
   const hendleLoginClick = async () => {
+    setStateDisabledInput(true)
     signin({email, password})
       .then(data => {
         if(data.message) {
@@ -46,7 +46,7 @@ function Login( ) {
         text: text,
         isSuccess: false
       });
-    });
+    }).finally(() => setStateDisabledInput(false))
   }
 
   useEffect(() => {

@@ -24,6 +24,7 @@ function Profile() {
 
   const [errorMessageName, setErrorMessageName] = useState('Введите имя')
   const [errorMessageEmail, setErrorMessageEmail] = useState('Введите email')
+  const [stateDisabledInput, setStateDisabledInput] = useState(false);
 
 
   useEffect(()=>{
@@ -47,8 +48,8 @@ function Profile() {
   }, [user, email, name])
 
   const handleProfileUpdate = (name, email) => {
+    setStateDisabledInput(true)
     handleEditClick()
-
      updateProfile({name: name, email: email})
       .then(data => {
         setUser(data);
@@ -61,7 +62,7 @@ function Profile() {
       )
       .catch(error => {
         console.error('Введите данные в поля ввода', error)
-      });
+      }).finally(() => setStateDisabledInput(false))
   }
 
 
