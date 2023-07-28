@@ -1,64 +1,153 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./SavedMovies.css";
+import "../Movies/MoviesCardList/MoviesCardList.css";
+import "../Movies/Movies.css";
 import Footer from "../Footer/Footer";
 import SearchForm from "../Movies/SearchForm/SearchForm";
-import pic1 from "../../images/pic__COLOR_pic.png";
-import pic2 from "../../images/pic2.png";
-import pic3 from "../../images/png3.png";
 import HeaderLogedin from "../HeaderLogedin/HeaderLogedin";
-import {Link} from "react-router-dom";
+import {CurrentUserContext} from "../App/App";
+import {useResize} from "../../utils/HOOKS/UseResize";
+import {
+  ADD_MOVIES_SIZE_1280,
+  ADD_MOVIES_SIZE_480,
+  ADD_MOVIES_SIZE_768,
+  MOVIES_SIZE_CARDS_1280,
+  MOVIES_SIZE_CARDS_480,
+  MOVIES_SIZE_CARDS_768,
 
-function SavedMovies() {
+} from "../../utils/constants";
+import {getLocalStorage, setLocalStorage} from "../localStorage/localStorage";
+import  {getSaveMovies} from "../../utils/Api/MainApi";
+import  {getMovies} from "../../utils/Api/ApiFilm";
+import {arrMoviesData} from "../scripts/arrMoviesData";
+import Preloader from "../Preloader/Preloader";
+import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
+
+function SavedMovies(props) {
+
+  const [preloader, setPreloader] = useState(false)
+  const [counterCard, setCounterCard] = useState(0)
+  const [switchCheked, setSwitchCheked] = useState(false)
+  const [isOther, setisOther] = useState(false)
+  const [durationLength, setDurationLength] = useState(0);
+  const [isSearch, setIsSearch] = useState(false);
+  const {currentScreen} = useResize();
+  const {
+    findeSaveMoviesStore,
+    setFindeSaveMoviesStore,
+    saveMoviesStore,
+    setSaveMoviesStore,
+    setSearchText,
+  } = useContext(CurrentUserContext);
+  const titleName = "SaveMoviesSearch";
+
+  const deliteFilm = (id) => {
+    setSaveMoviesStore(prev => prev.filter(film => film._id !== id))
+    setFindeSaveMoviesStore(prev => prev.filter(film => film._id !== id))
+  }
+
+  const switchHandler = (status) => {
+    setSwitchCheked(status)
+    setIsSearch(true)
+  }
+
+  useEffect(() => {
+    if (switchCheked && durationLength > counterCard) {
+      setisOther(true)
+    } else if (!switchCheked && (findeSaveMoviesStore.length > 0 && findeSaveMoviesStore.length > counterCard)) {
+      setisOther(true)
+    } else {
+      setisOther(false)
+    }
+  }, [findeSaveMoviesStore, counterCard, switchCheked, durationLength])
+
+
+
+
+  useEffect(() => {
+    switch (currentScreen) {
+      case 'SCREEN_SIZE_1400':
+        setCounterCard(MOVIES_SIZE_CARDS_1280)
+        break;
+      case "SCREEN_SIZE_1200":
+        setCounterCard(MOVIES_SIZE_CARDS_1280)
+        break;
+      case "SCREEN_SIZE_1240":
+        setCounterCard(MOVIES_SIZE_CARDS_1280)
+        break;
+      case "SCREEN_SIZE_768":
+        setCounterCard(MOVIES_SIZE_CARDS_768)
+        break;
+      default:
+        setCounterCard(MOVIES_SIZE_CARDS_480)
+        break;
+    }
+  }, [currentScreen])
+
+  useEffect(() => {
+    setPreloader(true)
+    const data = getLocalStorage(titleName);
+    if (!data?.length && findeSaveMoviesStore.length === 0) {
+      const fetchData = async () => {
+        const saves = await getSaveMovies();
+        const data = await getMovies();
+        const convertSaves = await arrMoviesData(data, saves)
+        setSaveMoviesStore(convertSaves);
+        setFindeSaveMoviesStore(convertSaves)
+      }
+      fetchData();
+    } else if (data?.length && findeSaveMoviesStore.length === 0) {
+      setSaveMoviesStore(data);
+      setFindeSaveMoviesStore(data)
+    }
+    setPreloader(false)
+    setSearchText('')
+  }, []);
+
+
+  useEffect(() => {
+    setLocalStorage(titleName, saveMoviesStore);
+  }, [saveMoviesStore])
+
+  const findeMovies = (text) => {
+    setPreloader(true)
+
+    if (text.length > 0) {
+      const searchTerm = text.toLowerCase().trim();
+      const filteredMovies = saveMoviesStore.filter(movie => {
+        const nameRU = movie.nameRU.toLowerCase();
+        const nameEN = movie.nameEN.toLowerCase();
+        return nameRU.includes(searchTerm) || nameEN.includes(searchTerm);
+      });
+      setFindeSaveMoviesStore(filteredMovies);
+    }
+    setIsSearch(true)
+    setPreloader(false)
+  }
+
+  const addMoviesCard = () => {
+    let add = ADD_MOVIES_SIZE_1280;
+    if (currentScreen === 'SCREEN_SIZE_768') {
+      add = ADD_MOVIES_SIZE_768
+    } else if (currentScreen === 'SCREEN_SIZE_480') {
+      add = ADD_MOVIES_SIZE_480
+    }
+    setCounterCard(prev => prev + add)
+  }
+
 
   return (
     <>
       <HeaderLogedin/>
       <main className="main-container">
-        <SearchForm/>
-
-        <section className="saveMovieCardList">
-          <ul className="saveMovieCardList__container">
-            <li className="saveMovie">
-              <div className="saveMovie__container">
-                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster-saved" src={pic1} alt="Сохраненный Фильм"/>
-                </Link>
-                <p className="saveMovie__caption">33 слова о дизайне</p>
-                <div className="saveMovie__like-container">
-                  <button type="button" className="saveMovie__like"></button>
-                  <button type="button" className="saveMovie__like-activee"></button>
-                </div>
-              </div>
-              <p className="saveMovie__time-line">1ч 47м</p>
-            </li>
-
-            <li className="saveMovie">
-              <div className="saveMovie__container">
-                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster-saved" src={pic2} alt="Киноальманах «100 лет дизайна»"/>
-                </Link>
-                <p className="saveMovie__caption">Киноальманах «100 лет дизайна»</p>
-                <div className="saveMovie__like-container">
-                  <button type="button" className="saveMovie__like-active"></button>
-                </div>
-              </div>
-              <p className="saveMovie__time-line">1ч 3м</p>
-            </li>
-
-            <li className="saveMovie">
-              <div className="saveMovie__container">
-                <Link to={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target={"_blank"}>
-                  <img className="saveMovie__poster-saved" src={pic3} alt="В погоне за Бенкси"/>
-                </Link>
-                <p className="saveMovie__caption">В погоне за Бенкси</p>
-                <div className="saveMovie__like-container">
-                  <button type="button" className="saveMovie__like"></button>
-                </div>
-              </div>
-              <p className="saveMovie__time-line">1ч 42м</p>
-            </li>
-          </ul>
-        </section>
+        <SearchForm nameLocal={titleName} {...props} findeMovies={findeMovies} switchCheked={switchCheked}
+                    switchHandler={switchHandler}/>
+        {preloader && <Preloader/>}
+        {!preloader &&
+          <MoviesCardList titleName={titleName}  {...props} cards={findeSaveMoviesStore} switchCheked={switchCheked}
+                          counterCard={counterCard} setDurationLength={setDurationLength} saveMoviesCards
+                          deliteFilm={deliteFilm} isSearch={isSearch}/>}
+        {isOther && <button className="main__button-container" onClick={addMoviesCard}>Еще</button>}
       </main>
       <Footer/>
     </>

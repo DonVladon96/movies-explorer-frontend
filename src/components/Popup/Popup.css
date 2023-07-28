@@ -1,0 +1,150 @@
+.popup {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup__opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__notactive {
+  display: none;
+}
+
+.popup__box {
+  width: 400px;
+  margin: auto;
+  height: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+}
+
+.popup__message {
+  color: #48ff00;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+.popup__message:before {
+  content: '';
+  background: linear-gradient(325deg, #ff0000, #4c2ad8, #000000, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #9b3535, #ff0000 );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 30s linear infinite;
+  opacity: 1;
+  transition: opacity .3s cubic-bezier(0.02, 0, 0.99, 0.99);
+  border-radius: 10px;
+}
+
+.popup__message:disabled {
+  background-color: #A0A0A0;
+  opacity: 0.3;
+}
+
+.popup__message:disabled:before {
+  background-color: #A0A0A0;
+  opacity: 0.3;
+}
+
+.popup__message:disabled:after {
+  background-color: #A0A0A0;
+  opacity: 0.3;
+}
+
+.popup__message:active {
+  color: #000;
+
+}
+
+.popup__message:active:after {
+  background: transparent;
+}
+
+.popup__message:hover:before {
+  opacity: 1;
+}
+
+.popup__message:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+
+
+.popup__button-close {
+  width: 22px;
+  height: 22px;
+  background-image: url(../../images/closeButton.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -25px;
+  left: 440px;
+  cursor: pointer;
+}
+
+.ppopup__button-close:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 769px) {
+  .popup__box {
+    width: 250px;
+  }
+
+  .popup__button-close {
+    top: -25px;
+    left: 285px;
+  }
+}

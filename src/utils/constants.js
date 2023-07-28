@@ -1,72 +1,22 @@
-export
-const MAIN_API_SETTING = {
-  baseUrl: 'https://api.krivo.nomoredomains.rocks',
-  headers: {
-    authorization: 'bdecdc76-75a5-40e2-94d6-35ac4e7b5bcc',
-    'Content-Type': 'application/json'
-  }
-}
 
-export
-const MOVIES_API_SETTING = {
-  baseUrl: 'https://api.nomoreparties.co',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-}
+export const PROFILE_UPDATE_OK_STATUS = "Изменения в профиль успешно внесены!"
 
-export
-const DATE_BIRTH = {
-  birthDate: new Date(1992, 6, 28),
-  dateTitles: ['год', 'года', 'лет'],
-}
+export const LOGIN_ERROR_STATUS = "Ошибка при регистрации"
 
-export
-const DURATION_TITLES = ['минута', 'минуты', 'минут'];
+export const MOVIES_SIZE_CARDS_1280 = 12;
+export const MOVIES_SIZE_CARDS_768 = 8;
+export const MOVIES_SIZE_CARDS_480 = 5;
 
-export
-const LOGIN_FORM_SETTING = {
-  type: 'login',
-  title: 'Рады видеть!',
-  btnSubmitText: 'Войти',
-  transitionText: 'Ещё не зарегистрированы?',
-  transitionPath: '/signup',
-  transitionLinkText: 'Регистрация',
-}
+export const SCREEN_SIZE_480 = 480;
+export const SCREEN_SIZE_768 = 768;
+export const SCREEN_SIZE_1240 = 992;
+export const SCREEN_SIZE_1200 = 1200;
+export const SCREEN_SIZE_1400 = 1400;
 
-export
-const REGISTER_FORM_SETTING = {
-  type: 'register',
-  title: 'Добро пожаловать!',
-  btnSubmitText: 'Зарегистрироваться',
-  transitionText: 'Уже зарегистрированы?',
-  transitionPath: '/signin',
-  transitionLinkText: 'Войти',
-}
+export const ADD_MOVIES_SIZE_1280 = 3;
+export const ADD_MOVIES_SIZE_768 = 2;
+export const ADD_MOVIES_SIZE_480 = 1;
 
-export
-const INPUT_NAME_ERROR = {
-  name: 'Имя не должно быть короче 2 букв',
-  email: 'Введите корректный email',
-  password: 'Пароль состоит минимум из 8 символов',
-  searchMovies: 'Нужно ввести ключевое слово',
-}
+export const SHORTS_MOVIES_40MIN = 41;
 
-export
-const ERROR_MESSAGE = {
-  notFound: 'Ничего не найдено',
-  tryAgainLater: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз',
-  errorRequest: 'Неверный email или пароль',
-  repeatedEmail: 'Пользователь с таким email уже зарегистрирован',
-}
-
-export
-const STORAGE_DATA_NAME = {
-  userId: 'uI',
-  movies: 'movies',
-  searchQuery: 'sQ',
-  toggleShortMovie: 'toggleSM'
-}
-
-export
-const DURATION_SHORTMOVIE = 40;
+export const DURATION_CONVERT = 60;
